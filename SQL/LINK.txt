@@ -1,0 +1,1 @@
+httpswww.w3schools.comsqltrysql.aspfilename=trysql_select_all
