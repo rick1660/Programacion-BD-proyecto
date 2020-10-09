@@ -117,7 +117,7 @@ insert into Cliente values (3,'Antonio', 'Moreno Marquez','Mataderos 2312', '664
 insert into Cliente values (4,'Celsa', 'Piña Valderrama','avda. la cotorra', '6647789654','celsa@gmail.com')
 insert into Cliente values (5,'Pablo', 'Perez Pulido','avda el penon', '6648996542','pablo@gmail.com')
 
-
+select * from Automovil
 insert into Automovil values(1,8741,'Nissan','Altima','gris',2012, 2020-09-27 ,1)
 insert into Automovil values(2,7784,'Honda','civic','Morado',1998, 2020-09-30 ,2)
 insert into Automovil values(3,4521,'Ford','Fiesta','rojo',2006,2020-10-1,3)
@@ -127,12 +127,27 @@ insert into Automovil values(6,4521,'Ford','Focus','Negro',2004,2020-10-6,3)
 insert into Automovil values(7,1235,'Lambirghini','Aventor','Azul',2020,2020-09-13,2)
 insert into Automovil values(8,4587,'Maserati','Gran turismo','Plateado',2018,2020-06-8,2)
 
-select * from Automovil
 
 
-Insert into Departamentos values(1,'Carroceria',3)
-Insert into Departamentos values(2,'Electrico',5)
-Insert into Departamentos values(3,'Suspencion',2)
-Insert into Departamentos values(4,'Mecanico',1)
-Insert into Departamentos values(5,'Refaccionari',4)
 
+Select * from Departamentos
+Insert into Departamentos values(1,'Carroceria',6149)
+Insert into Departamentos values(2,'Electrico',8467)
+Insert into Departamentos values(3,'Suspencion',5923)
+Insert into Departamentos values(4,'Mecanico',1834)
+Insert into Departamentos values(5,'Refaccionari',7358)
+
+
+
+
+select * from Supervisor;
+insert into Supervisor values (6149,'Matti Karttunen', 'Kala Wolski', '2431526874', 'Matti45_ws@gmail.com')
+insert into Supervisor values (8467,'Karl', 'Jablonski', '9812862841', 'Kl_Jbsk@gmail.com')
+insert into Supervisor values (5923,'Rita Müller', 'Wandernde', '7056398317', 'rita_muller72@gmail.com')
+insert into Supervisor values (1834,'Palle Ibsen', 'Vaffeljernet', '820068319', 'ibsenx84@gmail.com')
+insert into Supervisor values (7358,'Miguel Angel', 'Paolino', '8503315463', 'Mp_paolo92@gmail.com')
+
+select * from Refaccion
+
+insert into Refaccion values (1,'Autolite Iridium Iridio Bujia',307, 2020-10-01,2020-10-04, 5)
+insert into Refaccion values (1,'Autolite Iridium Iridio Bujia',307, 2020-10-01,2020-10-04, 5)
