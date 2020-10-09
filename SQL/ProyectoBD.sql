@@ -101,4 +101,3 @@ CONSTRAINT FK_IdCliente2 FOREIGN KEY (IdCliente) REFERENCES Cliente(IdCliente),
 CONSTRAINT FK_Refaccion FOREIGN KEY (IdRefaccion) REFERENCES Refaccion(IdRefaccion),
 CONSTRAINT FK_IdServicio FOREIGN KEY (IdServicio) REFERENCES Servicios(IdServicio)
 )
-
