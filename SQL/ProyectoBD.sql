@@ -101,8 +101,8 @@ CONSTRAINT FK_IdCliente2 FOREIGN KEY (IdCliente) REFERENCES Cliente(IdCliente),
 CONSTRAINT FK_Refaccion FOREIGN KEY (IdRefaccion) REFERENCES Refaccion(IdRefaccion),
 CONSTRAINT FK_IdServicio FOREIGN KEY (IdServicio) REFERENCES Servicios(IdServicio)
 )
-<<<<<<< HEAD
-=======
+
+
 
 
 select * from Cliente;	 
@@ -135,20 +135,6 @@ Insert into Departamentos values(4,'Mecanico',1834)
 Insert into Departamentos values(5,'Refaccionari',7358)
 
 
-
-
-select * from Supervisor;
-insert into Supervisor values (6149,'Matti Karttunen', 'Kala Wolski', '2431526874', 'Matti45_ws@gmail.com')
-insert into Supervisor values (8467,'Karl', 'Jablonski', '9812862841', 'Kl_Jbsk@gmail.com')
-insert into Supervisor values (5923,'Rita Müller', 'Wandernde', '7056398317', 'rita_muller72@gmail.com')
-insert into Supervisor values (1834,'Palle Ibsen', 'Vaffeljernet', '820068319', 'ibsenx84@gmail.com')
-insert into Supervisor values (7358,'Miguel Angel', 'Paolino', '8503315463', 'Mp_paolo92@gmail.com')
-
-select * from Refaccion
-
-insert into Refaccion values (1,'Autolite Iridium Iridio Bujia',307, 2020-10-01,2020-10-04, 5)
-insert into Refaccion values (1,'Autolite Iridium Iridio Bujia',307, 2020-10-01,2020-10-04, 5)
->>>>>>> 7f3819c3531974aa02444a24d4a81e7afa6d311e
 
 --ALE
 --Empleados
@@ -186,3 +172,28 @@ insert into Diagnostico(IdDiagnostico,Falla,Causa,IdVehiculo) values(0014,'Se es
 insert into Factura(IdFactura,Fecha,Total,IdCliente,IdServicio,IdRefaccion) values(537,'2020-10-09',200.00,048,011,344);
 insert into Factura(IdFactura,Fecha,Total,IdCliente,IdServicio,IdRefaccion) values(538,'2020-10-09',350.00,048,012,411);
 insert into Factura(IdFactura,Fecha,Total,IdCliente,IdServicio,IdRefaccion) values(539,'2020-10-09',80.00,048,013,503);
+
+
+
+
+select * from Supervisor;
+insert into Supervisor values (6149,'Matti Karttunen', 'Kala Wolski', '2431526874', 'Matti45_ws@gmail.com')
+insert into Supervisor values (8467,'Karl', 'Jablonski', '9812862841', 'Kl_Jbsk@gmail.com')
+insert into Supervisor values (5923,'Rita Müller', 'Wandernde', '7056398317', 'rita_muller72@gmail.com')
+insert into Supervisor values (1834,'Palle Ibsen', 'Vaffeljernet', '820068319', 'ibsenx84@gmail.com')
+insert into Supervisor values (7358,'Miguel Angel', 'Paolino', '8503315463', 'Mp_paolo92@gmail.com')
+
+select * from Refaccion
+
+insert into Refaccion values (1,'Autolite Iridium Iridio Bujia',307, 2020-10-01,2020-10-04, 5)
+insert into Refaccion values (2,'Base Palanca De Cambios Ford F150',1190, '2020-10-01 07:00:25','2020-10-05 08:24:35' , 5)
+insert into Refaccion values (3,'Motor de Arranque Electrico',2943, '2020-10-01 07:00:25','2020-10-05 08:24:35' , 2)
+insert into Refaccion values (4,'Marcha Automotriz Electrica' , 3201, '2020-10-01 07:00:25','2020-10-05 08:24:35' , 2)
+insert into Refaccion values (5,'Cuartos Frontal VW Sedan 1600' , 300, '2020-10-02 07:00:25','2020-10-03 08:24:35' , 1)
+insert into Refaccion values (6,'Smalte Automotriz Max Sr' , 718, '2020-10-02 07:00:25','2020-10-03 08:24:35' , 1)
+insert into Refaccion values (7,'Amortiguadores Jetta Golf A2 A3' ,1824 , '2020-10-04 07:00:25','2020-10-03 08:24:35' , 3)
+insert into Refaccion values (8,'Tensor Ajustable Muelle' ,1499 , '2020-10-04 07:00:25','2020-10-03 08:24:35' , 3)
+insert into Refaccion values (9,'Motor Dodge O Jeep V6' ,19850 , '2020-09-24 12:58:00','2020-09-28 16:24:00' , 4)
+insert into Refaccion values (10,'Motor Nissan Valvulas Pick Up' ,18650 , '2020-09-24 12:58:00','2020-09-28 16:24:00' , 4)
+
+/* Falta Factura */ 
