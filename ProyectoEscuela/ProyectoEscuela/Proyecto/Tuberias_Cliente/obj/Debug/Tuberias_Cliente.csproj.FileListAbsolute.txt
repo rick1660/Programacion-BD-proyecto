@@ -1,0 +1,6 @@
+C:\Users\Rock Star\documents\visual studio 2013\Projects\Proyecto\Tuberias_Cliente\bin\Debug\Tuberias_Cliente.exe.config
+C:\Users\Rock Star\documents\visual studio 2013\Projects\Proyecto\Tuberias_Cliente\bin\Debug\Tuberias_Cliente.exe
+C:\Users\Rock Star\documents\visual studio 2013\Projects\Proyecto\Tuberias_Cliente\bin\Debug\Tuberias_Cliente.pdb
+C:\Users\Rock Star\documents\visual studio 2013\Projects\Proyecto\Tuberias_Cliente\obj\Debug\Tuberias_Cliente.exe
+C:\Users\Rock Star\documents\visual studio 2013\Projects\Proyecto\Tuberias_Cliente\obj\Debug\Tuberias_Cliente.pdb
+C:\Users\Rock Star\documents\visual studio 2013\Projects\Proyecto\Tuberias_Cliente\obj\Debug\Tuberias_Cliente.csprojResolveAssemblyReference.cache
