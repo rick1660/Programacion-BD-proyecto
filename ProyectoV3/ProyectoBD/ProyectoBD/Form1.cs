@@ -31,7 +31,16 @@ namespace ProyectoBD
             fh.Dock = DockStyle.Fill;
             this.PanelContenedor.Controls.Add(fh);
             this.PanelContenedor.Tag = fh;
+            ptbLogo.Visible = false;
+            lbl1.Visible = false;
+            lbl2.Visible = false;
+            lbl3.Visible = false;
+            lbl4.Visible = false;
+            lbl5.Visible = false;
+            lbl6.Visible = false;
+            lbl7.Visible = false;
             fh.Show();
+
         }
 
         private void AbrirAltaAuto(object altaauto)
@@ -43,6 +52,14 @@ namespace ProyectoBD
             fh.Dock = DockStyle.Fill;
             this.PanelContenedor.Controls.Add(fh);
             this.PanelContenedor.Tag = fh;
+            ptbLogo.Visible = false;
+            lbl1.Visible = false;
+            lbl2.Visible = false;
+            lbl3.Visible = false;
+            lbl4.Visible = false;
+            lbl5.Visible = false;
+            lbl6.Visible = false;
+            lbl7.Visible = false;
             fh.Show();
         }
 
@@ -55,6 +72,14 @@ namespace ProyectoBD
             fh.Dock = DockStyle.Fill;
             this.PanelContenedor.Controls.Add(fh);
             this.PanelContenedor.Tag = fh;
+            ptbLogo.Visible = false;
+            lbl1.Visible = false;
+            lbl2.Visible = false;
+            lbl3.Visible = false;
+            lbl4.Visible = false;
+            lbl5.Visible = false;
+            lbl6.Visible = false;
+            lbl7.Visible = false;
             fh.Show();
         }
 
@@ -67,6 +92,14 @@ namespace ProyectoBD
             fh.Dock = DockStyle.Fill;
             this.PanelContenedor.Controls.Add(fh);
             this.PanelContenedor.Tag = fh;
+            ptbLogo.Visible = false;
+            lbl1.Visible = false;
+            lbl2.Visible = false;
+            lbl3.Visible = false;
+            lbl4.Visible = false;
+            lbl5.Visible = false;
+            lbl6.Visible = false;
+            lbl7.Visible = false;
             fh.Show();
         }
 
@@ -79,6 +112,14 @@ namespace ProyectoBD
             fh.Dock = DockStyle.Fill;
             this.PanelContenedor.Controls.Add(fh);
             this.PanelContenedor.Tag = fh;
+            ptbLogo.Visible = false;
+            lbl1.Visible = false;
+            lbl2.Visible = false;
+            lbl3.Visible = false;
+            lbl4.Visible = false;
+            lbl5.Visible = false;
+            lbl6.Visible = false;
+            lbl7.Visible = false;
             fh.Show();
         }
 
@@ -91,6 +132,14 @@ namespace ProyectoBD
             fh.Dock = DockStyle.Fill;
             this.PanelContenedor.Controls.Add(fh);
             this.PanelContenedor.Tag = fh;
+            ptbLogo.Visible = false;
+            lbl1.Visible = false;
+            lbl2.Visible = false;
+            lbl3.Visible = false;
+            lbl4.Visible = false;
+            lbl5.Visible = false;
+            lbl6.Visible = false;
+            lbl7.Visible = false;
             fh.Show();
         }
 
@@ -105,6 +154,14 @@ namespace ProyectoBD
             fh.Dock = DockStyle.Fill;
             this.PanelContenedor.Controls.Add(fh);
             this.PanelContenedor.Tag = fh;
+            ptbLogo.Visible = false;
+            lbl1.Visible = false;
+            lbl2.Visible = false;
+            lbl3.Visible = false;
+            lbl4.Visible = false;
+            lbl5.Visible = false;
+            lbl6.Visible = false;
+            lbl7.Visible = false;
             fh.Show();
         }
 
@@ -117,6 +174,14 @@ namespace ProyectoBD
             fh.Dock = DockStyle.Fill;
             this.PanelContenedor.Controls.Add(fh);
             this.PanelContenedor.Tag = fh;
+            ptbLogo.Visible = false;
+            lbl1.Visible = false;
+            lbl2.Visible = false;
+            lbl3.Visible = false;
+            lbl4.Visible = false;
+            lbl5.Visible = false;
+            lbl6.Visible = false;
+            lbl7.Visible = false;
             fh.Show();
         }
 
@@ -129,6 +194,14 @@ namespace ProyectoBD
             fh.Dock = DockStyle.Fill;
             this.PanelContenedor.Controls.Add(fh);
             this.PanelContenedor.Tag = fh;
+            ptbLogo.Visible = false;
+            lbl1.Visible = false;
+            lbl2.Visible = false;
+            lbl3.Visible = false;
+            lbl4.Visible = false;
+            lbl5.Visible = false;
+            lbl6.Visible = false;
+            lbl7.Visible = false;
             fh.Show();
         }
 
@@ -142,6 +215,14 @@ namespace ProyectoBD
             fh.Dock = DockStyle.Fill;
             this.PanelContenedor.Controls.Add(fh);
             this.PanelContenedor.Tag = fh;
+            ptbLogo.Visible = false;
+            lbl1.Visible = false;
+            lbl2.Visible = false;
+            lbl3.Visible = false;
+            lbl4.Visible = false;
+            lbl5.Visible = false;
+            lbl6.Visible = false;
+            lbl7.Visible = false;
             fh.Show();
         }
 
@@ -157,6 +238,14 @@ namespace ProyectoBD
             fh.Dock = DockStyle.Fill;
             this.PanelContenedor.Controls.Add(fh);
             this.PanelContenedor.Tag = fh;
+            ptbLogo.Visible = false;
+            lbl1.Visible = false;
+            lbl2.Visible = false;
+            lbl3.Visible = false;
+            lbl4.Visible = false;
+            lbl5.Visible = false;
+            lbl6.Visible = false;
+            lbl7.Visible = false;
             fh.Show();
         }
 
@@ -169,6 +258,14 @@ namespace ProyectoBD
             fh.Dock = DockStyle.Fill;
             this.PanelContenedor.Controls.Add(fh);
             this.PanelContenedor.Tag = fh;
+            ptbLogo.Visible = false;
+            lbl1.Visible = false;
+            lbl2.Visible = false;
+            lbl3.Visible = false;
+            lbl4.Visible = false;
+            lbl5.Visible = false;
+            lbl6.Visible = false;
+            lbl7.Visible = false;
             fh.Show();
         }
 
@@ -181,6 +278,14 @@ namespace ProyectoBD
             fh.Dock = DockStyle.Fill;
             this.PanelContenedor.Controls.Add(fh);
             this.PanelContenedor.Tag = fh;
+            ptbLogo.Visible = false;
+            lbl1.Visible = false;
+            lbl2.Visible = false;
+            lbl3.Visible = false;
+            lbl4.Visible = false;
+            lbl5.Visible = false;
+            lbl6.Visible = false;
+            lbl7.Visible = false;
             fh.Show();
         }
 
@@ -194,6 +299,14 @@ namespace ProyectoBD
             fh.Dock = DockStyle.Fill;
             this.PanelContenedor.Controls.Add(fh);
             this.PanelContenedor.Tag = fh;
+            ptbLogo.Visible = false;
+            lbl1.Visible = false;
+            lbl2.Visible = false;
+            lbl3.Visible = false;
+            lbl4.Visible = false;
+            lbl5.Visible = false;
+            lbl6.Visible = false;
+            lbl7.Visible = false;
             fh.Show();
         }
 
@@ -207,6 +320,14 @@ namespace ProyectoBD
             fh.Dock = DockStyle.Fill;
             this.PanelContenedor.Controls.Add(fh);
             this.PanelContenedor.Tag = fh;
+            ptbLogo.Visible = false;
+            lbl1.Visible = false;
+            lbl2.Visible = false;
+            lbl3.Visible = false;
+            lbl4.Visible = false;
+            lbl5.Visible = false;
+            lbl6.Visible = false;
+            lbl7.Visible = false;
             fh.Show();
         }
 

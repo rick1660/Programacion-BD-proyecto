@@ -12,7 +12,7 @@ namespace ProyectoBD
 {
     class SQLConexion
     {
-            private SqlConnection Conexion = new SqlConnection("Server=DESKTOP-2JTUOUT;DataBase= ProyectoBD_2;Integrated Security=true");
+            private SqlConnection Conexion = new SqlConnection("Server=DESKTOP-NDLJN6T;DataBase= ProyectoBD_2;Integrated Security=true");
 
             public SqlConnection AbrirConexion()
             {
