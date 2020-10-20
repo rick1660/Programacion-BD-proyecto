@@ -348,13 +348,13 @@ namespace ProyectoBD
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AbrirAltaC(new AltaCliente ());
- 
+            
         }
 
         private void automovilToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AbrirAltaAuto(new AltaAutomovil());
-
+            
         }
 
         private void empleadoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -409,7 +409,7 @@ namespace ProyectoBD
         private void clienteToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             AbrirActualizarC(new ActualizarCliente());
-
+           
         }
 
         private void automovilToolStripMenuItem2_Click(object sender, EventArgs e)

@@ -180,14 +180,28 @@ insert into Diagnostico(IdDiagnostico,Falla,Causa,IdVehiculo) values(0015,'Calen
 insert into Diagnostico values(16,'Trueno de Bujias','Motor',5);
 insert into Diagnostico values(17,'Focos','Estrellados',4);
 
+create table Servicios (
+IdServicio int PRIMARY KEY NOT NULL,
+Costo float,
+Fecha datetime,
+Nombre varchar (20),
+Promocion smallint,
+veces_count bigint,
+InicioGarantia datetime,
+FinalGarantia datetime,
+IdDiagnostico int,
+IdDepartamento int,
+CONSTRAINT FK_Diagnostico_TBServicios FOREIGN KEY (IdDepartamento) REFERENCES Departamentos(IdDepartamento),
+CONSTRAINT FK_Departamentos_TBServicios FOREIGN KEY (IdDiagnostico) REFERENCES Diagnostico(IdDiagnostico)
+
 
 select * from Servicios;
 insert into Servicios values (1,5000,2020-10-04,'Alineacion',10,1,2020-10-04,2020-11-04, 0012, 3 )
 insert into Servicios values (2,3000,2020-10-03,'Focos',10,1,2020-10-03,2020-11-03, 0013, 2 )
 insert into Servicios values (3,1000,2020-09-27,'Arreglo Motor ',10,1,2020-09-27,2020-10-27, 0014, 1 )
 insert into Servicios values (4,1850,24-06-2017,'Cambio de Bujias',150,87,24-06-2017,24-12-2017, 0016, 4 )
-insert into Servicios values (5,258,27-04-2020,'Cambio de Focos',39,19,27-04-2020,28-07-2020, 17, 2,5)
-insert into Servicios values (6,150,27-04-2020,'Chequeo de llantas',10,5,27-04-2020,28-07-2020, 17, 6,5)
+insert into Servicios values (5,258,27-04-2020,'Cambio de Focos',39,19,27-04-2020,28-07-2020, 17,5)
+insert into Servicios values (6,150,27-04-2020,'Chequeo de llantas',10,5,27-04-2020,28-07-2020, 17,5)
 
 select * from Refaccion
 insert into Refaccion values (1,'Autolite Iridium Iridio Bujia',307, 2020-10-01,2020-10-04, 5)
@@ -561,12 +575,6 @@ select * from Servicios
 select Empleado.IdEmpleado,  COUNT(Servicios.IdServicio) as Garantias_Realizadas from Servicios INNER JOIN Empleado ON Empleado.IdEmpleado = Servicios.IdEmpleado
 Group by Empleado.IdEmpleado
 Order by Empleado.IdEmpleado DESC
-
-
-
-
-
-
 
 
 
