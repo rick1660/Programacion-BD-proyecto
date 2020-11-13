@@ -1,0 +1,65 @@
+﻿<Window x:Class="Proyecto_Final_concesionaria.MainWindow"
+       
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proyecto_Final_concesionaria"
+        mc:Ignorable="d"
+    Title="MainWindow" Height="700" MinHeight="700" Width="900" MinWidth="800" WindowStartupLocation="CenterScreen" WindowState="Normal">
+
+
+    <Grid >
+
+        <Grid.ColumnDefinitions  >
+
+            <ColumnDefinition Width="0.8*"  />
+            <ColumnDefinition  Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="Left" Background = "#3F819D" Grid.Column="0">
+
+            <Label Content="Consesionaria" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black" FontSize="36" FontWeight="ExtraBlack" Foreground="White" />
+
+
+        </Grid>
+
+        <Grid x:Name="Right" Background = "#3F819D" Grid.Column="1" >
+
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="0.3*"  />
+                <RowDefinition  Height="1*" />
+                <RowDefinition  Height="0.3*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Background="#EDEEEE" Grid.Row="1">
+
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center"  Width="400" Height="350" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.4*" />
+                        <RowDefinition Height="0.3*"/>
+                        <RowDefinition Height="0.3*"/>
+                        <RowDefinition Height="0.3*"/>
+                        <RowDefinition Height="0.3*"/>
+                        <RowDefinition Height="0.4*"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Content="Iniciar de sesion" HorizontalAlignment="Center"  VerticalAlignment="Bottom" FontSize="22" FontWeight="Bold" FontFamily="Arial Black"/>
+                    <Label Grid.Row="1" Content="Correo" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="20" FontWeight="Bold" FontFamily="Arial Black"/>
+                    <TextBox x:Name="txtCorreo" HorizontalAlignment="Center" Height="35" Grid.Row="2" VerticalAlignment="Top" Width="250"   TextAlignment="Center" FontSize="19" />
+                    <Label Grid.Row="3" Content="Contraseña" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="20" FontWeight="Bold" FontFamily="Arial Black"/>
+                    <TextBox x:Name="txtPassword" HorizontalAlignment="Center" Height="35" Grid.Row="4" VerticalAlignment="Top" Width="250"  TextAlignment="Center" FontSize="19" />
+                    <Label Grid.Row="5" Content="Haz Olvidado tu contraseña?" HorizontalAlignment="center"   VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black" />
+                    <Button x:Name="BtnIngresar" Grid.Row="5" Content="Ingresar" HorizontalAlignment="Center"  VerticalAlignment="Bottom"  Width="150" Height="30"  FontSize="15" FontFamily="Arial Black" Background="#21414C" Foreground="White" Click="Button_Click" />
+
+
+
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+
+
+    </Grid>
+</Window>

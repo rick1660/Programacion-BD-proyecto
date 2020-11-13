@@ -1,0 +1,24 @@
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\bin\Debug\Proyecto Final concesionaria.exe.config
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\bin\Debug\Proyecto Final concesionaria.exe
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\bin\Debug\Proyecto Final concesionaria.pdb
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\bin\Debug\MaterialDesignColors.dll
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\obj\Debug\Proyecto Final concesionaria.csprojAssemblyReference.cache
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\obj\Debug\App.g.cs
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\obj\Debug\Proyecto Final concesionaria_MarkupCompile.cache
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\obj\Debug\Proyecto Final concesionaria_MarkupCompile.lref
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\obj\Debug\Proyecto Final concesionaria.g.resources
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\obj\Debug\Proyecto_Final_concesionaria.Properties.Resources.resources
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\obj\Debug\Proyecto Final concesionaria.csproj.GenerateResource.cache
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\obj\Debug\Proyecto Final concesionaria.csproj.CoreCompileInputs.cache
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\obj\Debug\Proyecto Final concesionaria.csproj.CopyComplete
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\obj\Debug\Proyecto Final concesionaria.exe
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\obj\Debug\Proyecto Final concesionaria.pdb
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\obj\Debug\MainWindow.g.cs
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\obj\Debug\MainWindow.baml
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\obj\Debug\Principal.g.cs
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\obj\Debug\Principal.baml
+C:\Users\Rick\Documents\Trabajos\Programacion de base de datos\Proyecto Final concesionaria\Proyecto Final concesionaria\obj\Debug\App.baml
