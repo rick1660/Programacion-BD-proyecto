@@ -45,6 +45,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -52,6 +53,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button10);
             this.groupBox1.Controls.Add(this.button9);
             this.groupBox1.Controls.Add(this.button8);
             this.groupBox1.Controls.Add(this.button7);
@@ -63,7 +65,7 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Location = new System.Drawing.Point(12, 104);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(279, 542);
+            this.groupBox1.Size = new System.Drawing.Size(279, 580);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -171,7 +173,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(227, 49);
             this.button6.TabIndex = 5;
-            this.button6.Text = "&Reportes";
+            this.button6.Text = "&Bitacora";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // groupBox2
@@ -221,14 +223,24 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(227, 49);
             this.button9.TabIndex = 8;
-            this.button9.Text = "&Bitacora";
+            this.button9.Text = "&Traspasos";
             this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Location = new System.Drawing.Point(26, 516);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(227, 49);
+            this.button10.TabIndex = 10;
+            this.button10.Text = "&Reportes";
+            this.button10.UseVisualStyleBackColor = true;
             // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1070, 678);
+            this.ClientSize = new System.Drawing.Size(1070, 719);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
@@ -265,6 +277,7 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button10;
     }
 }
 
