@@ -1,0 +1,10 @@
+C:\Users\jc_rc\ArchivosGit\Programacion-BD-proyecto\VisualConcesionaria\Concesionaria\Concesionaria\bin\Debug\Concesionaria.exe.config
+C:\Users\jc_rc\ArchivosGit\Programacion-BD-proyecto\VisualConcesionaria\Concesionaria\Concesionaria\bin\Debug\Concesionaria.exe
+C:\Users\jc_rc\ArchivosGit\Programacion-BD-proyecto\VisualConcesionaria\Concesionaria\Concesionaria\bin\Debug\Concesionaria.pdb
+C:\Users\jc_rc\ArchivosGit\Programacion-BD-proyecto\VisualConcesionaria\Concesionaria\Concesionaria\obj\Debug\Concesionaria.csprojAssemblyReference.cache
+C:\Users\jc_rc\ArchivosGit\Programacion-BD-proyecto\VisualConcesionaria\Concesionaria\Concesionaria\obj\Debug\Concesionaria.Properties.Resources.resources
+C:\Users\jc_rc\ArchivosGit\Programacion-BD-proyecto\VisualConcesionaria\Concesionaria\Concesionaria\obj\Debug\Concesionaria.csproj.GenerateResource.cache
+C:\Users\jc_rc\ArchivosGit\Programacion-BD-proyecto\VisualConcesionaria\Concesionaria\Concesionaria\obj\Debug\Concesionaria.csproj.CoreCompileInputs.cache
+C:\Users\jc_rc\ArchivosGit\Programacion-BD-proyecto\VisualConcesionaria\Concesionaria\Concesionaria\obj\Debug\Concesionaria.exe
+C:\Users\jc_rc\ArchivosGit\Programacion-BD-proyecto\VisualConcesionaria\Concesionaria\Concesionaria\obj\Debug\Concesionaria.pdb
+C:\Users\jc_rc\ArchivosGit\Programacion-BD-proyecto\VisualConcesionaria\Concesionaria\Concesionaria\obj\Debug\Concesionaria.frmMenuPrincipal.resources
