@@ -31,7 +31,7 @@ namespace Proyecto_Final_concesionaria
                 Principal pcl = new Principal();
                 pcl.Show();
                 this.Close();
-           
+                    
 
         }
     }

@@ -60,48 +60,73 @@
                     </Button>
                 </Grid>
                 <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#3F819D">
+
+
+                   
                     <ListViewItem Height="60">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="ViewDashboard" Margin="10"  Width="30" Height="30" VerticalAlignment="Center"/>
-                            <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
-                        </StackPanel>
+                            <Button x:Name="BtnOne"   Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center" HorizontalAlignment="Center" Height="60" MinWidth="60" Click="BtnOne_Click">
+                                <StackPanel Orientation="Horizontal"  >
+                                    <materialDesign:PackIcon Kind="ViewDashboard"   Width="30" Height="30" VerticalAlignment="Center"    />
+                                    <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
+                                </StackPanel>
+                            </Button>
                     </ListViewItem>
+
+
                     <ListViewItem Height="60">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="ViewDashboard" Margin="10" Width="30" Height="30" VerticalAlignment="Center"/>
-                            <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
-                        </StackPanel>
+                        <Button x:Name="BtnTwo"   Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center" HorizontalAlignment="Center" Height="60" MinWidth="60" Click="BtnOne_Click">
+                            <StackPanel Orientation="Horizontal"  >
+                                <materialDesign:PackIcon Kind="ViewDashboard"   Width="30" Height="30" VerticalAlignment="Center"    />
+                                <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
+                            </StackPanel>
+                        </Button>
                     </ListViewItem>
+                    
                     <ListViewItem Height="60">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="ViewDashboard" Margin="10" Width="30" Height="30" VerticalAlignment="Center"/>
-                            <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
-                        </StackPanel>
+                        <Button x:Name="BtnThree"   Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center" HorizontalAlignment="Center" Height="60" MinWidth="60" Click="BtnOne_Click">
+                            <StackPanel Orientation="Horizontal"  >
+                                <materialDesign:PackIcon Kind="ViewDashboard"   Width="30" Height="30" VerticalAlignment="Center"    />
+                                <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
+                            </StackPanel>
+                        </Button>
                     </ListViewItem>
+
                     <ListViewItem Height="60">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="ViewDashboard" Margin="10" Width="30" Height="30" VerticalAlignment="Center"/>
-                            <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
-                        </StackPanel>
+                        <Button x:Name="BtnFourd"   Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center" HorizontalAlignment="Center" Height="60" MinWidth="60" Click="BtnOne_Click">
+                            <StackPanel Orientation="Horizontal"  >
+                                <materialDesign:PackIcon Kind="ViewDashboard"   Width="30" Height="30" VerticalAlignment="Center"    />
+                                <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
+                            </StackPanel>
+                        </Button>
                     </ListViewItem>
+
                     <ListViewItem Height="60">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="ViewDashboard" Margin="10" Width="30" Height="30" VerticalAlignment="Center"/>
-                            <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
-                        </StackPanel>
+                        <Button x:Name="BtnFive"   Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center" HorizontalAlignment="Center" Height="60" MinWidth="60" Click="BtnOne_Click">
+                            <StackPanel Orientation="Horizontal"  >
+                                <materialDesign:PackIcon Kind="ViewDashboard"   Width="30" Height="30" VerticalAlignment="Center"    />
+                                <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
+                            </StackPanel>
+                        </Button>
                     </ListViewItem>
+
                     <ListViewItem Height="60">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="ViewDashboard" Margin="10" Width="30" Height="30" VerticalAlignment="Center"/>
-                            <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
-                        </StackPanel>
+                        <Button x:Name="BtnSix"   Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center" HorizontalAlignment="Center" Height="60" MinWidth="60" Click="BtnOne_Click">
+                            <StackPanel Orientation="Horizontal"  >
+                                <materialDesign:PackIcon Kind="ViewDashboard"   Width="30" Height="30" VerticalAlignment="Center"    />
+                                <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
+                            </StackPanel>
+                        </Button>
                     </ListViewItem>
+
                     <ListViewItem Height="60">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="ViewDashboard" Margin="10" Width="30" Height="30" VerticalAlignment="Center"/>
-                            <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
-                        </StackPanel>
+                        <Button x:Name="Btn"   Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center" HorizontalAlignment="Center" Height="60" MinWidth="60" Click="BtnOne_Click">
+                            <StackPanel Orientation="Horizontal"  >
+                                <materialDesign:PackIcon Kind="ViewDashboard"   Width="30" Height="30" VerticalAlignment="Center"    />
+                                <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
+                            </StackPanel>
+                        </Button>
                     </ListViewItem>
+                    
                 </ListView>
             </StackPanel>
 
