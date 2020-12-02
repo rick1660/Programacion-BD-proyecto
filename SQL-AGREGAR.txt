@@ -1,0 +1,73 @@
+Automovil
+	IdAutomovil
+	Nombre
+	Marca
+	Modelo
+	Año
+	Color
+	Serie
+	FechaIngreso
+	PrecioCompra
+	PrecioVenta
+	PrecioTotal
+	PrecioPromo
+
+
+(Nueva tabla) Promocion
+	IdPromocion
+	Cantidad_Autos
+	Descuento
+	FechaVigencia
+
+Rol (Nueva Tabla)
+
+
+Triggers: (Son tablas)
+	Seleccion de Vehiculo
+	Se cancelo la compra (carrito)
+	Cambio de Caracteristicas
+	Auditoria general
+	Nuevo Auto registrado
+
+
+
+INTERFAZ:
+	Cliente
+		Ver
+
+	Empleado
+		Insertar
+		Actualizar
+
+
+
+Administrador (Sucursal)
+Insertar
+Actualizar
+Borrar
+
+
+	Login
+	MenuInicio
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------
+
+BD SQL
+Diseño
+Programadores 
+
+
+Documento (Todos)
