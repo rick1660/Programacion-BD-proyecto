@@ -40,5 +40,16 @@ namespace Proyecto_Final_concesionaria
             BtnOpen.Visibility = Visibility.Visible;
             BtnClose.Visibility = Visibility.Collapsed;
         }
+
+        private void StackPanel_MouseEnter(object sender, MouseEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnOne_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
+
 }
