@@ -274,6 +274,7 @@
             // 
             // BarraHorizontal
             // 
+            this.BarraHorizontal.BackColor = System.Drawing.Color.Gray;
             this.BarraHorizontal.Controls.Add(this.label4);
             this.BarraHorizontal.Controls.Add(this.label3);
             this.BarraHorizontal.Controls.Add(this.label2);
@@ -399,11 +400,13 @@
             // 
             // PanelContenedor
             // 
+            this.PanelContenedor.BackColor = System.Drawing.Color.White;
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContenedor.Location = new System.Drawing.Point(179, 50);
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(821, 600);
             this.PanelContenedor.TabIndex = 2;
+            
             // 
             // Form1
             // 
