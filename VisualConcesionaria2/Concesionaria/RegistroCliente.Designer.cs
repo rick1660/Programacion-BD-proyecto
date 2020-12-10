@@ -34,34 +34,34 @@
             this.ptxCerrar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSeparador2 = new Concesionaria.txtSeparador();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtSeparador1 = new Concesionaria.txtSeparador();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtSeparador3 = new Concesionaria.txtSeparador();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtSeparador4 = new Concesionaria.txtSeparador();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTel = new System.Windows.Forms.TextBox();
             this.txtSeparador5 = new Concesionaria.txtSeparador();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtSexo = new System.Windows.Forms.TextBox();
             this.txtSeparador6 = new Concesionaria.txtSeparador();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtEdad = new System.Windows.Forms.TextBox();
             this.txtSeparador7 = new Concesionaria.txtSeparador();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtFechaNa = new System.Windows.Forms.TextBox();
             this.txtSeparador8 = new Concesionaria.txtSeparador();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtRFC = new System.Windows.Forms.TextBox();
             this.txtSeparador9 = new Concesionaria.txtSeparador();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtReferencia1 = new System.Windows.Forms.TextBox();
             this.txtSeparador11 = new Concesionaria.txtSeparador();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtNumR1 = new System.Windows.Forms.TextBox();
             this.txtSeparador10 = new Concesionaria.txtSeparador();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtNumR2 = new System.Windows.Forms.TextBox();
             this.txtSeparador12 = new Concesionaria.txtSeparador();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtReferencia2 = new System.Windows.Forms.TextBox();
             this.txtSeparador13 = new Concesionaria.txtSeparador();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtNumR3 = new System.Windows.Forms.TextBox();
             this.txtSeparador14 = new Concesionaria.txtSeparador();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtReferencia3 = new System.Windows.Forms.TextBox();
+            this.btnIngresar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptxCerrar)).BeginInit();
@@ -69,13 +69,14 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Crimson;
+            this.panel1.BackColor = System.Drawing.Color.Teal;
             this.panel1.Controls.Add(this.ptxMinimizar);
             this.panel1.Controls.Add(this.ptxCerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(399, 42);
+            this.panel1.Size = new System.Drawing.Size(532, 52);
             this.panel1.TabIndex = 0;
             // 
             // ptxMinimizar
@@ -83,9 +84,10 @@
             this.ptxMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ptxMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptxMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("ptxMinimizar.Image")));
-            this.ptxMinimizar.Location = new System.Drawing.Point(341, 12);
+            this.ptxMinimizar.Location = new System.Drawing.Point(455, 14);
+            this.ptxMinimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ptxMinimizar.Name = "ptxMinimizar";
-            this.ptxMinimizar.Size = new System.Drawing.Size(20, 20);
+            this.ptxMinimizar.Size = new System.Drawing.Size(27, 25);
             this.ptxMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptxMinimizar.TabIndex = 10;
             this.ptxMinimizar.TabStop = false;
@@ -96,9 +98,10 @@
             this.ptxCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ptxCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptxCerrar.Image = ((System.Drawing.Image)(resources.GetObject("ptxCerrar.Image")));
-            this.ptxCerrar.Location = new System.Drawing.Point(367, 12);
+            this.ptxCerrar.Location = new System.Drawing.Point(489, 14);
+            this.ptxCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ptxCerrar.Name = "ptxCerrar";
-            this.ptxCerrar.Size = new System.Drawing.Size(20, 20);
+            this.ptxCerrar.Size = new System.Drawing.Size(27, 25);
             this.ptxCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptxCerrar.TabIndex = 9;
             this.ptxCerrar.TabStop = false;
@@ -107,8 +110,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Window;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(108, 66);
+            this.label1.ForeColor = System.Drawing.Color.Teal;
+            this.label1.Location = new System.Drawing.Point(176, 78);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(195, 25);
             this.label1.TabIndex = 1;
@@ -116,318 +122,407 @@
             // 
             // txtSeparador2
             // 
-            this.txtSeparador2.ForeColor = System.Drawing.Color.Red;
-            this.txtSeparador2.Location = new System.Drawing.Point(95, 162);
+            this.txtSeparador2.ForeColor = System.Drawing.Color.Teal;
+            this.txtSeparador2.Location = new System.Drawing.Point(126, 199);
+            this.txtSeparador2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSeparador2.Name = "txtSeparador2";
-            this.txtSeparador2.Size = new System.Drawing.Size(220, 2);
+            this.txtSeparador2.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador2.TabIndex = 17;
             this.txtSeparador2.Text = "txtSeparador2";
             // 
-            // txtContraseña
+            // txtApellidos
             // 
-            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtContraseña.Location = new System.Drawing.Point(95, 151);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(220, 13);
-            this.txtContraseña.TabIndex = 16;
-            this.txtContraseña.Text = "APELLIDOS";
+            this.txtApellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtApellidos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidos.ForeColor = System.Drawing.Color.Gray;
+            this.txtApellidos.Location = new System.Drawing.Point(126, 186);
+            this.txtApellidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Size = new System.Drawing.Size(293, 16);
+            this.txtApellidos.TabIndex = 16;
+            this.txtApellidos.Text = "APELLIDOS";
+            this.txtApellidos.Enter += new System.EventHandler(this.txtApellidos_Enter);
+            this.txtApellidos.Leave += new System.EventHandler(this.txtApellidos_Leave);
             // 
             // txtSeparador1
             // 
-            this.txtSeparador1.ForeColor = System.Drawing.Color.Red;
-            this.txtSeparador1.Location = new System.Drawing.Point(95, 130);
+            this.txtSeparador1.ForeColor = System.Drawing.Color.Teal;
+            this.txtSeparador1.Location = new System.Drawing.Point(126, 160);
+            this.txtSeparador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSeparador1.Name = "txtSeparador1";
-            this.txtSeparador1.Size = new System.Drawing.Size(220, 2);
+            this.txtSeparador1.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador1.TabIndex = 15;
             this.txtSeparador1.Text = "txtSeparador1";
             // 
-            // txtUsuario
+            // txtNombre
             // 
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsuario.Location = new System.Drawing.Point(95, 119);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(220, 13);
-            this.txtUsuario.TabIndex = 14;
-            this.txtUsuario.Text = "NOMBRES";
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.ForeColor = System.Drawing.Color.Gray;
+            this.txtNombre.Location = new System.Drawing.Point(126, 146);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(293, 16);
+            this.txtNombre.TabIndex = 14;
+            this.txtNombre.Text = "NOMBRES";
+            this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
+            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
             // txtSeparador3
             // 
-            this.txtSeparador3.ForeColor = System.Drawing.Color.Red;
-            this.txtSeparador3.Location = new System.Drawing.Point(95, 228);
+            this.txtSeparador3.ForeColor = System.Drawing.Color.Teal;
+            this.txtSeparador3.Location = new System.Drawing.Point(126, 281);
+            this.txtSeparador3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSeparador3.Name = "txtSeparador3";
-            this.txtSeparador3.Size = new System.Drawing.Size(220, 2);
+            this.txtSeparador3.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador3.TabIndex = 21;
             this.txtSeparador3.Text = "txtSeparador3";
             // 
-            // textBox1
+            // txtCorreo
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox1.Location = new System.Drawing.Point(95, 217);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 13);
-            this.textBox1.TabIndex = 20;
-            this.textBox1.Text = "CORREO";
+            this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.ForeColor = System.Drawing.Color.Gray;
+            this.txtCorreo.Location = new System.Drawing.Point(126, 267);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(293, 16);
+            this.txtCorreo.TabIndex = 20;
+            this.txtCorreo.Text = "CORREO";
+            this.txtCorreo.Enter += new System.EventHandler(this.textCorreo_Enter);
+            this.txtCorreo.Leave += new System.EventHandler(this.textCorreo_Leave);
             // 
             // txtSeparador4
             // 
-            this.txtSeparador4.ForeColor = System.Drawing.Color.Red;
-            this.txtSeparador4.Location = new System.Drawing.Point(95, 195);
+            this.txtSeparador4.ForeColor = System.Drawing.Color.Teal;
+            this.txtSeparador4.Location = new System.Drawing.Point(126, 240);
+            this.txtSeparador4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSeparador4.Name = "txtSeparador4";
-            this.txtSeparador4.Size = new System.Drawing.Size(220, 2);
+            this.txtSeparador4.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador4.TabIndex = 19;
             this.txtSeparador4.Text = "txtSeparador4";
             // 
-            // textBox2
+            // txtTel
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox2.Location = new System.Drawing.Point(95, 184);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(220, 13);
-            this.textBox2.TabIndex = 18;
-            this.textBox2.Text = "TELEFONO";
+            this.txtTel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTel.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTel.ForeColor = System.Drawing.Color.Gray;
+            this.txtTel.Location = new System.Drawing.Point(126, 226);
+            this.txtTel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTel.Name = "txtTel";
+            this.txtTel.Size = new System.Drawing.Size(293, 16);
+            this.txtTel.TabIndex = 18;
+            this.txtTel.Text = "TELEFONO";
+            this.txtTel.Enter += new System.EventHandler(this.textTel_Enter);
+            this.txtTel.Leave += new System.EventHandler(this.textTel_Leave);
             // 
             // txtSeparador5
             // 
-            this.txtSeparador5.ForeColor = System.Drawing.Color.Red;
-            this.txtSeparador5.Location = new System.Drawing.Point(95, 297);
+            this.txtSeparador5.ForeColor = System.Drawing.Color.Teal;
+            this.txtSeparador5.Location = new System.Drawing.Point(126, 366);
+            this.txtSeparador5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSeparador5.Name = "txtSeparador5";
-            this.txtSeparador5.Size = new System.Drawing.Size(220, 2);
+            this.txtSeparador5.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador5.TabIndex = 25;
             this.txtSeparador5.Text = "txtSeparador5";
             // 
-            // textBox3
+            // txtSexo
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox3.Location = new System.Drawing.Point(95, 286);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(220, 13);
-            this.textBox3.TabIndex = 24;
-            this.textBox3.Text = "SEXO";
+            this.txtSexo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSexo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSexo.ForeColor = System.Drawing.Color.Gray;
+            this.txtSexo.Location = new System.Drawing.Point(126, 352);
+            this.txtSexo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSexo.Name = "txtSexo";
+            this.txtSexo.Size = new System.Drawing.Size(293, 16);
+            this.txtSexo.TabIndex = 24;
+            this.txtSexo.Text = "GENERO";
+            this.txtSexo.Enter += new System.EventHandler(this.textSexo_Enter);
+            this.txtSexo.Leave += new System.EventHandler(this.textSexo_Leave);
             // 
             // txtSeparador6
             // 
-            this.txtSeparador6.ForeColor = System.Drawing.Color.Red;
-            this.txtSeparador6.Location = new System.Drawing.Point(95, 266);
+            this.txtSeparador6.ForeColor = System.Drawing.Color.Teal;
+            this.txtSeparador6.Location = new System.Drawing.Point(126, 327);
+            this.txtSeparador6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSeparador6.Name = "txtSeparador6";
-            this.txtSeparador6.Size = new System.Drawing.Size(220, 2);
+            this.txtSeparador6.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador6.TabIndex = 23;
             this.txtSeparador6.Text = "txtSeparador6";
             // 
-            // textBox4
+            // txtEdad
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox4.Location = new System.Drawing.Point(95, 255);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(220, 13);
-            this.textBox4.TabIndex = 22;
-            this.textBox4.Text = "EDAD";
+            this.txtEdad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEdad.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEdad.ForeColor = System.Drawing.Color.Gray;
+            this.txtEdad.Location = new System.Drawing.Point(126, 314);
+            this.txtEdad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Size = new System.Drawing.Size(293, 16);
+            this.txtEdad.TabIndex = 22;
+            this.txtEdad.Text = "EDAD";
+            this.txtEdad.Enter += new System.EventHandler(this.textEdad_Enter);
+            this.txtEdad.Leave += new System.EventHandler(this.textEdad_Leave);
             // 
             // txtSeparador7
             // 
-            this.txtSeparador7.ForeColor = System.Drawing.Color.Red;
-            this.txtSeparador7.Location = new System.Drawing.Point(95, 328);
+            this.txtSeparador7.ForeColor = System.Drawing.Color.Teal;
+            this.txtSeparador7.Location = new System.Drawing.Point(126, 404);
+            this.txtSeparador7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSeparador7.Name = "txtSeparador7";
-            this.txtSeparador7.Size = new System.Drawing.Size(220, 2);
+            this.txtSeparador7.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador7.TabIndex = 27;
             this.txtSeparador7.Text = "txtSeparador7";
             // 
-            // textBox5
+            // txtFechaNa
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox5.Location = new System.Drawing.Point(95, 317);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(220, 13);
-            this.textBox5.TabIndex = 26;
-            this.textBox5.Text = "FECHA DE NACIMIENTO";
+            this.txtFechaNa.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFechaNa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFechaNa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFechaNa.ForeColor = System.Drawing.Color.Gray;
+            this.txtFechaNa.Location = new System.Drawing.Point(126, 390);
+            this.txtFechaNa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFechaNa.Name = "txtFechaNa";
+            this.txtFechaNa.Size = new System.Drawing.Size(293, 16);
+            this.txtFechaNa.TabIndex = 26;
+            this.txtFechaNa.Text = "FECHA DE NACIMIENTO  (AAA-MM-DD)";
+            this.txtFechaNa.Enter += new System.EventHandler(this.txtFechaNa_Enter);
+            this.txtFechaNa.Leave += new System.EventHandler(this.txtFechaNa_Leave);
             // 
             // txtSeparador8
             // 
-            this.txtSeparador8.ForeColor = System.Drawing.Color.Red;
-            this.txtSeparador8.Location = new System.Drawing.Point(95, 357);
+            this.txtSeparador8.ForeColor = System.Drawing.Color.Teal;
+            this.txtSeparador8.Location = new System.Drawing.Point(126, 439);
+            this.txtSeparador8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSeparador8.Name = "txtSeparador8";
-            this.txtSeparador8.Size = new System.Drawing.Size(220, 2);
+            this.txtSeparador8.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador8.TabIndex = 29;
             this.txtSeparador8.Text = "txtSeparador8";
             // 
-            // textBox6
+            // txtRFC
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox6.Location = new System.Drawing.Point(95, 346);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(220, 13);
-            this.textBox6.TabIndex = 28;
-            this.textBox6.Text = "RFC";
+            this.txtRFC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRFC.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRFC.ForeColor = System.Drawing.Color.Gray;
+            this.txtRFC.Location = new System.Drawing.Point(126, 426);
+            this.txtRFC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRFC.Name = "txtRFC";
+            this.txtRFC.Size = new System.Drawing.Size(293, 16);
+            this.txtRFC.TabIndex = 28;
+            this.txtRFC.Text = "RFC";
+            this.txtRFC.Enter += new System.EventHandler(this.textRFC_Enter);
+            this.txtRFC.Leave += new System.EventHandler(this.textRFC_Leave);
             // 
             // txtSeparador9
             // 
-            this.txtSeparador9.ForeColor = System.Drawing.Color.Red;
-            this.txtSeparador9.Location = new System.Drawing.Point(95, 389);
+            this.txtSeparador9.ForeColor = System.Drawing.Color.Teal;
+            this.txtSeparador9.Location = new System.Drawing.Point(126, 478);
+            this.txtSeparador9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSeparador9.Name = "txtSeparador9";
-            this.txtSeparador9.Size = new System.Drawing.Size(220, 2);
+            this.txtSeparador9.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador9.TabIndex = 31;
             this.txtSeparador9.Text = "txtSeparador9";
             // 
-            // textBox7
+            // txtReferencia1
             // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox7.Location = new System.Drawing.Point(95, 378);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(220, 13);
-            this.textBox7.TabIndex = 30;
-            this.textBox7.Text = "REFERENCIA 1";
+            this.txtReferencia1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtReferencia1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtReferencia1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReferencia1.ForeColor = System.Drawing.Color.Gray;
+            this.txtReferencia1.Location = new System.Drawing.Point(126, 464);
+            this.txtReferencia1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtReferencia1.Name = "txtReferencia1";
+            this.txtReferencia1.Size = new System.Drawing.Size(293, 16);
+            this.txtReferencia1.TabIndex = 30;
+            this.txtReferencia1.Text = "REFERENCIA 1";
+            this.txtReferencia1.Enter += new System.EventHandler(this.textReferencia1_Enter);
+            this.txtReferencia1.Leave += new System.EventHandler(this.textReferencia1_Leave);
             // 
             // txtSeparador11
             // 
-            this.txtSeparador11.ForeColor = System.Drawing.Color.Red;
-            this.txtSeparador11.Location = new System.Drawing.Point(95, 418);
+            this.txtSeparador11.ForeColor = System.Drawing.Color.Teal;
+            this.txtSeparador11.Location = new System.Drawing.Point(126, 514);
+            this.txtSeparador11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSeparador11.Name = "txtSeparador11";
-            this.txtSeparador11.Size = new System.Drawing.Size(220, 2);
+            this.txtSeparador11.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador11.TabIndex = 35;
             this.txtSeparador11.Text = "txtSeparador11";
             // 
-            // textBox9
+            // txtNumR1
             // 
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox9.Location = new System.Drawing.Point(95, 407);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(220, 13);
-            this.textBox9.TabIndex = 34;
-            this.textBox9.Text = "NUMERO DE REFERENCIA 1";
+            this.txtNumR1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNumR1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNumR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumR1.ForeColor = System.Drawing.Color.Gray;
+            this.txtNumR1.Location = new System.Drawing.Point(126, 501);
+            this.txtNumR1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumR1.Name = "txtNumR1";
+            this.txtNumR1.Size = new System.Drawing.Size(293, 16);
+            this.txtNumR1.TabIndex = 34;
+            this.txtNumR1.Text = "NUMERO DE REFERENCIA 1";
+            this.txtNumR1.Enter += new System.EventHandler(this.textNumR1_Enter);
+            this.txtNumR1.Leave += new System.EventHandler(this.textNumR1_Leave);
             // 
             // txtSeparador10
             // 
-            this.txtSeparador10.ForeColor = System.Drawing.Color.Red;
-            this.txtSeparador10.Location = new System.Drawing.Point(95, 473);
+            this.txtSeparador10.ForeColor = System.Drawing.Color.Teal;
+            this.txtSeparador10.Location = new System.Drawing.Point(126, 582);
+            this.txtSeparador10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSeparador10.Name = "txtSeparador10";
-            this.txtSeparador10.Size = new System.Drawing.Size(220, 2);
+            this.txtSeparador10.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador10.TabIndex = 39;
             this.txtSeparador10.Text = "txtSeparador10";
             // 
-            // textBox8
+            // txtNumR2
             // 
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox8.Location = new System.Drawing.Point(95, 462);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(220, 13);
-            this.textBox8.TabIndex = 38;
-            this.textBox8.Text = "NUMERO DE REFERENCIA 2";
+            this.txtNumR2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNumR2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNumR2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumR2.ForeColor = System.Drawing.Color.Gray;
+            this.txtNumR2.Location = new System.Drawing.Point(126, 569);
+            this.txtNumR2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumR2.Name = "txtNumR2";
+            this.txtNumR2.Size = new System.Drawing.Size(293, 16);
+            this.txtNumR2.TabIndex = 38;
+            this.txtNumR2.Text = "NUMERO DE REFERENCIA 2";
+            this.txtNumR2.Enter += new System.EventHandler(this.textNumR2_Enter);
+            this.txtNumR2.Leave += new System.EventHandler(this.textNumR2_Leave);
             // 
             // txtSeparador12
             // 
-            this.txtSeparador12.ForeColor = System.Drawing.Color.Red;
-            this.txtSeparador12.Location = new System.Drawing.Point(95, 444);
+            this.txtSeparador12.ForeColor = System.Drawing.Color.Teal;
+            this.txtSeparador12.Location = new System.Drawing.Point(126, 546);
+            this.txtSeparador12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSeparador12.Name = "txtSeparador12";
-            this.txtSeparador12.Size = new System.Drawing.Size(220, 2);
+            this.txtSeparador12.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador12.TabIndex = 37;
             this.txtSeparador12.Text = "txtSeparador12";
             // 
-            // textBox10
+            // txtReferencia2
             // 
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox10.Location = new System.Drawing.Point(95, 433);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(220, 13);
-            this.textBox10.TabIndex = 36;
-            this.textBox10.Text = "REFERENCIA 2";
+            this.txtReferencia2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtReferencia2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtReferencia2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReferencia2.ForeColor = System.Drawing.Color.Gray;
+            this.txtReferencia2.Location = new System.Drawing.Point(126, 533);
+            this.txtReferencia2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtReferencia2.Name = "txtReferencia2";
+            this.txtReferencia2.Size = new System.Drawing.Size(293, 16);
+            this.txtReferencia2.TabIndex = 36;
+            this.txtReferencia2.Text = "REFERENCIA 2";
+            this.txtReferencia2.Enter += new System.EventHandler(this.textReferencia2_Enter);
+            this.txtReferencia2.Leave += new System.EventHandler(this.textReferencia2_Leave);
             // 
             // txtSeparador13
             // 
-            this.txtSeparador13.ForeColor = System.Drawing.Color.Red;
-            this.txtSeparador13.Location = new System.Drawing.Point(95, 526);
+            this.txtSeparador13.ForeColor = System.Drawing.Color.Teal;
+            this.txtSeparador13.Location = new System.Drawing.Point(126, 647);
+            this.txtSeparador13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSeparador13.Name = "txtSeparador13";
-            this.txtSeparador13.Size = new System.Drawing.Size(220, 2);
+            this.txtSeparador13.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador13.TabIndex = 43;
             this.txtSeparador13.Text = "txtSeparador13";
             // 
-            // textBox11
+            // txtNumR3
             // 
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox11.Location = new System.Drawing.Point(95, 515);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(220, 13);
-            this.textBox11.TabIndex = 42;
-            this.textBox11.Text = "NUMERO DE REFERENCIA 3";
+            this.txtNumR3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNumR3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNumR3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumR3.ForeColor = System.Drawing.Color.Gray;
+            this.txtNumR3.Location = new System.Drawing.Point(126, 634);
+            this.txtNumR3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumR3.Name = "txtNumR3";
+            this.txtNumR3.Size = new System.Drawing.Size(293, 16);
+            this.txtNumR3.TabIndex = 42;
+            this.txtNumR3.Text = "NUMERO DE REFERENCIA 3";
+            this.txtNumR3.Enter += new System.EventHandler(this.textNumR3_Enter);
+            this.txtNumR3.Leave += new System.EventHandler(this.textNumR3_Leave);
             // 
             // txtSeparador14
             // 
-            this.txtSeparador14.ForeColor = System.Drawing.Color.Red;
-            this.txtSeparador14.Location = new System.Drawing.Point(95, 497);
+            this.txtSeparador14.ForeColor = System.Drawing.Color.Teal;
+            this.txtSeparador14.Location = new System.Drawing.Point(126, 612);
+            this.txtSeparador14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSeparador14.Name = "txtSeparador14";
-            this.txtSeparador14.Size = new System.Drawing.Size(220, 2);
+            this.txtSeparador14.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador14.TabIndex = 41;
             this.txtSeparador14.Text = "txtSeparador14";
             // 
-            // textBox12
+            // txtReferencia3
             // 
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox12.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox12.Location = new System.Drawing.Point(95, 486);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(220, 13);
-            this.textBox12.TabIndex = 40;
-            this.textBox12.Text = "REFERENCIA 3";
+            this.txtReferencia3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtReferencia3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtReferencia3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReferencia3.ForeColor = System.Drawing.Color.Gray;
+            this.txtReferencia3.Location = new System.Drawing.Point(126, 598);
+            this.txtReferencia3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtReferencia3.Name = "txtReferencia3";
+            this.txtReferencia3.Size = new System.Drawing.Size(293, 16);
+            this.txtReferencia3.TabIndex = 40;
+            this.txtReferencia3.Text = "REFERENCIA 3";
+            this.txtReferencia3.Enter += new System.EventHandler(this.txtReferencia3_Enter);
+            this.txtReferencia3.Leave += new System.EventHandler(this.txtReferencia3_Leave);
             // 
-            // button1
+            // btnIngresar
             // 
-            this.button1.BackColor = System.Drawing.Color.Crimson;
-            this.button1.Location = new System.Drawing.Point(141, 544);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 34);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "REGISTRAR";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnIngresar.BackColor = System.Drawing.Color.Teal;
+            this.btnIngresar.ForeColor = System.Drawing.Color.White;
+            this.btnIngresar.Location = new System.Drawing.Point(126, 672);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(293, 42);
+            this.btnIngresar.TabIndex = 44;
+            this.btnIngresar.Text = "REGISTRAR";
+            this.btnIngresar.UseVisualStyleBackColor = false;
             // 
             // RegistroCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(399, 631);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(532, 777);
+            this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtSeparador13);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.txtNumR3);
             this.Controls.Add(this.txtSeparador14);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.txtReferencia3);
             this.Controls.Add(this.txtSeparador10);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txtNumR2);
             this.Controls.Add(this.txtSeparador12);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.txtReferencia2);
             this.Controls.Add(this.txtSeparador11);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.txtNumR1);
             this.Controls.Add(this.txtSeparador9);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtReferencia1);
             this.Controls.Add(this.txtSeparador8);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtRFC);
             this.Controls.Add(this.txtSeparador7);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtFechaNa);
             this.Controls.Add(this.txtSeparador5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtSexo);
             this.Controls.Add(this.txtSeparador6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtEdad);
             this.Controls.Add(this.txtSeparador3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.txtSeparador4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtTel);
             this.Controls.Add(this.txtSeparador2);
-            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.txtApellidos);
             this.Controls.Add(this.txtSeparador1);
-            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Gray;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "RegistroCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistroCliente";
@@ -446,33 +541,33 @@
         private System.Windows.Forms.PictureBox ptxCerrar;
         private System.Windows.Forms.Label label1;
         private txtSeparador txtSeparador2;
-        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.TextBox txtApellidos;
         private txtSeparador txtSeparador1;
-        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtNombre;
         private txtSeparador txtSeparador3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCorreo;
         private txtSeparador txtSeparador4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTel;
         private txtSeparador txtSeparador5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtSexo;
         private txtSeparador txtSeparador6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtEdad;
         private txtSeparador txtSeparador7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtFechaNa;
         private txtSeparador txtSeparador8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtRFC;
         private txtSeparador txtSeparador9;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtReferencia1;
         private txtSeparador txtSeparador11;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtNumR1;
         private txtSeparador txtSeparador10;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtNumR2;
         private txtSeparador txtSeparador12;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtReferencia2;
         private txtSeparador txtSeparador13;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtNumR3;
         private txtSeparador txtSeparador14;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtReferencia3;
+        private System.Windows.Forms.Button btnIngresar;
     }
 }
