@@ -31,6 +31,8 @@ Triggers: (Son tablas)
 
 
 
+
+
 INTERFAZ:
 	Cliente
 		Ver
