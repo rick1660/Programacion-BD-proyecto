@@ -90,6 +90,9 @@
     <Compile Include="Compra.Designer.cs">
       <DependentUpon>Compra.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConexionBD.cs" />
+    <Compile Include="Consultas1.cs" />
+    <Compile Include="Consultas2.cs" />
     <Compile Include="Empelados.cs">
       <SubType>Form</SubType>
     </Compile>

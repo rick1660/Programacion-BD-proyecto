@@ -7,15 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Runtime.InteropServices;
 namespace Concesionaria
 {
     public partial class RegistroCliente : Form
     {
+
+        Consultas2 objetoCliente = new Consultas2();
         public RegistroCliente()
         {
             InitializeComponent();
         }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
 
         private void ptxCerrar_Click(object sender, EventArgs e)
         {
@@ -214,7 +223,7 @@ namespace Concesionaria
             if (txtReferencia2.Text == "REFERENCIA 2")
             {
                 txtReferencia2.Text = "";
-                txtReferencia2.ForeColor = Color.Gray;
+                txtReferencia2.ForeColor = Color.Black;
             }
         }
 
@@ -268,7 +277,7 @@ namespace Concesionaria
             if (txtReferencia3.Text == "REFERENCIA 3")
             {
                 txtReferencia3.Text = "";
-                txtReferencia3.ForeColor = Color.Gray;
+                txtReferencia3.ForeColor = Color.Black;
             }
         }
 
@@ -279,6 +288,33 @@ namespace Concesionaria
                 txtReferencia3.Text = "REFERENCIA 3";
                 txtReferencia3.ForeColor = Color.Gray;
             }
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                                              //  Nombre, Apellidos, Telefono, Correo, Edad, Sexo, FechaNacimiento, RFC, Referencia1, NumR1, Referencia2, NumR2, Referencia3, NumR3
+                objetoCliente.InsertarCliente(txtNombre.Text, txtApellidos.Text,txtPassword.Text, txtTel.Text, txtCorreo.Text, txtEdad.Text, txtSexo.Text, txtFechaNa.Text, txtRFC.Text, txtReferencia1.Text, txtNumR1.Text, txtReferencia2.Text, txtNumR2.Text, txtReferencia3.Text, txtNumR3.Text);
+                MessageBox.Show("Datos Insertados Correctamente");
+              
+           
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se Insertaron Datos" + ex);
+            }
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void RegistroCliente_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -289,6 +289,7 @@
             this.BarraHorizontal.Name = "BarraHorizontal";
             this.BarraHorizontal.Size = new System.Drawing.Size(821, 50);
             this.BarraHorizontal.TabIndex = 1;
+            this.BarraHorizontal.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraHorizontal_Paint);
             this.BarraHorizontal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraHorizontal_MouseDown);
             // 
             // label4

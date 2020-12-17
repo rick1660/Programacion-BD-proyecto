@@ -59,15 +59,16 @@
             this.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelSuperior.Location = new System.Drawing.Point(0, 0);
             this.PanelSuperior.Name = "PanelSuperior";
-            this.PanelSuperior.Size = new System.Drawing.Size(365, 37);
+            this.PanelSuperior.Size = new System.Drawing.Size(485, 37);
             this.PanelSuperior.TabIndex = 0;
+            this.PanelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelSuperior_MouseDown);
             // 
             // ptxMinimizar
             // 
             this.ptxMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ptxMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptxMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("ptxMinimizar.Image")));
-            this.ptxMinimizar.Location = new System.Drawing.Point(316, 8);
+            this.ptxMinimizar.Location = new System.Drawing.Point(436, 8);
             this.ptxMinimizar.Name = "ptxMinimizar";
             this.ptxMinimizar.Size = new System.Drawing.Size(20, 20);
             this.ptxMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -80,7 +81,7 @@
             this.ptxCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ptxCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptxCerrar.Image = ((System.Drawing.Image)(resources.GetObject("ptxCerrar.Image")));
-            this.ptxCerrar.Location = new System.Drawing.Point(342, 8);
+            this.ptxCerrar.Location = new System.Drawing.Point(462, 8);
             this.ptxCerrar.Name = "ptxCerrar";
             this.ptxCerrar.Size = new System.Drawing.Size(20, 20);
             this.ptxCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -93,7 +94,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(79, 40);
+            this.label1.Location = new System.Drawing.Point(142, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 25);
             this.label1.TabIndex = 2;
@@ -105,7 +106,7 @@
             this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.Gray;
-            this.txtUsuario.Location = new System.Drawing.Point(73, 118);
+            this.txtUsuario.Location = new System.Drawing.Point(136, 112);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(220, 19);
             this.txtUsuario.TabIndex = 3;
@@ -128,14 +129,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 185);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(365, 393);
+            this.panel2.Size = new System.Drawing.Size(485, 393);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // txtSeparador2
             // 
             this.txtSeparador2.ForeColor = System.Drawing.Color.Teal;
-            this.txtSeparador2.Location = new System.Drawing.Point(73, 213);
+            this.txtSeparador2.Location = new System.Drawing.Point(136, 207);
             this.txtSeparador2.Name = "txtSeparador2";
             this.txtSeparador2.Size = new System.Drawing.Size(220, 2);
             this.txtSeparador2.TabIndex = 13;
@@ -145,7 +146,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(187, 281);
+            this.label2.Location = new System.Drawing.Point(250, 275);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 12;
@@ -156,7 +157,7 @@
             this.txtContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.Color.Gray;
-            this.txtContraseña.Location = new System.Drawing.Point(73, 196);
+            this.txtContraseña.Location = new System.Drawing.Point(136, 190);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(220, 19);
             this.txtContraseña.TabIndex = 11;
@@ -167,7 +168,7 @@
             // txtSeparador1
             // 
             this.txtSeparador1.ForeColor = System.Drawing.Color.Teal;
-            this.txtSeparador1.Location = new System.Drawing.Point(73, 135);
+            this.txtSeparador1.Location = new System.Drawing.Point(136, 129);
             this.txtSeparador1.Name = "txtSeparador1";
             this.txtSeparador1.Size = new System.Drawing.Size(220, 2);
             this.txtSeparador1.TabIndex = 10;
@@ -179,9 +180,11 @@
             this.btnIniciar.BackColor = System.Drawing.Color.Teal;
             this.btnIniciar.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
             this.btnIniciar.FlatAppearance.BorderSize = 0;
-            this.btnIniciar.Location = new System.Drawing.Point(107, 241);
+            this.btnIniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIniciar.ForeColor = System.Drawing.Color.White;
+            this.btnIniciar.Location = new System.Drawing.Point(136, 235);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(122, 37);
+            this.btnIniciar.Size = new System.Drawing.Size(220, 37);
             this.btnIniciar.TabIndex = 9;
             this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.UseVisualStyleBackColor = false;
@@ -191,7 +194,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(171)))), ((int)(((byte)(190)))));
-            this.linkLabel1.Location = new System.Drawing.Point(141, 291);
+            this.linkLabel1.Location = new System.Drawing.Point(218, 282);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(58, 13);
             this.linkLabel1.TabIndex = 8;
@@ -206,13 +209,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 37);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(365, 142);
+            this.panel1.Size = new System.Drawing.Size(485, 142);
             this.panel1.TabIndex = 3;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(36, 16);
+            this.pictureBox2.Location = new System.Drawing.Point(97, 15);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(290, 112);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -224,7 +227,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(365, 578);
+            this.ClientSize = new System.Drawing.Size(485, 578);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.PanelSuperior);

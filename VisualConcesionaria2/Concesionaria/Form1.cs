@@ -138,6 +138,9 @@ namespace Concesionaria
             AbrirFormEnPanel(new Reportes());
         }
 
-        
+        private void BarraHorizontal_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
