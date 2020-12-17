@@ -38,7 +38,7 @@ namespace Concesionaria
 
         private void txtNombre_Enter(object sender, EventArgs e)
         {
-            if (txtNombre.Text == "NOMBRES")
+            if (txtNombre.Text == "Nombre")
             {
                 txtNombre.Text = "";
                 txtNombre.ForeColor = Color.Black;
@@ -50,7 +50,7 @@ namespace Concesionaria
         {
             if (txtNombre.Text == "")
             {
-                txtNombre.Text = "NOMBRES";
+                txtNombre.Text = "Nombre";
                 txtNombre.ForeColor = Color.Gray;
             }
         }
@@ -58,7 +58,7 @@ namespace Concesionaria
         private void txtApellidos_Enter(object sender, EventArgs e)
         {
 
-            if (txtApellidos.Text == "APELLIDOS")
+            if (txtApellidos.Text == "Apellidos")
             {
                 txtApellidos.Text = "";
                 txtApellidos.ForeColor = Color.Black;
@@ -69,14 +69,14 @@ namespace Concesionaria
         {
             if (txtApellidos.Text == "")
             {
-                txtApellidos.Text = "APELLIDOS";
+                txtApellidos.Text = "Apellidos";
                 txtApellidos.ForeColor = Color.Gray;
             }
         }
 
         private void textTel_Enter(object sender, EventArgs e)
         {
-            if (txtTel.Text == "TELEFONO")
+            if (txtTel.Text == "Telefono")
             {
                 txtTel.Text = "";
                 txtTel.ForeColor = Color.Black;
@@ -87,14 +87,14 @@ namespace Concesionaria
         {
             if (txtTel.Text == "")
             {
-                txtTel.Text = "TELEFONO";
+                txtTel.Text = "Telefono";
                 txtTel.ForeColor = Color.Gray;
             }
         }
 
         private void textCorreo_Enter(object sender, EventArgs e)
         {
-            if (txtCorreo.Text == "CORREO")
+            if (txtCorreo.Text == "Correo")
             {
                 txtCorreo.Text = "";
                 txtCorreo.ForeColor = Color.Black;
@@ -105,14 +105,14 @@ namespace Concesionaria
         {
             if (txtCorreo.Text == "")
             {
-                txtCorreo.Text = "CORREO";
+                txtCorreo.Text = "Correo";
                 txtCorreo.ForeColor = Color.Gray;
             }
         }
 
         private void textEdad_Enter(object sender, EventArgs e)
         {
-            if (txtEdad.Text == "EDAD")
+            if (txtEdad.Text == "Edad")
             {
                 txtEdad.Text = "";
                 txtEdad.ForeColor = Color.Black;
@@ -123,32 +123,18 @@ namespace Concesionaria
         {
             if (txtEdad.Text == "")
             {
-                txtEdad.Text = "EDAD";
+                txtEdad.Text = "Edad";
                 txtEdad.ForeColor = Color.Gray;
             }
         }
 
-        private void textSexo_Enter(object sender, EventArgs e)
-        {
-            if (txtSexo.Text == "GENERO")
-            {
-                txtSexo.Text = "";
-                txtSexo.ForeColor = Color.Black;
-            }
-        }
 
-        private void textSexo_Leave(object sender, EventArgs e)
-        {
-            if (txtSexo.Text == "")
-            {
-                txtSexo.Text = "GENERO";
-                txtSexo.ForeColor = Color.Gray;
-            }
-        }
 
+
+        
         private void txtFechaNa_Enter(object sender, EventArgs e)
         {
-            if (txtFechaNa.Text == "FECHA DE NACIMIENTO  (AAA-MM-DD)")
+            if (txtFechaNa.Text == "Fecha  de nacimiento  (AAA-MM-DD)")
             {
                 txtFechaNa.Text = "";
                 txtFechaNa.ForeColor = Color.Black;
@@ -159,7 +145,7 @@ namespace Concesionaria
         {
             if (txtFechaNa.Text == "")
             {
-                txtFechaNa.Text = "FECHA DE NACIMIENTO  (AAA-MM-DD)";
+                txtFechaNa.Text = "Fecha  de nacimiento  (AAA-MM-DD)";
                 txtFechaNa.ForeColor = Color.Gray;
             }
         }
@@ -184,7 +170,7 @@ namespace Concesionaria
 
         private void textReferencia1_Enter(object sender, EventArgs e)
         {
-            if (txtReferencia1.Text == "REFERENCIA 1")
+            if (txtReferencia1.Text == "Nombre")
             {
                 txtReferencia1.Text = "";
                 txtReferencia1.ForeColor = Color.Black;
@@ -195,14 +181,14 @@ namespace Concesionaria
         {
             if (txtReferencia1.Text == "")
             {
-                txtReferencia1.Text = "REFERENCIA 1";
+                txtReferencia1.Text = "Nombre";
                 txtReferencia1.ForeColor = Color.Gray;
             }
         }
 
         private void textNumR1_Enter(object sender, EventArgs e)
         {
-            if (txtNumR1.Text == "NUMERO DE REFERENCIA 1")
+            if (txtNumR1.Text == "Telefono")
             {
                 txtNumR1.Text = "";
                 txtNumR1.ForeColor = Color.Black;
@@ -213,14 +199,14 @@ namespace Concesionaria
         {
             if (txtNumR1.Text == "")
             {
-                txtNumR1.Text = "NUMERO DE REFERENCIA 1";
+                txtNumR1.Text = "Telefono";
                 txtNumR1.ForeColor = Color.Gray;
             }
         }
 
         private void textReferencia2_Enter(object sender, EventArgs e)
         {
-            if (txtReferencia2.Text == "REFERENCIA 2")
+            if (txtReferencia2.Text == "Nombre")
             {
                 txtReferencia2.Text = "";
                 txtReferencia2.ForeColor = Color.Black;
@@ -231,14 +217,14 @@ namespace Concesionaria
         {
             if (txtReferencia2.Text == "")
             {
-                txtReferencia2.Text = "REFERENCIA 2";
+                txtReferencia2.Text = "Nombre";
                 txtReferencia2.ForeColor = Color.Gray;
             }
         }
 
         private void textNumR2_Enter(object sender, EventArgs e)
         {
-            if (txtNumR2.Text == "NUMERO DE REFERENCIA 2")
+            if (txtNumR2.Text == "Telefono")
             {
                 txtNumR2.Text = "";
                 txtNumR2.ForeColor = Color.Black;
@@ -249,14 +235,14 @@ namespace Concesionaria
         {
             if (txtNumR2.Text == "")
             {
-                txtNumR2.Text = "NUMERO DE REFERENCIA 2";
+                txtNumR2.Text = "Telefono";
                 txtNumR2.ForeColor = Color.Gray;
             }
         }
 
         private void textNumR3_Enter(object sender, EventArgs e)
         {
-            if (txtNumR3.Text == "NUMERO DE REFERENCIA 3")
+            if (txtNumR3.Text == "Telefono")
             {
                 txtNumR3.Text = "";
                 txtNumR3.ForeColor = Color.Black;
@@ -267,14 +253,14 @@ namespace Concesionaria
         {
             if (txtNumR3.Text == "")
             {
-                txtNumR3.Text = "NUMERO DE REFERENCIA 3";
+                txtNumR3.Text = "Telefono";
                 txtNumR3.ForeColor = Color.Gray;
             }
         }
 
         private void txtReferencia3_Enter(object sender, EventArgs e)
         {
-            if (txtReferencia3.Text == "REFERENCIA 3")
+            if (txtReferencia3.Text == "Nombre")
             {
                 txtReferencia3.Text = "";
                 txtReferencia3.ForeColor = Color.Black;
@@ -285,7 +271,7 @@ namespace Concesionaria
         {
             if (txtReferencia3.Text == "")
             {
-                txtReferencia3.Text = "REFERENCIA 3";
+                txtReferencia3.Text = "Nombre";
                 txtReferencia3.ForeColor = Color.Gray;
             }
         }
@@ -294,8 +280,8 @@ namespace Concesionaria
         {
             try
             {
-                                              //  Nombre, Apellidos, Telefono, Correo, Edad, Sexo, FechaNacimiento, RFC, Referencia1, NumR1, Referencia2, NumR2, Referencia3, NumR3
-                objetoCliente.InsertarCliente(txtNombre.Text, txtApellidos.Text,txtPassword.Text, txtTel.Text, txtCorreo.Text, txtEdad.Text, txtSexo.Text, txtFechaNa.Text, txtRFC.Text, txtReferencia1.Text, txtNumR1.Text, txtReferencia2.Text, txtNumR2.Text, txtReferencia3.Text, txtNumR3.Text);
+                                              //  Nombre, Apellidos,password, Telefono, Correo, Edad, Sexo, FechaNacimiento, RFC, Referencia1, NumR1, Referencia2, NumR2, Referencia3, NumR3
+                objetoCliente.InsertarCliente(txtNombre.Text, txtApellidos.Text,txtPassword.Text, txtTel.Text, txtCorreo.Text, txtEdad.Text,txtDireccion.Text, cmxGenero.Text, txtFechaNa.Text, txtRFC.Text, txtReferencia1.Text, txtNumR1.Text, txtReferencia2.Text, txtNumR2.Text, txtReferencia3.Text, txtNumR3.Text);
                 MessageBox.Show("Datos Insertados Correctamente");
               
            
@@ -315,6 +301,74 @@ namespace Concesionaria
         private void RegistroCliente_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "Contraseña")
+            {
+                txtPassword.Text = "";
+                txtPassword.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+
+              if (txtPassword.Text == "")
+            {
+                txtPassword.Text = "Contraseña";
+                txtPassword.ForeColor = Color.Gray;
+            }
+        }
+
+        private void lblGenero_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtNombre.Text = "Nombre";
+            txtApellidos.Text = "Apellidos";
+            txtCorreo.Text = "Correo";
+            txtPassword.Text = "Contraseña";
+            txtEdad.Text = "Edad";
+            txtDireccion.Text = "Direccion";
+            txtTel.Text = "Telefono";
+            cmxGenero.Text = "";
+            txtReferencia1.Text = "Nombre";
+            txtRFC.Text = "RFC";
+            txtReferencia2.Text = "Nombre";
+            txtReferencia3.Text = "Nombre";
+            txtNumR1.Text = "Telefono";
+            txtNumR2.Text = "Telefono";
+            txtNumR2.Text = "Telefono";
+            txtFechaNa.Text = "Fecha  de nacimiento  (AAA-MM-DD)";
+
+        }
+
+        private void txtDireccion_Enter(object sender, EventArgs e)
+        {
+            if(txtDireccion.Text == "Direccion")
+            {
+                txtDireccion.Text = "";
+                txtDireccion.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtDireccion_Leave(object sender, EventArgs e)
+        {
+            if (txtDireccion.Text == "")
+            {
+                txtDireccion.Text = "Direccion";
+                txtDireccion.ForeColor = Color.Gray;
+            }
         }
     }
 }

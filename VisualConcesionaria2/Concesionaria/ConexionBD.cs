@@ -10,7 +10,7 @@ namespace Concesionaria
 {
     class ConexionBD
     {
-        private SqlConnection Conexion = new SqlConnection("Server=DESKTOP-NDLJN6T;DataBase= BDConcesionario;Integrated Security=true");
+        private SqlConnection Conexion = new SqlConnection("Server=DESKTOP-NDLJN6T;DataBase= concesionario;Integrated Security=true");
 
         public SqlConnection AbrirConexion()
         {

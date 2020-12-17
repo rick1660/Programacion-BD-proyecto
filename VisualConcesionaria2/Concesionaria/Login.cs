@@ -70,7 +70,7 @@ namespace Concesionaria
 
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "USUARIO") 
+            if (txtUsuario.Text == "Usuario") 
             {
                 txtUsuario.Text = "";
                 txtUsuario.ForeColor = Color.Black;
@@ -81,14 +81,14 @@ namespace Concesionaria
         {
             if (txtUsuario.Text == "")
             {
-                txtUsuario.Text = "USUARIO";
+                txtUsuario.Text = "Usuario";
                 txtUsuario.ForeColor = Color.Gray;
             }
         }
 
         private void txtContraseña_Enter(object sender, EventArgs e)
         {
-            if (txtContraseña.Text == "CONTRASEÑA")
+            if (txtContraseña.Text == "Contraseña")
             {
                 txtContraseña.Text = "";
                 txtContraseña.ForeColor = Color.Black;
@@ -100,7 +100,7 @@ namespace Concesionaria
         {
             if (txtContraseña.Text == "")
             {
-                txtContraseña.Text = "CONTRASEÑA";
+                txtContraseña.Text = "Contraseña";
                 txtContraseña.ForeColor = Color.Gray;
             }
         }

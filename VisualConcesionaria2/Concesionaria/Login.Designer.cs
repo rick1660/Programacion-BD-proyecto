@@ -35,14 +35,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtSeparador2 = new Concesionaria.txtSeparador();
             this.label2 = new System.Windows.Forms.Label();
             this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.txtSeparador1 = new Concesionaria.txtSeparador();
             this.btnIniciar = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkRegistro = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtSeparador2 = new Concesionaria.txtSeparador();
+            this.txtSeparador1 = new Concesionaria.txtSeparador();
             this.PanelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptxCerrar)).BeginInit();
@@ -94,11 +94,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(142, 34);
+            this.label1.Location = new System.Drawing.Point(163, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 25);
+            this.label1.Size = new System.Drawing.Size(162, 25);
             this.label1.TabIndex = 2;
-            this.label1.Text = "INICIO DE SESION";
+            this.label1.Text = "Inicio de sesion";
             // 
             // txtUsuario
             // 
@@ -106,12 +106,12 @@
             this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.Gray;
-            this.txtUsuario.Location = new System.Drawing.Point(136, 112);
+            this.txtUsuario.Location = new System.Drawing.Point(126, 118);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(220, 19);
             this.txtUsuario.TabIndex = 3;
             this.txtUsuario.Tag = "";
-            this.txtUsuario.Text = "USUARIO";
+            this.txtUsuario.Text = "Usuario";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
@@ -123,7 +123,7 @@
             this.panel2.Controls.Add(this.txtContraseña);
             this.panel2.Controls.Add(this.txtSeparador1);
             this.panel2.Controls.Add(this.btnIniciar);
-            this.panel2.Controls.Add(this.linkLabel1);
+            this.panel2.Controls.Add(this.linkRegistro);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.txtUsuario);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -133,20 +133,11 @@
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // txtSeparador2
-            // 
-            this.txtSeparador2.ForeColor = System.Drawing.Color.Teal;
-            this.txtSeparador2.Location = new System.Drawing.Point(136, 207);
-            this.txtSeparador2.Name = "txtSeparador2";
-            this.txtSeparador2.Size = new System.Drawing.Size(220, 2);
-            this.txtSeparador2.TabIndex = 13;
-            this.txtSeparador2.Text = "txtSeparador2";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(250, 275);
+            this.label2.Location = new System.Drawing.Point(240, 281);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 12;
@@ -157,23 +148,13 @@
             this.txtContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.Color.Gray;
-            this.txtContraseña.Location = new System.Drawing.Point(136, 190);
+            this.txtContraseña.Location = new System.Drawing.Point(126, 183);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(220, 19);
             this.txtContraseña.TabIndex = 11;
-            this.txtContraseña.Text = "CONTRASEÑA";
+            this.txtContraseña.Text = "Contraseña";
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
             this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
-            // 
-            // txtSeparador1
-            // 
-            this.txtSeparador1.ForeColor = System.Drawing.Color.Teal;
-            this.txtSeparador1.Location = new System.Drawing.Point(136, 129);
-            this.txtSeparador1.Name = "txtSeparador1";
-            this.txtSeparador1.Size = new System.Drawing.Size(220, 2);
-            this.txtSeparador1.TabIndex = 10;
-            this.txtSeparador1.Text = "txtSeparador1";
-            this.txtSeparador1.Click += new System.EventHandler(this.txtSeparador1_Click);
             // 
             // btnIniciar
             // 
@@ -182,7 +163,7 @@
             this.btnIniciar.FlatAppearance.BorderSize = 0;
             this.btnIniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciar.ForeColor = System.Drawing.Color.White;
-            this.btnIniciar.Location = new System.Drawing.Point(136, 235);
+            this.btnIniciar.Location = new System.Drawing.Point(126, 241);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(220, 37);
             this.btnIniciar.TabIndex = 9;
@@ -190,17 +171,18 @@
             this.btnIniciar.UseVisualStyleBackColor = false;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
-            // linkLabel1
+            // linkRegistro
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(171)))), ((int)(((byte)(190)))));
-            this.linkLabel1.Location = new System.Drawing.Point(218, 282);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(58, 13);
-            this.linkLabel1.TabIndex = 8;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Registrarte";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkRegistro.AutoSize = true;
+            this.linkRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkRegistro.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(171)))), ((int)(((byte)(190)))));
+            this.linkRegistro.Location = new System.Drawing.Point(198, 284);
+            this.linkRegistro.Name = "linkRegistro";
+            this.linkRegistro.Size = new System.Drawing.Size(73, 17);
+            this.linkRegistro.TabIndex = 8;
+            this.linkRegistro.TabStop = true;
+            this.linkRegistro.Text = "Registrate";
+            this.linkRegistro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // panel1
             // 
@@ -214,13 +196,33 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Gray;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(97, 15);
+            this.pictureBox2.Location = new System.Drawing.Point(109, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(290, 112);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.Size = new System.Drawing.Size(277, 112);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            // 
+            // txtSeparador2
+            // 
+            this.txtSeparador2.ForeColor = System.Drawing.Color.Teal;
+            this.txtSeparador2.Location = new System.Drawing.Point(126, 203);
+            this.txtSeparador2.Name = "txtSeparador2";
+            this.txtSeparador2.Size = new System.Drawing.Size(220, 2);
+            this.txtSeparador2.TabIndex = 13;
+            this.txtSeparador2.Text = "txtSeparador2";
+            // 
+            // txtSeparador1
+            // 
+            this.txtSeparador1.ForeColor = System.Drawing.Color.Teal;
+            this.txtSeparador1.Location = new System.Drawing.Point(126, 138);
+            this.txtSeparador1.Name = "txtSeparador1";
+            this.txtSeparador1.Size = new System.Drawing.Size(220, 2);
+            this.txtSeparador1.TabIndex = 10;
+            this.txtSeparador1.Text = "txtSeparador1";
+            this.txtSeparador1.Click += new System.EventHandler(this.txtSeparador1_Click);
             // 
             // Login
             // 
@@ -254,7 +256,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkRegistro;
         private System.Windows.Forms.Button btnIniciar;
         private txtSeparador txtSeparador1;
         private txtSeparador txtSeparador2;

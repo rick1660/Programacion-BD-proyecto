@@ -14,10 +14,10 @@ namespace Concesionaria
 
         //-----------------------Insertar----------------------------------
 
-        public void InsertarCliente(string Nombre, string Apellidos,string Password, string Telefono, string Correo, string Edad, string Sexo, string FechaNacimiento, string RFC, string Referencia1, string NumR1, string Referencia2, string NumR2, string Referencia3, string NumR3)
+        public void InsertarCliente(string Nombre, string Apellidos,string Password, string Telefono, string Correo, string Edad,string Direccion, string Sexo, string FechaNacimiento, string RFC, string Referencia1, string NumR1, string Referencia2, string NumR2, string Referencia3, string NumR3)
         {
 
-            conexion.InsertarCliente( Nombre, Apellidos,Password ,Convert.ToInt32(Telefono), Correo, Convert.ToInt32(Edad), Sexo, FechaNacimiento, RFC, Referencia1, Convert.ToInt32(NumR1), Referencia2, Convert.ToInt32(NumR2), Referencia3, Convert.ToInt32(NumR3));
+            conexion.InsertarCliente( Nombre, Apellidos,Password , Telefono, Correo, Convert.ToInt32(Edad), Direccion, Sexo,Convert.ToDateTime(FechaNacimiento), RFC, Referencia1, NumR1, Referencia2, NumR2, Referencia3, NumR3);
         }
     }
 }

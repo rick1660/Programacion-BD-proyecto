@@ -21,7 +21,6 @@ D:\Trabajos\Concesionaria\Concesionaria\obj\Debug\Concesionaria.Venta.resources
 D:\Trabajos\VisualConcesionaria2\Concesionaria\bin\Debug\Concesionaria.exe.config
 D:\Trabajos\VisualConcesionaria2\Concesionaria\bin\Debug\Concesionaria.exe
 D:\Trabajos\VisualConcesionaria2\Concesionaria\bin\Debug\Concesionaria.pdb
-D:\Trabajos\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.csprojAssemblyReference.cache
 D:\Trabajos\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.Accesorios.resources
 D:\Trabajos\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.Admin.resources
 D:\Trabajos\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.Autos.resources
