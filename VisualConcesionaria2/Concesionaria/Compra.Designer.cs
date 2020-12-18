@@ -129,7 +129,7 @@
             this.groupBox2.Size = new System.Drawing.Size(267, 63);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Fecha de Venta";
+            this.groupBox2.Text = "Fecha de Compra:";
             // 
             // dateTimePicker1
             // 
@@ -435,7 +435,7 @@
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(200, 35);
             this.lblTipo.TabIndex = 14;
-            this.lblTipo.Text = "COMPRA-VENTA";
+            this.lblTipo.Text = "COMPRA";
             this.lblTipo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
