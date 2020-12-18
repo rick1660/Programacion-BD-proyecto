@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bitacoras));
             this.label1 = new System.Windows.Forms.Label();
             this.gbRegistros = new System.Windows.Forms.GroupBox();
             this.btnAccesAlta = new System.Windows.Forms.Button();
@@ -40,14 +39,9 @@
             this.btnCompraBita = new System.Windows.Forms.Button();
             this.btnTraspasosBita = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ptxMinimizar = new System.Windows.Forms.PictureBox();
-            this.ptxCerrar = new System.Windows.Forms.PictureBox();
             this.gbRegistros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gbMovimientos.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptxMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptxCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -165,40 +159,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
-            this.panel1.Controls.Add(this.ptxMinimizar);
-            this.panel1.Controls.Add(this.ptxCerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1095, 52);
             this.panel1.TabIndex = 7;
-            // 
-            // ptxMinimizar
-            // 
-            this.ptxMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ptxMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ptxMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("ptxMinimizar.Image")));
-            this.ptxMinimizar.Location = new System.Drawing.Point(1018, 14);
-            this.ptxMinimizar.Margin = new System.Windows.Forms.Padding(4);
-            this.ptxMinimizar.Name = "ptxMinimizar";
-            this.ptxMinimizar.Size = new System.Drawing.Size(27, 25);
-            this.ptxMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptxMinimizar.TabIndex = 10;
-            this.ptxMinimizar.TabStop = false;
-            // 
-            // ptxCerrar
-            // 
-            this.ptxCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ptxCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ptxCerrar.Image = ((System.Drawing.Image)(resources.GetObject("ptxCerrar.Image")));
-            this.ptxCerrar.Location = new System.Drawing.Point(1052, 14);
-            this.ptxCerrar.Margin = new System.Windows.Forms.Padding(4);
-            this.ptxCerrar.Name = "ptxCerrar";
-            this.ptxCerrar.Size = new System.Drawing.Size(27, 25);
-            this.ptxCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptxCerrar.TabIndex = 9;
-            this.ptxCerrar.TabStop = false;
             // 
             // Bitacoras
             // 
@@ -217,9 +183,6 @@
             this.gbRegistros.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gbMovimientos.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptxMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptxCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,7 +201,5 @@
         private System.Windows.Forms.Button btnTraspasosBita;
         private System.Windows.Forms.Button btnCompraBita;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox ptxMinimizar;
-        private System.Windows.Forms.PictureBox ptxCerrar;
     }
 }
