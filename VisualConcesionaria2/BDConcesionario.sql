@@ -547,8 +547,8 @@ go
 
 ------------------------------
 
-create trigger tr_BitacoraAccesoriosAlta
-on Accesorios for insert
+create trigger tr_BitacoraAutopartesAlta
+on Autopartes for insert
 as
 declare @Fecha DateTime
 
@@ -558,8 +558,8 @@ values ('Administrador',@Fecha, 'Alta de Accesorio' )
 go
 
 
-create trigger tr_BitacoraAccesoriosBaja
-on Accesorios for delete
+create trigger tr_BitacoraAutoPartesBaja
+on Autopartes for delete
 as
 declare @Fecha DateTime
 
@@ -569,8 +569,8 @@ values ('Administrador',@Fecha, 'Eliminacion de Automovil' )
 go
 
 
-create trigger tr_BitacoraAccesoriosActualizacion
-on Accesorios for update
+create trigger tr_BitacoraAutopartesActualizacion
+on Autopartes for update
 as
 declare @Fecha DateTime
 
@@ -632,3 +632,6 @@ create proc MostrarBitacoraTraspasos
 as
 select *from BitacoraTraspasos
 go
+
+
+select * from DetalleCompraVenta
