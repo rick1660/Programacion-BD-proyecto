@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroCliente));
             this.panel1 = new System.Windows.Forms.Panel();
             this.ptxMinimizar = new System.Windows.Forms.PictureBox();
@@ -57,6 +58,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtSeparador5 = new Concesionaria.txtSeparador();
             this.txtSeparador15 = new Concesionaria.txtSeparador();
             this.txtSeparador13 = new Concesionaria.txtSeparador();
@@ -75,6 +77,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptxCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -460,6 +463,11 @@
             this.txtDireccion.Enter += new System.EventHandler(this.txtDireccion_Enter);
             this.txtDireccion.Leave += new System.EventHandler(this.txtDireccion_Leave);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
+            // 
             // txtSeparador5
             // 
             this.txtSeparador5.ForeColor = System.Drawing.Color.Teal;
@@ -665,9 +673,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.RegistroCliente_Load);
+            this.Shown += new System.EventHandler(this.RegistroCliente_Shown);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptxMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptxCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -718,5 +728,6 @@
         private System.Windows.Forms.Button btnLimpiar;
         private txtSeparador txtSeparador5;
         private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

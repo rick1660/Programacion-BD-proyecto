@@ -10,6 +10,8 @@ namespace Concesionaria
 {
     class Consultas1
     {
+        int ICConta = 1;
+
         // CREACION DE OBJETO PARA LLAMAR CONSULTA
         private ConexionBD conexion = new ConexionBD();
         SqlDataReader leer;
@@ -23,13 +25,15 @@ namespace Concesionaria
         //Insertar
         // I N S E R T A R 
         
-        public void InsertarCliente( string Nombre, string Apellidos,string Password ,string Telefono,string Correo, int Edad,string Direccion,string Sexo, DateTime FechaNacimiento, string RFC, string Referencia1, string NumR1, string Referencia2, string NumR2, string Referencia3, string NumR3)
+        public void InsertarCliente( string Nombre, string Apellidos,string Password ,string Telefono,string Correo, int Edad,string Direccion,string Sexo, string FechaNacimiento, string RFC, string Referencia1, string NumR1, string Referencia2, string NumR2, string Referencia3, string NumR3)
         {
             
+
             SqlCommand comandoInsertar = new SqlCommand();
             comandoInsertar.Connection = conexion.AbrirConexion();
             comandoInsertar.CommandText = "InsertarCliente";
             comandoInsertar.CommandType = CommandType.StoredProcedure;
+            
             comandoInsertar.Parameters.AddWithValue("@Nombre", Nombre);
             comandoInsertar.Parameters.AddWithValue("@Apellidos", Apellidos);
             comandoInsertar.Parameters.AddWithValue("@PasswordCliente",Password);
@@ -51,6 +55,8 @@ namespace Concesionaria
             comandoInsertar.ExecuteNonQuery();
             comandoInsertar.Parameters.Clear();
             comandoInsertar.CommandType = CommandType.Text;
+
+         
         }
     }
 }

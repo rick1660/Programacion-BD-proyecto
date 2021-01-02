@@ -48,21 +48,21 @@ CREATE TABLE Empleados
 
 CREATE TABLE Clientes 
 (
-  IdClientes INT PRIMARY KEY NOT NULL IDENTITY(1,1),
-  Nombre VARCHAR(45),
-  apellidos VARCHAR(45),
-  PasswordCliente VARCHAR(20),
-  Telefono varchar(10),
-  Correo VARCHAR(45),
-  Edad INT,
-  Direccion VARCHAR(45),
-  Sexo VARCHAR(45),
-  FechaNacimiento DATETIME,
-  RFC VARCHAR(45),
+  IdClientes INT PRIMARY KEY NOT NULL Identity (1,1),
+  Nombre VARCHAR(45) NOT NULL,
+  apellidos VARCHAR(45) NOT NULL,
+  PasswordCliente VARCHAR(20) NOT NULL,
+  Telefono varchar(10) NOT NULL,
+  Correo VARCHAR(45) NOT NULL,
+  Edad INT NOT NULL,
+  Direccion VARCHAR(45) NOT NULL,
+  Sexo VARCHAR(45) NOT NULL,
+  FechaNacimiento DATETIME NOT NULL,
+  RFC VARCHAR(45) NOT NULL,
   ReferenciaUno VARCHAR(45) NOT NULL,
   NumRefUno Varchar(10) NOT NULL,
   ReferenciaDos VARCHAR(45) NOT NULL,
-  NumRedDos varchar(10)  NOT NULL,
+  NumRefDos varchar(10)  NOT NULL,
   ReferenciaTres VARCHAR(45) NOT NULL,
   NumRefTres varchar(10) NOT NULL,
   TipoUsuario INT NOT NULL,
@@ -71,11 +71,11 @@ CREATE TABLE Clientes
 Insert into Clientes values('Ricardo','Jacuinde', '12345',6645929,'ricardo@mail.com',22,'Otay', 'Masculino','2020-10-01','fdsfsd','marta',664, 'cris',663, 'sofia',662,2);
 Insert into Clientes values(2,'marta','Jimenes', '12345',6645929,'ricardo@mail.com',22,'Otay', 'Masculino','2020-10-01 07:00:25','fdsfsd','marta',664, 'cris',663, 'sofia',662,2);
 
-
+Delete from Clientes where IdClientes=3
  Drop Table Clientes
  Drop Table CompraVenta
 
-select * from clientes
+select * from Clientes
 --Automovil
 CREATE TABLE Automoviles 
 (
@@ -342,6 +342,9 @@ select * from Operaciones
 if object_id('InsertarCliente') is not null
   drop proc InsertarCliente
 
+
+
+Go
 create procedure InsertarCliente
 @Nombre varchar (45),
 @Apellidos varchar (45),
@@ -356,21 +359,24 @@ create procedure InsertarCliente
 @ReferenciaUno VARCHAR(45),
 @NumRefUno varchar (10) ,
 @ReferenciaDos VARCHAR(45) ,
-@NumRedDos varchar (10),
+@NumRefDos varchar (10),
 @ReferenciaTres VARCHAR(45) ,
 @NumRefTres varchar (10),
 @TipoUsuario INT 
 
 as
-insert into Clientes values (@Nombre,@Apellidos,@PasswordCliente,@Telefono,@Correo,@Edad,@Direccion,@Sexo,@FechaNacimiento,@RFC,@ReferenciaUno,@NumRefUno,@ReferenciaDos,@NumRedDos,@ReferenciaTres,@ReferenciaTres, @TipoUsuario)
+insert into Clientes values (@Nombre,@Apellidos,@PasswordCliente,@Telefono,@Correo,@Edad,@Direccion,@Sexo,@FechaNacimiento,@RFC,@ReferenciaUno,@NumRefUno,@ReferenciaDos,@NumRefDos,@ReferenciaTres,@ReferenciaTres, @TipoUsuario)
+
 go
 
 
 
 
+exec InsertarCliente 'Ricardo','Jacuinde', '12345',6645929,'ricardo@mail.com',22,'Otay', 'Masculino','2020-10-01','fdsfsd','marta',664, 'cris',663, 'sofia',662,2
 
 
---TRIGGERS
+
+--TRIGGERS	
 /*Selección de un automóvil y que permita llevar un proceso de aplicación de accesorios 
 al seleccionar un vehículo con características básicas*/
 create trigger SeleccionVehiculo
@@ -442,13 +448,9 @@ Fecha DateTime,
 Accion varchar(20)
 )
 
-
-------------
 create trigger tr_BitacoraClientesAlta
-on Clientes for insert
-as
+on Clientes for insertas
 declare @Fecha DateTime
-
 set @Fecha = (select GETDATE())
 insert into BitacoraClientes ( Rol, Fecha, Accion)
 values ('Administrador',@Fecha, 'Alta de Cliente Nuevo' )
@@ -456,12 +458,13 @@ go
 
 
 
+DROP TRIGGER IF EXISTS tr_BitacoraClientesBaja
 create trigger tr_BitacoraClientesBaja
 on Clientes for delete
 as
 declare @Fecha DateTime
 
-set @Fecha = (select GETDATE())
+et @Fecha = (select GETDATE())
 insert into BitacoraClientes ( Rol, Fecha, Accion)
 values ('Administrador',@Fecha, 'Eliminacion de Cliente' )
 go
@@ -488,7 +491,6 @@ set @Fecha = (select GETDATE())
 insert into BitacoraEmpleados ( Rol, Fecha, Accion)
 values ('Administrador',@Fecha, 'Alta de Empleado Nuevo' )
 go
-
 
 create trigger tr_BitacoraEmpleadosBaja
 on Empleados for delete

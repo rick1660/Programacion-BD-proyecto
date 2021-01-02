@@ -278,19 +278,143 @@ namespace Concesionaria
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            try
+            errorProvider1.Clear();
+            if (ValidacionRegistro()) 
             {
-                                              //  Nombre, Apellidos,password, Telefono, Correo, Edad, Sexo, FechaNacimiento, RFC, Referencia1, NumR1, Referencia2, NumR2, Referencia3, NumR3
-                objetoCliente.InsertarCliente(txtNombre.Text, txtApellidos.Text,txtPassword.Text, txtTel.Text, txtCorreo.Text, txtEdad.Text,txtDireccion.Text, cmxGenero.Text, txtFechaNa.Text, txtRFC.Text, txtReferencia1.Text, txtNumR1.Text, txtReferencia2.Text, txtNumR2.Text, txtReferencia3.Text, txtNumR3.Text);
-                MessageBox.Show("Datos Insertados Correctamente");
+                try
+                {
+                    //  Nombre, Apellidos,password, Telefono, Correo, Edad, Sexo, FechaNacimiento, RFC, Referencia1, NumR1, Referencia2, NumR2, Referencia3, NumR3
+                    objetoCliente.InsertarCliente(txtNombre.Text, txtApellidos.Text, txtPassword.Text, txtTel.Text, txtCorreo.Text, txtEdad.Text, txtDireccion.Text, cmxGenero.Text, txtFechaNa.Text, txtRFC.Text, txtReferencia1.Text, txtNumR1.Text, txtReferencia2.Text, txtNumR2.Text, txtReferencia3.Text, txtNumR3.Text);
+                    MessageBox.Show("Datos Insertados Correctamente");
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("No se Insertaron Datos" + ex);
+                }
+            }
+           
               
            
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se Insertaron Datos" + ex);
-            }
         }
+
+        private bool ValidacionRegistro()
+        {
+            bool isOK = true;
+            if (txtNombre.Text == "Nombre" || txtNombre.Text == "")
+            {
+                errorProvider1.SetError(txtNombre, "Ingrese su Nombre");
+                isOK = false;
+            }
+
+
+            if (txtApellidos.Text == "Apellidos" || txtApellidos.Text == "")
+            {
+                errorProvider1.SetError(txtApellidos, "Ingrese sus Apellidos");
+                isOK = false;
+            }
+
+
+            if (txtPassword.Text == "Contraseña" || txtPassword.Text == "")
+            {
+                errorProvider1.SetError(txtPassword, "Establesca una contraseña");
+                isOK = false;
+            }
+
+
+            if (txtTel.Text == "Telefono" || txtTel.Text == "")
+            {
+                errorProvider1.SetError(txtTel, "Ingrese su Numero telefonico");
+                isOK = false;
+            }
+
+            if (txtCorreo.Text == "Correo" || txtCorreo.Text == "")
+            {
+                errorProvider1.SetError(txtCorreo, "Ingrese su Correo ");
+                isOK = false;
+            }
+
+
+            if (txtEdad.Text == "Edad" || txtEdad.Text == "")
+            {
+                errorProvider1.SetError(txtEdad, "Ingrese su edad ");
+                isOK = false;
+            }
+
+
+            if (txtDireccion.Text == "Direccion" || txtDireccion.Text == "")
+            {
+                errorProvider1.SetError(txtDireccion, "Ingrese su Direccion");
+                isOK = false;
+            }
+
+            if (cmxGenero.Text == "")
+            {
+                errorProvider1.SetError(cmxGenero, "Seleccione su genero");
+                isOK = false;
+            }
+
+            if (txtFechaNa.Text == "Fecha  de nacimiento  (AAA-MM-DD)" || txtFechaNa.Text == "")
+            {
+                errorProvider1.SetError(txtFechaNa, "Ingrese su Fecha de nacimiento");
+                isOK = false;
+            }
+
+
+            if (txtRFC.Text == "RFC" || txtRFC.Text == "")
+            {
+                errorProvider1.SetError(txtRFC, "Ingrese su RFC");
+                isOK = false;
+            }
+
+
+            if (txtReferencia1.Text == "Nombre" || txtReferencia1.Text == "")
+            {
+                errorProvider1.SetError(txtReferencia1, "Ingrese El nombre se su Referencia");
+                isOK = false;
+            }
+
+
+            if (txtNumR1.Text == "Telefono" || txtNumR1.Text == "")
+            {
+                errorProvider1.SetError(txtNumR1, "Ingrese el numero telefonico se su Referencia");
+                isOK = false;
+            }
+
+
+            if (txtReferencia2.Text == "Nombre" || txtReferencia2.Text == "")
+            {
+                errorProvider1.SetError(txtReferencia2, "Ingrese El nombre se su Referencia");
+                isOK = false;
+            }
+
+
+            if (txtNumR2.Text == "Telefono" || txtNumR2.Text == "")
+            {
+                errorProvider1.SetError(txtNumR2, "Ingrese el numero telefonico se su Referencia");
+                isOK = false;
+            }
+
+            if (txtReferencia3.Text == "Nombre" || txtReferencia3.Text == "")
+            {
+                errorProvider1.SetError(txtReferencia3, "Ingrese El nombre se su Referencia");
+                isOK = false;
+            }
+
+
+            if (txtNumR3.Text == "Telefono" || txtNumR3.Text == "")
+            {
+                errorProvider1.SetError(txtNumR3, "Ingrese el numero telefonico se su Referencia");
+                isOK = false;
+            }
+
+
+
+
+            return isOK;
+        }
+
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -300,6 +424,113 @@ namespace Concesionaria
 
         private void RegistroCliente_Load(object sender, EventArgs e)
         {
+            bool isOK = true;
+            if (txtNombre.Text == "Nombre" || txtNombre.Text == "")
+            {
+                errorProvider1.SetError(txtNombre, "Ingrese su Nombre");
+                isOK = false;
+            }
+
+
+            if (txtApellidos.Text == "Apellidos" || txtApellidos.Text == "")
+            {
+                errorProvider1.SetError(txtApellidos, "Ingrese sus Apellidos");
+                isOK = false;
+            }
+
+
+            if (txtPassword.Text == "Contraseña" || txtPassword.Text == "")
+            {
+                errorProvider1.SetError(txtPassword, "Establesca una contraseña");
+                isOK = false;
+            }
+
+
+            if (txtTel.Text == "Telefono" || txtTel.Text == "")
+            {
+                errorProvider1.SetError(txtTel, "Ingrese su Numero telefonico");
+                isOK = false;
+            }
+
+            if (txtCorreo.Text == "Correo" || txtCorreo.Text == "")
+            {
+                errorProvider1.SetError(txtCorreo, "Ingrese su Correo ");
+                isOK = false;
+            }
+
+
+            if (txtEdad.Text == "Edad" || txtEdad.Text == "")
+            {
+                errorProvider1.SetError(txtEdad, "Ingrese su edad ");
+                isOK = false;
+            }
+
+
+            if (txtDireccion.Text == "Direccion" || txtDireccion.Text == "")
+            {
+                errorProvider1.SetError(txtDireccion, "Ingrese su Direccion");
+                isOK = false;
+            }
+
+            if (cmxGenero.Text == "")
+            {
+                errorProvider1.SetError(cmxGenero, "Seleccione su genero");
+                isOK = false;
+            }
+
+            if (txtFechaNa.Text == "Fecha  de nacimiento  (AAA-MM-DD)" || txtFechaNa.Text == "")
+            {
+                errorProvider1.SetError(txtFechaNa, "Ingrese su Fecha de nacimiento");
+                isOK = false;
+            }
+
+
+            if (txtRFC.Text == "RFC" || txtRFC.Text == "")
+            {
+                errorProvider1.SetError(txtRFC, "Ingrese su RFC");
+                isOK = false;
+            }
+
+
+            if (txtReferencia1.Text == "Nombre" || txtReferencia1.Text == "")
+            {
+                errorProvider1.SetError(txtReferencia1, "Ingrese El nombre se su Referencia");
+                isOK = false;
+            }
+
+
+            if (txtNumR1.Text == "Telefono" || txtNumR1.Text == "")
+            {
+                errorProvider1.SetError(txtNumR1, "Ingrese el numero telefonico se su Referencia");
+                isOK = false;
+            }
+
+
+            if (txtReferencia2.Text == "Nombre" || txtReferencia2.Text == "")
+            {
+                errorProvider1.SetError(txtReferencia2, "Ingrese El nombre se su Referencia");
+                isOK = false;
+            }
+
+
+            if (txtNumR2.Text == "Telefono" || txtNumR2.Text == "")
+            {
+                errorProvider1.SetError(txtNumR2, "Ingrese el numero telefonico se su Referencia");
+                isOK = false;
+            }
+
+            if (txtReferencia3.Text == "Nombre" || txtReferencia3.Text == "")
+            {
+                errorProvider1.SetError(txtReferencia3, "Ingrese El nombre se su Referencia");
+                isOK = false;
+            }
+
+
+            if (txtNumR3.Text == "Telefono" || txtNumR3.Text == "")
+            {
+                errorProvider1.SetError(txtNumR3, "Ingrese el numero telefonico se su Referencia");
+                isOK = false;
+            }
 
         }
 
@@ -335,21 +566,37 @@ namespace Concesionaria
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             txtNombre.Text = "Nombre";
+            txtNombre.ForeColor = Color.Gray;
             txtApellidos.Text = "Apellidos";
+            txtApellidos.ForeColor = Color.Gray;
             txtCorreo.Text = "Correo";
+            txtCorreo.ForeColor = Color.Gray;
             txtPassword.Text = "Contraseña";
+            txtPassword.ForeColor = Color.Gray;
             txtEdad.Text = "Edad";
+            txtEdad.ForeColor = Color.Gray;
             txtDireccion.Text = "Direccion";
+            txtDireccion.ForeColor = Color.Gray;
             txtTel.Text = "Telefono";
+            txtTel.ForeColor = Color.Gray;
             cmxGenero.Text = "";
+            cmxGenero.ForeColor = Color.Gray;
             txtReferencia1.Text = "Nombre";
+            txtReferencia1.ForeColor = Color.Gray;
             txtRFC.Text = "RFC";
+            txtRFC.ForeColor = Color.Gray;
             txtReferencia2.Text = "Nombre";
+            txtReferencia2.ForeColor = Color.Gray;
             txtReferencia3.Text = "Nombre";
+            txtReferencia3.ForeColor = Color.Gray;
             txtNumR1.Text = "Telefono";
+            txtNumR1.ForeColor = Color.Gray;
             txtNumR2.Text = "Telefono";
-            txtNumR2.Text = "Telefono";
+            txtNumR2.ForeColor = Color.Gray;
+            txtNumR3.Text = "Telefono";
+            txtNumR3.ForeColor = Color.Gray;
             txtFechaNa.Text = "Fecha  de nacimiento  (AAA-MM-DD)";
+            txtFechaNa.ForeColor = Color.Gray;
 
         }
 
@@ -369,6 +616,15 @@ namespace Concesionaria
                 txtDireccion.Text = "Direccion";
                 txtDireccion.ForeColor = Color.Gray;
             }
+        }
+
+        private void RegistroCliente_Shown(object sender, EventArgs e)
+        {
+            if(txtNombre.Text == "" || txtNombre.Text == "Nombre") 
+            {
+
+            }
+
         }
     }
 }
