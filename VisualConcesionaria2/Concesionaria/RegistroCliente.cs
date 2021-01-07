@@ -285,8 +285,11 @@ namespace Concesionaria
                 {
                     //  Nombre, Apellidos,password, Telefono, Correo, Edad, Sexo, FechaNacimiento, RFC, Referencia1, NumR1, Referencia2, NumR2, Referencia3, NumR3
                     objetoCliente.InsertarCliente(txtNombre.Text, txtApellidos.Text, txtPassword.Text, txtTel.Text, txtCorreo.Text, txtEdad.Text, txtDireccion.Text, cmxGenero.Text, txtFechaNa.Text, txtRFC.Text, txtReferencia1.Text, txtNumR1.Text, txtReferencia2.Text, txtNumR2.Text, txtReferencia3.Text, txtNumR3.Text);
-                    MessageBox.Show("Datos Insertados Correctamente");
-
+                    MessageBox.Show("Registro Realizado con exito");
+                    this.Close();
+                    Login Sesion = new Login();
+                    Sesion.Show();
+                    
 
                 }
                 catch (Exception ex)
@@ -624,6 +627,181 @@ namespace Concesionaria
             {
 
             }
+
+        }
+
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmxGenero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumR3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtReferencia3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumR2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtReferencia2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumR1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtReferencia1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRFC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFechaNa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEdad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCorreo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtApellidos_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

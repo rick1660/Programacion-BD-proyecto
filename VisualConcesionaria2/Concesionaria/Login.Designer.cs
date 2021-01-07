@@ -109,7 +109,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(126, 118);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(220, 19);
-            this.txtUsuario.TabIndex = 3;
+            this.txtUsuario.TabIndex = 1;
             this.txtUsuario.Tag = "";
             this.txtUsuario.Text = "Usuario";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
@@ -136,7 +136,7 @@
             // txtSeparador2
             // 
             this.txtSeparador2.ForeColor = System.Drawing.Color.Teal;
-            this.txtSeparador2.Location = new System.Drawing.Point(126, 203);
+            this.txtSeparador2.Location = new System.Drawing.Point(126, 206);
             this.txtSeparador2.Name = "txtSeparador2";
             this.txtSeparador2.Size = new System.Drawing.Size(220, 2);
             this.txtSeparador2.TabIndex = 13;
@@ -160,15 +160,16 @@
             this.txtContraseña.Location = new System.Drawing.Point(126, 183);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(220, 19);
-            this.txtContraseña.TabIndex = 11;
+            this.txtContraseña.TabIndex = 2;
             this.txtContraseña.Text = "Contraseña";
+            this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
             this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
             // 
             // txtSeparador1
             // 
             this.txtSeparador1.ForeColor = System.Drawing.Color.Teal;
-            this.txtSeparador1.Location = new System.Drawing.Point(126, 138);
+            this.txtSeparador1.Location = new System.Drawing.Point(126, 145);
             this.txtSeparador1.Name = "txtSeparador1";
             this.txtSeparador1.Size = new System.Drawing.Size(220, 2);
             this.txtSeparador1.TabIndex = 10;
@@ -185,7 +186,7 @@
             this.btnIniciar.Location = new System.Drawing.Point(126, 241);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(220, 37);
-            this.btnIniciar.TabIndex = 9;
+            this.btnIniciar.TabIndex = 3;
             this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.UseVisualStyleBackColor = false;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
@@ -198,7 +199,7 @@
             this.linkRegistro.Location = new System.Drawing.Point(201, 284);
             this.linkRegistro.Name = "linkRegistro";
             this.linkRegistro.Size = new System.Drawing.Size(73, 17);
-            this.linkRegistro.TabIndex = 8;
+            this.linkRegistro.TabIndex = 4;
             this.linkRegistro.TabStop = true;
             this.linkRegistro.Text = "Registrate";
             this.linkRegistro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);

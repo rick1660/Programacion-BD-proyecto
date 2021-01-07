@@ -21,12 +21,15 @@ Create TABLE Administrador
 	 Direccion VARCHAR(45),
 	 Telefono INT,
 	 Correo VARCHAR(45),
+	 Contraseña Varchar(45),
 	 FechaIngreso DATE ,
 	 TipoUsuario INT NOT NULL,
 	 CONSTRAINT FK_Admin_TBRol FOREIGN KEY (TipoUsuario) REFERENCES Rol (IdRol),
 )		
 
-
+Drop Table Administrador
+select * from Administrador
+Insert into Administrador values('1','Jefemaestro','halo',564213,'jefe@gmail.com','12345','2020-11-02',3);
 
 
 --Empleados
@@ -71,7 +74,7 @@ CREATE TABLE Clientes
 Insert into Clientes values('Ricardo','Jacuinde', '12345',6645929,'ricardo@mail.com',22,'Otay', 'Masculino','2020-10-01','fdsfsd','marta',664, 'cris',663, 'sofia',662,2);
 Insert into Clientes values(2,'marta','Jimenes', '12345',6645929,'ricardo@mail.com',22,'Otay', 'Masculino','2020-10-01 07:00:25','fdsfsd','marta',664, 'cris',663, 'sofia',662,2);
 
-Delete from Clientes where IdClientes=3
+Delete from Clientes where IdClientes=4
  Drop Table Clientes
  Drop Table CompraVenta
 
@@ -342,7 +345,7 @@ select * from Operaciones
 if object_id('InsertarCliente') is not null
   drop proc InsertarCliente
 
-
+----Procedimiento para insetar cliente------
 
 Go
 create procedure InsertarCliente
@@ -370,12 +373,16 @@ insert into Clientes values (@Nombre,@Apellidos,@PasswordCliente,@Telefono,@Corr
 go
 
 
-
-
 exec InsertarCliente 'Ricardo','Jacuinde', '12345',6645929,'ricardo@mail.com',22,'Otay', 'Masculino','2020-10-01','fdsfsd','marta',664, 'cris',663, 'sofia',662,2
 
 
+-----procedimiento para consultar clientes----------
+CREATE PROCEDURE MostrarClientes
+AS
+SELECT * FROM Clientes
+GO
 
+exec MostrarClientes
 --TRIGGERS	
 /*Selección de un automóvil y que permita llevar un proceso de aplicación de accesorios 
 al seleccionar un vehículo con características básicas*/

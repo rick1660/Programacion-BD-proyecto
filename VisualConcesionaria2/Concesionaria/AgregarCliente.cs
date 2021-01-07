@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace Concesionaria
 {
-    public partial class Autos : Form
+    public partial class AgregarCliente : Form
     {
-        public Autos()
+        public AgregarCliente()
         {
             InitializeComponent();
         }
 
-        private void Autos_Load(object sender, EventArgs e)
+        private void lblAutos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AgregarCliente_Load(object sender, EventArgs e)
         {
 
         }

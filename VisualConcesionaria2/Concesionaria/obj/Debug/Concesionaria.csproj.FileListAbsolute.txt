@@ -89,3 +89,6 @@ C:\Users\jc_rc\ArchivosGit\Programacion-BD-proyecto\VisualConcesionaria2\Concesi
 C:\Users\jc_rc\ArchivosGit\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.csproj.CopyComplete
 C:\Users\jc_rc\ArchivosGit\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.exe
 C:\Users\jc_rc\ArchivosGit\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.pdb
+C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.ClienteInterfaz.resources
+C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.AutosCliente.resources
+C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.AgregarCliente.resources

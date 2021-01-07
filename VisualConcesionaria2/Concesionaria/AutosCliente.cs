@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Concesionaria
 {
-    public partial class Autos : Form
+    public partial class AutosCliente : Form
     {
-        public Autos()
+        public AutosCliente()
         {
             InitializeComponent();
-        }
-
-        private void Autos_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

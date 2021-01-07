@@ -146,6 +146,7 @@
             this.txtApellidos.Size = new System.Drawing.Size(293, 16);
             this.txtApellidos.TabIndex = 2;
             this.txtApellidos.Text = "Apellidos";
+            this.txtApellidos.TextChanged += new System.EventHandler(this.txtApellidos_TextChanged);
             this.txtApellidos.Enter += new System.EventHandler(this.txtApellidos_Enter);
             this.txtApellidos.Leave += new System.EventHandler(this.txtApellidos_Leave);
             // 
@@ -161,6 +162,7 @@
             this.txtNombre.Size = new System.Drawing.Size(293, 16);
             this.txtNombre.TabIndex = 1;
             this.txtNombre.Text = "Nombre";
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
             this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
@@ -176,6 +178,7 @@
             this.txtCorreo.Size = new System.Drawing.Size(293, 16);
             this.txtCorreo.TabIndex = 5;
             this.txtCorreo.Text = "Correo";
+            this.txtCorreo.TextChanged += new System.EventHandler(this.txtCorreo_TextChanged);
             this.txtCorreo.Enter += new System.EventHandler(this.textCorreo_Enter);
             this.txtCorreo.Leave += new System.EventHandler(this.textCorreo_Leave);
             // 
@@ -191,6 +194,7 @@
             this.txtTel.Size = new System.Drawing.Size(293, 16);
             this.txtTel.TabIndex = 4;
             this.txtTel.Text = "Telefono";
+            this.txtTel.TextChanged += new System.EventHandler(this.txtTel_TextChanged);
             this.txtTel.Enter += new System.EventHandler(this.textTel_Enter);
             this.txtTel.Leave += new System.EventHandler(this.textTel_Leave);
             // 
@@ -206,6 +210,7 @@
             this.txtEdad.Size = new System.Drawing.Size(293, 16);
             this.txtEdad.TabIndex = 6;
             this.txtEdad.Text = "Edad";
+            this.txtEdad.TextChanged += new System.EventHandler(this.txtEdad_TextChanged);
             this.txtEdad.Enter += new System.EventHandler(this.textEdad_Enter);
             this.txtEdad.Leave += new System.EventHandler(this.textEdad_Leave);
             // 
@@ -219,8 +224,9 @@
             this.txtRFC.Margin = new System.Windows.Forms.Padding(4);
             this.txtRFC.Name = "txtRFC";
             this.txtRFC.Size = new System.Drawing.Size(293, 16);
-            this.txtRFC.TabIndex = 9;
+            this.txtRFC.TabIndex = 10;
             this.txtRFC.Text = "RFC";
+            this.txtRFC.TextChanged += new System.EventHandler(this.txtRFC_TextChanged);
             this.txtRFC.Enter += new System.EventHandler(this.textRFC_Enter);
             this.txtRFC.Leave += new System.EventHandler(this.textRFC_Leave);
             // 
@@ -234,8 +240,9 @@
             this.txtReferencia1.Margin = new System.Windows.Forms.Padding(4);
             this.txtReferencia1.Name = "txtReferencia1";
             this.txtReferencia1.Size = new System.Drawing.Size(293, 16);
-            this.txtReferencia1.TabIndex = 10;
+            this.txtReferencia1.TabIndex = 11;
             this.txtReferencia1.Text = "Nombre";
+            this.txtReferencia1.TextChanged += new System.EventHandler(this.txtReferencia1_TextChanged);
             this.txtReferencia1.Enter += new System.EventHandler(this.textReferencia1_Enter);
             this.txtReferencia1.Leave += new System.EventHandler(this.textReferencia1_Leave);
             // 
@@ -249,8 +256,9 @@
             this.txtNumR1.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumR1.Name = "txtNumR1";
             this.txtNumR1.Size = new System.Drawing.Size(293, 16);
-            this.txtNumR1.TabIndex = 11;
+            this.txtNumR1.TabIndex = 12;
             this.txtNumR1.Text = "Telefono";
+            this.txtNumR1.TextChanged += new System.EventHandler(this.txtNumR1_TextChanged);
             this.txtNumR1.Enter += new System.EventHandler(this.textNumR1_Enter);
             this.txtNumR1.Leave += new System.EventHandler(this.textNumR1_Leave);
             // 
@@ -264,8 +272,9 @@
             this.txtNumR2.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumR2.Name = "txtNumR2";
             this.txtNumR2.Size = new System.Drawing.Size(293, 16);
-            this.txtNumR2.TabIndex = 13;
+            this.txtNumR2.TabIndex = 114;
             this.txtNumR2.Text = "Telefono";
+            this.txtNumR2.TextChanged += new System.EventHandler(this.txtNumR2_TextChanged);
             this.txtNumR2.Enter += new System.EventHandler(this.textNumR2_Enter);
             this.txtNumR2.Leave += new System.EventHandler(this.textNumR2_Leave);
             // 
@@ -279,8 +288,9 @@
             this.txtReferencia2.Margin = new System.Windows.Forms.Padding(4);
             this.txtReferencia2.Name = "txtReferencia2";
             this.txtReferencia2.Size = new System.Drawing.Size(293, 16);
-            this.txtReferencia2.TabIndex = 12;
+            this.txtReferencia2.TabIndex = 13;
             this.txtReferencia2.Text = "Nombre";
+            this.txtReferencia2.TextChanged += new System.EventHandler(this.txtReferencia2_TextChanged);
             this.txtReferencia2.Enter += new System.EventHandler(this.textReferencia2_Enter);
             this.txtReferencia2.Leave += new System.EventHandler(this.textReferencia2_Leave);
             // 
@@ -294,8 +304,9 @@
             this.txtNumR3.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumR3.Name = "txtNumR3";
             this.txtNumR3.Size = new System.Drawing.Size(293, 16);
-            this.txtNumR3.TabIndex = 15;
+            this.txtNumR3.TabIndex = 16;
             this.txtNumR3.Text = "Telefono";
+            this.txtNumR3.TextChanged += new System.EventHandler(this.txtNumR3_TextChanged);
             this.txtNumR3.Enter += new System.EventHandler(this.textNumR3_Enter);
             this.txtNumR3.Leave += new System.EventHandler(this.textNumR3_Leave);
             // 
@@ -309,8 +320,9 @@
             this.txtReferencia3.Margin = new System.Windows.Forms.Padding(4);
             this.txtReferencia3.Name = "txtReferencia3";
             this.txtReferencia3.Size = new System.Drawing.Size(293, 16);
-            this.txtReferencia3.TabIndex = 14;
+            this.txtReferencia3.TabIndex = 15;
             this.txtReferencia3.Text = "Nombre";
+            this.txtReferencia3.TextChanged += new System.EventHandler(this.txtReferencia3_TextChanged);
             this.txtReferencia3.Enter += new System.EventHandler(this.txtReferencia3_Enter);
             this.txtReferencia3.Leave += new System.EventHandler(this.txtReferencia3_Leave);
             // 
@@ -322,7 +334,7 @@
             this.btnIngresar.Margin = new System.Windows.Forms.Padding(4);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(293, 42);
-            this.btnIngresar.TabIndex = 16;
+            this.btnIngresar.TabIndex = 17;
             this.btnIngresar.Text = "Registrar";
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
@@ -352,7 +364,8 @@
             this.cmxGenero.Location = new System.Drawing.Point(229, 443);
             this.cmxGenero.Name = "cmxGenero";
             this.cmxGenero.Size = new System.Drawing.Size(113, 24);
-            this.cmxGenero.TabIndex = 7;
+            this.cmxGenero.TabIndex = 8;
+            this.cmxGenero.SelectedIndexChanged += new System.EventHandler(this.cmxGenero_SelectedIndexChanged);
             // 
             // lblGenero
             // 
@@ -375,8 +388,9 @@
             this.txtFechaNa.Margin = new System.Windows.Forms.Padding(4);
             this.txtFechaNa.Name = "txtFechaNa";
             this.txtFechaNa.Size = new System.Drawing.Size(293, 16);
-            this.txtFechaNa.TabIndex = 8;
+            this.txtFechaNa.TabIndex = 9;
             this.txtFechaNa.Text = "Fecha  de nacimiento  (AAA-MM-DD)";
+            this.txtFechaNa.TextChanged += new System.EventHandler(this.txtFechaNa_TextChanged);
             this.txtFechaNa.Enter += new System.EventHandler(this.txtFechaNa_Enter);
             this.txtFechaNa.Leave += new System.EventHandler(this.txtFechaNa_Leave);
             // 
@@ -390,6 +404,7 @@
             this.label2.Size = new System.Drawing.Size(155, 24);
             this.label2.TabIndex = 49;
             this.label2.Text = "Datos personales";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -401,6 +416,7 @@
             this.label3.Size = new System.Drawing.Size(173, 24);
             this.label3.TabIndex = 50;
             this.label3.Text = "Datos de referencia";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -412,6 +428,7 @@
             this.label4.Size = new System.Drawing.Size(138, 20);
             this.label4.TabIndex = 51;
             this.label4.Text = "Primera referencia";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -423,6 +440,7 @@
             this.label5.Size = new System.Drawing.Size(149, 20);
             this.label5.TabIndex = 52;
             this.label5.Text = "Segunda referencia";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -434,6 +452,7 @@
             this.label6.Size = new System.Drawing.Size(138, 20);
             this.label6.TabIndex = 53;
             this.label6.Text = "Tercera referencia";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // btnLimpiar
             // 
@@ -458,8 +477,9 @@
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(293, 16);
-            this.txtDireccion.TabIndex = 55;
+            this.txtDireccion.TabIndex = 7;
             this.txtDireccion.Text = "Direccion";
+            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             this.txtDireccion.Enter += new System.EventHandler(this.txtDireccion_Enter);
             this.txtDireccion.Leave += new System.EventHandler(this.txtDireccion_Leave);
             // 
@@ -477,6 +497,7 @@
             this.txtSeparador5.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador5.TabIndex = 56;
             this.txtSeparador5.Text = "txtSeparador5";
+            this.txtSeparador5.Click += new System.EventHandler(this.txtSeparador5_Click);
             // 
             // txtSeparador15
             // 
@@ -487,6 +508,7 @@
             this.txtSeparador15.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador15.TabIndex = 46;
             this.txtSeparador15.Text = "txtSeparador15";
+            this.txtSeparador15.Click += new System.EventHandler(this.txtSeparador15_Click);
             // 
             // txtSeparador13
             // 
@@ -497,6 +519,7 @@
             this.txtSeparador13.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador13.TabIndex = 43;
             this.txtSeparador13.Text = "txtSeparador13";
+            this.txtSeparador13.Click += new System.EventHandler(this.txtSeparador13_Click);
             // 
             // txtSeparador14
             // 
@@ -507,6 +530,7 @@
             this.txtSeparador14.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador14.TabIndex = 41;
             this.txtSeparador14.Text = "txtSeparador14";
+            this.txtSeparador14.Click += new System.EventHandler(this.txtSeparador14_Click);
             // 
             // txtSeparador10
             // 
@@ -517,6 +541,7 @@
             this.txtSeparador10.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador10.TabIndex = 39;
             this.txtSeparador10.Text = "txtSeparador10";
+            this.txtSeparador10.Click += new System.EventHandler(this.txtSeparador10_Click);
             // 
             // txtSeparador12
             // 
@@ -527,6 +552,7 @@
             this.txtSeparador12.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador12.TabIndex = 37;
             this.txtSeparador12.Text = "txtSeparador12";
+            this.txtSeparador12.Click += new System.EventHandler(this.txtSeparador12_Click);
             // 
             // txtSeparador11
             // 
@@ -537,6 +563,7 @@
             this.txtSeparador11.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador11.TabIndex = 35;
             this.txtSeparador11.Text = "txtSeparador11";
+            this.txtSeparador11.Click += new System.EventHandler(this.txtSeparador11_Click);
             // 
             // txtSeparador9
             // 
@@ -547,6 +574,7 @@
             this.txtSeparador9.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador9.TabIndex = 31;
             this.txtSeparador9.Text = "txtSeparador9";
+            this.txtSeparador9.Click += new System.EventHandler(this.txtSeparador9_Click);
             // 
             // txtSeparador8
             // 
@@ -557,6 +585,7 @@
             this.txtSeparador8.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador8.TabIndex = 29;
             this.txtSeparador8.Text = "txtSeparador8";
+            this.txtSeparador8.Click += new System.EventHandler(this.txtSeparador8_Click);
             // 
             // txtSeparador7
             // 
@@ -567,6 +596,7 @@
             this.txtSeparador7.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador7.TabIndex = 27;
             this.txtSeparador7.Text = "txtSeparador7";
+            this.txtSeparador7.Click += new System.EventHandler(this.txtSeparador7_Click);
             // 
             // txtSeparador6
             // 
@@ -577,6 +607,7 @@
             this.txtSeparador6.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador6.TabIndex = 23;
             this.txtSeparador6.Text = "txtSeparador6";
+            this.txtSeparador6.Click += new System.EventHandler(this.txtSeparador6_Click);
             // 
             // txtSeparador3
             // 
@@ -587,6 +618,7 @@
             this.txtSeparador3.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador3.TabIndex = 21;
             this.txtSeparador3.Text = "txtSeparador3";
+            this.txtSeparador3.Click += new System.EventHandler(this.txtSeparador3_Click);
             // 
             // txtSeparador4
             // 
@@ -597,6 +629,7 @@
             this.txtSeparador4.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador4.TabIndex = 19;
             this.txtSeparador4.Text = "txtSeparador4";
+            this.txtSeparador4.Click += new System.EventHandler(this.txtSeparador4_Click);
             // 
             // txtSeparador2
             // 
@@ -607,6 +640,7 @@
             this.txtSeparador2.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador2.TabIndex = 17;
             this.txtSeparador2.Text = "txtSeparador2";
+            this.txtSeparador2.Click += new System.EventHandler(this.txtSeparador2_Click);
             // 
             // txtSeparador1
             // 
@@ -617,6 +651,7 @@
             this.txtSeparador1.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador1.TabIndex = 15;
             this.txtSeparador1.Text = "txtSeparador1";
+            this.txtSeparador1.Click += new System.EventHandler(this.txtSeparador1_Click);
             // 
             // RegistroCliente
             // 

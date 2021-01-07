@@ -27,13 +27,11 @@ namespace Concesionaria
         
         public void InsertarCliente( string Nombre, string Apellidos,string Password ,string Telefono,string Correo, int Edad,string Direccion,string Sexo, string FechaNacimiento, string RFC, string Referencia1, string NumR1, string Referencia2, string NumR2, string Referencia3, string NumR3)
         {
-            
 
             SqlCommand comandoInsertar = new SqlCommand();
             comandoInsertar.Connection = conexion.AbrirConexion();
             comandoInsertar.CommandText = "InsertarCliente";
-            comandoInsertar.CommandType = CommandType.StoredProcedure;
-            
+            comandoInsertar.CommandType = CommandType.StoredProcedure;   
             comandoInsertar.Parameters.AddWithValue("@Nombre", Nombre);
             comandoInsertar.Parameters.AddWithValue("@Apellidos", Apellidos);
             comandoInsertar.Parameters.AddWithValue("@PasswordCliente",Password);
@@ -51,12 +49,30 @@ namespace Concesionaria
             comandoInsertar.Parameters.AddWithValue("@ReferenciaTres", Referencia3);
             comandoInsertar.Parameters.AddWithValue("@NumRefTres", NumR3);
             comandoInsertar.Parameters.AddWithValue("@TipoUsuario", 2);
-
             comandoInsertar.ExecuteNonQuery();
             comandoInsertar.Parameters.Clear();
             comandoInsertar.CommandType = CommandType.Text;
 
          
         }
+
+        //Mostrar
+
+
+        public DataTable MostrarClientes()
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "MostrarClientes";
+            comando.CommandType = CommandType.StoredProcedure;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+
+        }
+
+        
+
     }
 }

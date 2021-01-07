@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace Concesionaria
 {
@@ -18,6 +19,15 @@ namespace Concesionaria
         {
 
             conexion.InsertarCliente( Nombre, Apellidos,Password , Telefono, Correo, Convert.ToInt32(Edad), Direccion, Sexo, FechaNacimiento, RFC, Referencia1, NumR1, Referencia2, NumR2, Referencia3, NumR3);
+        }
+
+
+        public DataTable MostrarCliente()
+        {
+
+            DataTable tabla = new DataTable();
+            tabla = conexion.MostrarClientes();
+            return tabla;
         }
     }
 }
