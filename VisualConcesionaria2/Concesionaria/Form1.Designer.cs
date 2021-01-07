@@ -44,7 +44,7 @@
             this.BarraHorizontal = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ptxMinimizar = new System.Windows.Forms.PictureBox();
             this.ptxRestaurar = new System.Windows.Forms.PictureBox();
@@ -277,7 +277,7 @@
             this.BarraHorizontal.BackColor = System.Drawing.Color.Gray;
             this.BarraHorizontal.Controls.Add(this.label4);
             this.BarraHorizontal.Controls.Add(this.label3);
-            this.BarraHorizontal.Controls.Add(this.label2);
+            this.BarraHorizontal.Controls.Add(this.lblUsuario);
             this.BarraHorizontal.Controls.Add(this.label1);
             this.BarraHorizontal.Controls.Add(this.ptxMinimizar);
             this.BarraHorizontal.Controls.Add(this.ptxRestaurar);
@@ -289,6 +289,7 @@
             this.BarraHorizontal.Name = "BarraHorizontal";
             this.BarraHorizontal.Size = new System.Drawing.Size(821, 50);
             this.BarraHorizontal.TabIndex = 1;
+            this.BarraHorizontal.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraHorizontal_Paint);
             this.BarraHorizontal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraHorizontal_MouseDown);
             // 
             // label4
@@ -312,15 +313,15 @@
             this.label3.Text = "Fecha:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label2
+            // lblUsuario
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(247, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 17);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "User";
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(247, 19);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(38, 17);
+            this.lblUsuario.TabIndex = 6;
+            this.lblUsuario.Text = "User";
             // 
             // label1
             // 
@@ -406,6 +407,7 @@
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(821, 600);
             this.PanelContenedor.TabIndex = 2;
+            this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint);
             // 
             // Form1
             // 
@@ -417,7 +419,9 @@
             this.Controls.Add(this.MenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.MenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.BarraHorizontal.ResumeLayout(false);
@@ -444,7 +448,7 @@
         private System.Windows.Forms.PictureBox ptxMinimizar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnAutos;
         private System.Windows.Forms.Button btnVenta;

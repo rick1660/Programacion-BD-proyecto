@@ -16,5 +16,10 @@ namespace Concesionaria
         {
             InitializeComponent();
         }
+
+        private void Autos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

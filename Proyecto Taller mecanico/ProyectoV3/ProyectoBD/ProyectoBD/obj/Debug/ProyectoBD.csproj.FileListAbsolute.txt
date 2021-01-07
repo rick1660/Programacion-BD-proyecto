@@ -26,7 +26,6 @@ C:\Users\jc_rc\Desktop\ProyectoBD\ProyectoBD\ProyectoBD\obj\Debug\ProyectoBD.His
 C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\ProyectoV3\ProyectoBD\ProyectoBD\bin\Debug\ProyectoBD.exe.config
 C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\ProyectoV3\ProyectoBD\ProyectoBD\bin\Debug\ProyectoBD.exe
 C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\ProyectoV3\ProyectoBD\ProyectoBD\bin\Debug\ProyectoBD.pdb
-C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\ProyectoV3\ProyectoBD\ProyectoBD\obj\Debug\ProyectoBD.csprojAssemblyReference.cache
 C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\ProyectoV3\ProyectoBD\ProyectoBD\obj\Debug\ProyectoBD.ActualizacionEmpleado.resources
 C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\ProyectoV3\ProyectoBD\ProyectoBD\obj\Debug\ProyectoBD.ActualizacionRefaccion.resources
 C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\ProyectoV3\ProyectoBD\ProyectoBD\obj\Debug\ProyectoBD.ActualizarAutomovil.resources

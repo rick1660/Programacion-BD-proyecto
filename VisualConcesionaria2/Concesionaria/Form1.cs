@@ -13,9 +13,10 @@ namespace Concesionaria
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public Form1( string nombre)
         {
             InitializeComponent();
+            lblUsuario.Text = nombre;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -76,7 +77,7 @@ namespace Concesionaria
             
         }
 
-        private void AbrirFormEnPanel(object Formhijo)
+        public void AbrirFormEnPanel(object Formhijo)
         {
             if (this.PanelContenedor.Controls.Count > 0)
                 this.PanelContenedor.Controls.RemoveAt(0);
@@ -138,6 +139,19 @@ namespace Concesionaria
             AbrirFormEnPanel(new Reportes());
         }
 
-        
+        private void BarraHorizontal_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void PanelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
