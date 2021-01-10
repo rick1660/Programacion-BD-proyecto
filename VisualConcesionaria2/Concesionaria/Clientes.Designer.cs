@@ -32,7 +32,8 @@
             this.dgbClientes = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.panel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgbClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             this.lblAutos.BackColor = System.Drawing.Color.Transparent;
             this.lblAutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAutos.ForeColor = System.Drawing.Color.Teal;
-            this.lblAutos.Location = new System.Drawing.Point(360, 26);
+            this.lblAutos.Location = new System.Drawing.Point(378, 9);
             this.lblAutos.Name = "lblAutos";
             this.lblAutos.Size = new System.Drawing.Size(109, 29);
             this.lblAutos.TabIndex = 13;
@@ -50,13 +51,10 @@
             // 
             // dgbClientes
             // 
-            this.dgbClientes.AllowUserToAddRows = false;
-            this.dgbClientes.AllowUserToDeleteRows = false;
             this.dgbClientes.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgbClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgbClientes.Location = new System.Drawing.Point(-2, 80);
+            this.dgbClientes.Location = new System.Drawing.Point(-1, 58);
             this.dgbClientes.Name = "dgbClientes";
-            this.dgbClientes.ReadOnly = true;
             this.dgbClientes.Size = new System.Drawing.Size(822, 296);
             this.dgbClientes.TabIndex = 14;
             this.dgbClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -87,25 +85,35 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnModificar
             // 
-            this.button2.BackColor = System.Drawing.Color.Teal;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(505, 431);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 42);
-            this.button2.TabIndex = 57;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnModificar.BackColor = System.Drawing.Color.Teal;
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(505, 431);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(113, 42);
+            this.btnModificar.TabIndex = 57;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // panel
+            // 
+            this.panel.Location = new System.Drawing.Point(0, 172);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(670, 49);
+            this.panel.TabIndex = 58;
+            this.panel.Visible = false;
+            this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Paint);
             // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 600);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.panel);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgbClientes);
@@ -126,6 +134,7 @@
         private System.Windows.Forms.DataGridView dgbClientes;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Panel panel;
     }
 }

@@ -73,10 +73,7 @@ namespace Concesionaria
         {
             try 
             {
-
                 Conexion.Open();
-
-              
 
                 SqlCommand cmd = new SqlCommand("SELECT Nombre , TipoUsuario FROM Clientes WHERE Correo = @Correo AND PasswordCliente = @pas", Conexion);
                 cmd.Parameters.AddWithValue("Correo", Correo);
@@ -84,7 +81,6 @@ namespace Concesionaria
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
-
 
                 SqlCommand TAdmin = new SqlCommand("SELECT Nombre , TipoUsuario FROM Administrador WHERE Correo = @Correo AND Contraseña = @pas", Conexion);
                 TAdmin.Parameters.AddWithValue("correo", Correo);
@@ -94,13 +90,12 @@ namespace Concesionaria
                 Tba.Fill(Tad);
 
 
-
                 if (dt.Rows.Count == 1 )
                 {
                     this.Hide();
                    if (dt.Rows[0][1].ToString() == "2")
                     {
-                        NombreUsuario = Tad.Rows[0][0].ToString();
+                        NombreUsuario = dt.Rows[0][0].ToString();
                         new ClienteInterfaz(dt.Rows[0][0].ToString()).Show();
                     }
                   

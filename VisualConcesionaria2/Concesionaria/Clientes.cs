@@ -16,7 +16,8 @@ namespace Concesionaria
 
 
         Consultas2 objetoCliente = new Consultas2();
-       
+        private string IdCliente = null;
+
         public Clientes()
         {
             InitializeComponent();
@@ -43,21 +44,53 @@ namespace Concesionaria
             MostrarCliente();
         }
 
+        ModificarCliente registro = new ModificarCliente();
+
         private void button2_Click(object sender, EventArgs e)
         {
-
+            AbrirFormEnPanel1(new ModificarCliente());
+            this.panel.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (dgbClientes.SelectedRows.Count > 0)
+            {
+                IdCliente = dgbClientes.CurrentRow.Cells["IdClientes"].Value.ToString();
+                objetoCliente.EliminarCliente(IdCliente);
+                MessageBox.Show("Eliminado correctamente");
+                MostrarCliente();
+            }
+            else
+                MessageBox.Show("seleccione una fila por favor");
+        }
 
+        private void panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        public void AbrirFormEnPanel1(object Formhijo)
+        {
+            if (this.panel.Controls.Count > 0)
+                this.panel.Controls.RemoveAt(0);
+            Form fh = Formhijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panel.Controls.Add(fh);
+            this.panel.Tag = fh;
+            fh.Show();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Principal.AbrirFormEnPanel(new AgregarCliente());
-            MessageBox.Show("Correo y/o contraseña incorrecta");
+            AbrirFormEnPanel1(new AgregarCliente());
+            this.panel.Visible = true;
+        }
 
+        public void CerrarPanel() 
+        {
+            this.panel.Visible = false;
         }
     }
 }

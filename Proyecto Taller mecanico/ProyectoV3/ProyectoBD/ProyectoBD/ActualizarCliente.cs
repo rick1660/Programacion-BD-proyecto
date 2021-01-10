@@ -42,6 +42,7 @@ namespace ProyectoBD
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
+
             try
             {
                 objetoCliente.EditarCliente(txtIdCliente.Text, txtNombre.Text, txtApellidos.Text, txtDireccion.Text, txtTelefono.Text, txtEmail.Text);
@@ -70,6 +71,11 @@ namespace ProyectoBD
             }
             else
                 MessageBox.Show("seleccione una fila por favor");
+        }
+
+        private void DataGActualizar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

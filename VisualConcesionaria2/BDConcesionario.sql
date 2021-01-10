@@ -1,6 +1,5 @@
 create database concesionario
-use concesionario
-
+use concesionario          
 
 ------------Creacion de tablas------------------------------------
 --Sucursal principal
@@ -10,9 +9,13 @@ CREATE TABLE Sucursal_principal
  IdSucursal INT PRIMARY KEY NOT NULL,
  Nombre VARCHAR(45),
  Direccion VARCHAR(45),
- Telefono INT,
+ Telefono Varchar,
  Correo VARCHAR(45),
 )
+
+ALTER TABLE Sucursal_principal ALTER COLUMN  Telefono Varchar(10);
+
+Insert into Sucursal_principal values('1','National cars','Zona rio','664123578','NationalsCarsRio@gmail.com');
 
 Create TABLE Administrador
 (
@@ -27,7 +30,7 @@ Create TABLE Administrador
 	 CONSTRAINT FK_Admin_TBRol FOREIGN KEY (TipoUsuario) REFERENCES Rol (IdRol),
 )		
 
-Drop Table Administrador
+Drop Table Empleados
 select * from Administrador
 Insert into Administrador values('1','Jefemaestro','halo',564213,'jefe@gmail.com','12345','2020-11-02',3);
 
@@ -36,16 +39,23 @@ Insert into Administrador values('1','Jefemaestro','halo',564213,'jefe@gmail.com
 CREATE TABLE Empleados
 (
   IdEmpleados INT PRIMARY KEY NOT NULL IDENTITY(1,1),
-  Nombre VARCHAR(45) ,
-  Apellidos VARCHAR(45) ,
-  FechaIngreso DATE ,
-  Telefono INT ,
+  Nombre VARCHAR(45) NOT NULL ,
+  Apellidos VARCHAR(45) NOT NULL ,
+  Correo Varchar (45) NOT NULL,
+  PasswordEmpleado varchar(45),
+  FechaNacimiento DATETIME NOT NULL, 
+  FechaIngreso DATE NOT NULL ,
+  Telefono Varchar(10) NOT NULL ,
   Sucursal INT NOT NULL,
   TipoUsuario INT NOT NULL,
   CONSTRAINT FK_IdRol_TBRol FOREIGN KEY (TipoUsuario) REFERENCES Rol (IdRol),
   CONSTRAINT FK_IdEmpleados_TBSucursalPrincipal FOREIGN KEY (Sucursal) REFERENCES Sucursal_principal (IdSucursal)
  
 )
+
+Insert into Empleados values('Saul','Partida','Saul@gmail.com','12345','1975-11-02','2019-02-12','66412489',1,1);
+select * from Empleados
+
 
 --Clientes
 
@@ -188,6 +198,8 @@ CREATE TABLE Rol
   Nombre VARCHAR(45),
  
  )
+ select * from rol
+ Update Rol set Nombre='Cliente' where IdRol=2
 
 ----------Modulos para los roles a los cuales se tendran acceso---------
 CREATE TABLE Modulos
@@ -213,7 +225,7 @@ CREATE TABLE Rol_Operacion
  IdRolOperacion INT PRIMARY KEY NOT NULL  ,
  IdRol INT  ,
  IdOperacion INT
- CONSTRAINT FK_Rol_Operacion_Rol   FOREIGN KEY (IdRol) REFERENCES Rol (IdRol),
+ CONSTRAINT FK_Rol_Operacion_Rol   FOREIGN KEY (IdRol) REFERENCES Rol (IdRol), 
  CONSTRAINT FK_Rol_Operacion_Operacion   FOREIGN KEY (IdOperacion) REFERENCES Operaciones (IdOperacion)
 )
 
@@ -372,9 +384,32 @@ insert into Clientes values (@Nombre,@Apellidos,@PasswordCliente,@Telefono,@Corr
 
 go
 
-
 exec InsertarCliente 'Ricardo','Jacuinde', '12345',6645929,'ricardo@mail.com',22,'Otay', 'Masculino','2020-10-01','fdsfsd','marta',664, 'cris',663, 'sofia',662,2
 
+
+--------------------Procedimiento para insertar empleado
+
+if object_id('InsertarEmpleado') is not null
+  drop proc InsertarEmpleado
+
+Go
+create procedure InsertarEmpleado
+@Nombre varchar (45),
+@Apellidos varchar (45),
+@Correo varchar (45),
+@PasswordEmpleado varchar(20),
+@FechaNacimiento DATETIME,
+@FechaIngreso DATETIME,
+@Telefono varchar (10) ,
+@Sucursal INT ,
+@TipoUsuario INT 
+
+as
+insert into Empleados values (@Nombre,@Apellidos,@Correo,@PasswordEmpleado,@FechaNacimiento,@FechaIngreso,@Telefono,@Sucursal, @TipoUsuario)
+go
+
+exec InsertarEmpleado 'Magnus','Mefisto','Magnus@gmail.com','12345','1975-10-01','2020-09-01','61248121',1,1
+exec InsertarEmpleado 'prueba','testeo','prueba@gmail.com','12345','1975-10-01','2020-09-01','61248121',1,1
 
 -----procedimiento para consultar clientes----------
 CREATE PROCEDURE MostrarClientes
@@ -382,7 +417,71 @@ AS
 SELECT * FROM Clientes
 GO
 
-exec MostrarClientes
+
+
+-----procedimiento para consultar clientes----------
+CREATE PROCEDURE MostrarEmpleados
+AS
+SELECT * FROM Empleados
+GO
+
+
+
+--------Procedimiento para eliminar cliente
+create proc EliminarCliente
+@IdCliente int
+as
+delete from Clientes where IdClientes=@IdCliente
+go
+
+-------Procedimiento para eliminar Empleado
+
+create proc EliminarEmpleado
+@IdEmpleados int
+as
+delete from Empleados where IdEmpleados=@IdEmpleados
+go
+
+-- Procedimiento para actualizar cliente
+
+create proc ActualizarCliente
+@Nombre varchar (45),
+@Apellidos varchar (45),
+@PasswordCliente varchar(20),
+@Telefono varchar (10),
+@Correo varchar (45),
+@Edad int,
+@Direccion varchar (45),
+@Sexo Varchar (45),
+@FechaNacimiento DATETIME,
+@RFC Varchar(45),
+@ReferenciaUno VARCHAR(45),
+@NumRefUno varchar (10) ,
+@ReferenciaDos VARCHAR(45) ,
+@NumRefDos varchar (10),
+@ReferenciaTres VARCHAR(45) ,
+@NumRefTres varchar (10),
+@TipoUsuario INT 
+as
+Update Clientes set Nombre=@Nombre, Apellidos=@Apellidos,PasswordCliente=@PasswordCliente,Telefono=@Telefono,Correo=@Correo, Edad=@Edad,Direccion=@Direccion, Sexo=@Sexo, FechaNacimiento=@FechaNacimiento,RFC=@RFC,ReferenciaUno=@ReferenciaUno,NumRefUno=@NumRefUno,ReferenciaDos=@ReferenciaDos,NumRedDos=@NumRefDos,ReferenciaTres=@ReferenciaTres,NumRefTres=@NumRefTres,TipoUsuario=@TipoUsuario where RFC=@RFC
+go
+
+-- Procedimiento para actualizar Empleado------
+
+create proc ActualizarEmpleado
+@Nombre varchar (45),
+@Apellidos varchar (45),
+@Correo varchar (45),
+@PasswordEmpleado varchar(20),
+@FechaNacimiento DATETIME,
+@FechaIngreso DATETIME,
+@Telefono varchar (10) ,
+@Sucursal INT ,
+@TipoUsuario INT 
+as
+Update Empleados set Nombre=@Nombre, Apellidos=@Apellidos,Correo=@Correo,PasswordEmpleado=@PasswordEmpleado,FechaNacimiento=@FechaNacimiento,FechaIngreso=@FechaIngreso,Telefono=@Telefono,Sucursal=@Sucursal,TipoUsuario=@TipoUsuario where Telefono=@Telefono
+go
+
 --TRIGGERS	
 /*Selección de un automóvil y que permita llevar un proceso de aplicación de accesorios 
 al seleccionar un vehículo con características básicas*/
@@ -488,6 +587,9 @@ values ('Administrador',@Fecha, 'Actualizacion de Datos de Cliente' )
 go
 
 
+
+if object_id('tr_BitacoraEmpleadosAlta') is not null
+  drop Trigger tr_BitacoraEmpleadosAlta
 ---------------
 create trigger tr_BitacoraEmpleadosAlta
 on Empleados for insert
@@ -499,6 +601,11 @@ insert into BitacoraEmpleados ( Rol, Fecha, Accion)
 values ('Administrador',@Fecha, 'Alta de Empleado Nuevo' )
 go
 
+if object_id('tr_BitacoraEmpleadosBaja') is not null
+  drop Trigger tr_BitacoraEmpleadosBaja
+
+
+
 create trigger tr_BitacoraEmpleadosBaja
 on Empleados for delete
 as
@@ -509,6 +616,8 @@ insert into BitacoraEmpleados ( Rol, Fecha, Accion)
 values ('Administrador',@Fecha, 'Eliminacion de Empleado' )
 go
 
+if object_id('tr_BitacoraEmpleadosActualizacion') is not null
+  drop Trigger tr_BitacoraEmpleadosActualizacion
 
 create trigger tr_BitacoraEmpleadosActualizacion
 on Empleados for update

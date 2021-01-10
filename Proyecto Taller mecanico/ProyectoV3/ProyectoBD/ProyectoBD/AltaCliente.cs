@@ -53,5 +53,10 @@ namespace ProyectoBD
         {
             MostrarCliente();
         }
+
+        private void DataGAlta_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

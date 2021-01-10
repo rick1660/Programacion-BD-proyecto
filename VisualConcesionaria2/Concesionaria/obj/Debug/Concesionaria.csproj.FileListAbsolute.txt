@@ -92,3 +92,8 @@ C:\Users\jc_rc\ArchivosGit\Programacion-BD-proyecto\VisualConcesionaria2\Concesi
 C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.ClienteInterfaz.resources
 C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.AutosCliente.resources
 C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.AgregarCliente.resources
+C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.EliminarCliente.resources
+C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.ModificarCliente.resources
+C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.AutosAdmin.resources
+C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.AgregarEmpleado.resources
+C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.ModificarEmpleado.resources
