@@ -27,6 +27,14 @@ namespace Concesionaria
             conexion.InsertarEmpleado(Nombre, Apellidos, Correo, Password, FechaNacimiento,FechaIngreso ,Telefono);
         }
 
+
+        public void InsertarAuto(string Marca, string Modelo, string Color,string Año, string Serie, string FechaIngreso, string precioCompra,string PrecioVenta)
+        {
+
+            conexion.InsertarAutomovil(Marca, Modelo, Color, Año, Serie, FechaIngreso, precioCompra, PrecioVenta); ;
+        }
+
+
         //------------------------Mostrar-------------------------------
         public DataTable MostrarCliente()
         {
@@ -46,6 +54,14 @@ namespace Concesionaria
         }
 
 
+        public DataTable MostrarAutos()
+        {
+
+            DataTable tabla = new DataTable();
+            tabla = conexion.MostrarAutos();
+            return tabla;
+        }
+
 
         //------------------------Eliminar---------------------------
 
@@ -61,7 +77,13 @@ namespace Concesionaria
             conexion.EliminarEmpleado(Convert.ToInt32(IdEmpleados));
         }
 
-        
+        public void EliminarAutomovil(string IdAutomovil)
+        {
+
+            conexion.EliminarAutomovil(Convert.ToInt32(IdAutomovil));
+        }
+
+
 
 
         //-------------------Editar-------------------------------------
@@ -75,6 +97,12 @@ namespace Concesionaria
         {
 
             conexion.EditarEmpleado(Nombre, Apellidos, Correo, Password, FechaNacimiento, FechaIngreso, Telefono);
+        }
+
+        public void EditarAutomovil(string Marca, string Modelo, string Color, string Año, string Serie, string FechaIngreso, string PrecioCompra, string PrecioVenta )
+        {
+
+            conexion.EditarAutomovil(Marca, Modelo, Color, Año, Serie, FechaIngreso, PrecioCompra, PrecioVenta);
         }
 
     }

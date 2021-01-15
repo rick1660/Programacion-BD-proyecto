@@ -196,5 +196,10 @@ namespace Concesionaria
         {
 
         }
+
+        private void PanelSuperior_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

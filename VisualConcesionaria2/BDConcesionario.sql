@@ -36,6 +36,8 @@ Insert into Administrador values('1','Jefemaestro','halo',564213,'jefe@gmail.com
 
 
 --Empleados
+
+drop Table Empleados
 CREATE TABLE Empleados
 (
   IdEmpleados INT PRIMARY KEY NOT NULL IDENTITY(1,1),
@@ -90,6 +92,8 @@ Delete from Clientes where IdClientes=4
 
 select * from Clientes
 --Automovil
+
+
 CREATE TABLE Automoviles 
 (
   IdAutomovil INT PRIMARY KEY NOT NULL IDENTITY(1,1),
@@ -101,13 +105,13 @@ CREATE TABLE Automoviles
   FechaIngreso DATE NOT NULL,
   PrecioCompra INT NOT NULL,
   PrecioVenta INT NOT NULL,
-  PrecioTotal INT NOT NULL,
-  PrecioPromo INT NOT NULL,
   Sucursal INT NOT NULL,
   CONSTRAINT FK_SucursalAuto_TBSucursalPrincipal FOREIGN KEY (Sucursal) REFERENCES Sucursal_principal (IdSucursal)
   )
 
-  
+  ALTER TABLE Automoviles DROP CONSTRAINT FK_SucursalAuto_TBSucursalPrincipal
+  Drop Table Automoviles
+
 --Autopartes
 CREATE TABLE Autopartes 
 (
@@ -168,6 +172,7 @@ CREATE TABLE DetalleCompraVenta
 
   )
 
+ 
 
 CREATE TABLE DetalleTraspaso 
 (
@@ -387,7 +392,7 @@ go
 exec InsertarCliente 'Ricardo','Jacuinde', '12345',6645929,'ricardo@mail.com',22,'Otay', 'Masculino','2020-10-01','fdsfsd','marta',664, 'cris',663, 'sofia',662,2
 
 
---------------------Procedimiento para insertar empleado
+--------------------Procedimiento para insertar empleado-----------
 
 if object_id('InsertarEmpleado') is not null
   drop proc InsertarEmpleado
@@ -411,6 +416,28 @@ go
 exec InsertarEmpleado 'Magnus','Mefisto','Magnus@gmail.com','12345','1975-10-01','2020-09-01','61248121',1,1
 exec InsertarEmpleado 'prueba','testeo','prueba@gmail.com','12345','1975-10-01','2020-09-01','61248121',1,1
 
+
+----------------Procedimiento para insertar automovil--------------
+Go
+create procedure InsertarAutomovil
+@Marca varchar (45),
+@Modelo varchar (45),
+@Color varchar (45),
+@Año varchar(45),
+@Serie Varchar(25),
+@FechaIngreso DATETIME,
+@PrecioCompra INT ,
+@PrecioVenta INT ,
+@Sucursal INT 
+
+as
+insert into Automoviles values (@Marca,@Modelo,@Color,@Año,@Serie,@FechaIngreso,@PrecioCompra,@PrecioVenta,@Sucursal)
+go
+
+exec InsertarAutomovil 'Ford','Focus','Rojo','2019','dsf412d1','2020-09-01',170000,200000,1
+
+
+
 -----procedimiento para consultar clientes----------
 CREATE PROCEDURE MostrarClientes
 AS
@@ -424,6 +451,15 @@ CREATE PROCEDURE MostrarEmpleados
 AS
 SELECT * FROM Empleados
 GO
+ 
+ if object_id('MostrarAutos') is not null
+  drop proc MostrarAutos
+
+CREATE PROCEDURE MostrarAutos
+AS
+SELECT * FROM Automoviles
+GO
+
 
 
 
@@ -440,6 +476,14 @@ create proc EliminarEmpleado
 @IdEmpleados int
 as
 delete from Empleados where IdEmpleados=@IdEmpleados
+go
+
+-------Procedimiento para eliminar automovil
+
+create proc EliminarAutomovil
+@IdAutomovil int
+as
+delete from Automoviles where IdAutomovil=@IdAutomovil
 go
 
 -- Procedimiento para actualizar cliente
@@ -480,6 +524,22 @@ create proc ActualizarEmpleado
 @TipoUsuario INT 
 as
 Update Empleados set Nombre=@Nombre, Apellidos=@Apellidos,Correo=@Correo,PasswordEmpleado=@PasswordEmpleado,FechaNacimiento=@FechaNacimiento,FechaIngreso=@FechaIngreso,Telefono=@Telefono,Sucursal=@Sucursal,TipoUsuario=@TipoUsuario where Telefono=@Telefono
+go
+
+-- Procedimiento para actualizar Automovil------
+
+create proc ActualizarAutomovil
+@Marca varchar (45),
+@Modelo varchar (45),
+@Color varchar (45),
+@Año varchar(45),
+@Serie Varchar(25),
+@FechaIngreso DATETIME,
+@PrecioCompra INT ,
+@PrecioVenta INT ,
+@Sucursal INT  
+as
+Update Automoviles set Marca=@Marca, Modelo=@Modelo, Color=@Color, Año=@Año, Serie=@Serie, FechaIngreso=@FechaIngreso, PrecioCompra=@PrecioCompra, PrecioVenta=@PrecioVenta, Sucursal=@Sucursal where Serie=@Serie
 go
 
 --TRIGGERS	
@@ -554,6 +614,9 @@ Fecha DateTime,
 Accion varchar(20)
 )
 
+if object_id('tr_BitacoraClientesAlta') is not null
+  drop Trigger tr_BitacoraClientesAlta
+
 create trigger tr_BitacoraClientesAlta
 on Clientes for insertas
 declare @Fecha DateTime
@@ -575,6 +638,8 @@ insert into BitacoraClientes ( Rol, Fecha, Accion)
 values ('Administrador',@Fecha, 'Eliminacion de Cliente' )
 go
 
+if object_id('tr_BitacoraClientesActualizacion') is not null
+  drop Trigger tr_BitacoraClientesActualizacion
 
 create trigger tr_BitacoraClientesActualizacion
 on Clientes for update

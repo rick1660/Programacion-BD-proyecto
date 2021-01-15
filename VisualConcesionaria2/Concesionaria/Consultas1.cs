@@ -79,6 +79,31 @@ namespace Concesionaria
 
         }
 
+        public void InsertarAutomovil(string Marca,string Modelo, string Color, string Año, string Serie, string FechaIngreso, string PrecioCompra, string PrecioVenta)
+        {
+
+            SqlCommand comandoInsertar = new SqlCommand();
+            comandoInsertar.Connection = conexion.AbrirConexion();
+            comandoInsertar.CommandText = "InsertarAutomovil";
+            comandoInsertar.CommandType = CommandType.StoredProcedure;
+            comandoInsertar.Parameters.AddWithValue("@Marca", Marca);
+            comandoInsertar.Parameters.AddWithValue("@Modelo", @Modelo);
+            comandoInsertar.Parameters.AddWithValue("@Color", Color);
+            comandoInsertar.Parameters.AddWithValue("@Año", Año);
+            comandoInsertar.Parameters.AddWithValue("@Serie", Serie);
+            comandoInsertar.Parameters.AddWithValue("@FechaIngreso", FechaIngreso);
+            comandoInsertar.Parameters.AddWithValue("@PrecioCompra", PrecioCompra);
+            comandoInsertar.Parameters.AddWithValue("@PrecioVenta", PrecioVenta);
+            comandoInsertar.Parameters.AddWithValue("@Sucursal", 1);
+            comandoInsertar.ExecuteNonQuery();
+            comandoInsertar.Parameters.Clear();
+            comandoInsertar.CommandType = CommandType.Text;
+
+
+
+
+        }
+
         //Mostrar
 
 
@@ -107,6 +132,23 @@ namespace Concesionaria
             return tabla;
 
         }
+
+        public DataTable MostrarAutos()
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "MostrarAutos";
+            comando.CommandType = CommandType.StoredProcedure;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+
+        }
+
+
+      
+
 
         //Eliminar
         public void EliminarCliente(int IdCliente)
@@ -137,6 +179,20 @@ namespace Concesionaria
             comando.Parameters.Clear();
             comando.CommandType = CommandType.Text;
         }
+
+        public void EliminarAutomovil(int IdAutomovil)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "EliminarAutomovil";
+            comando.CommandType = CommandType.StoredProcedure;
+
+            comando.Parameters.AddWithValue("@IdAutomovil", IdAutomovil);
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+            comando.CommandType = CommandType.Text;
+        }
+
 
         //Editar
 
@@ -176,7 +232,7 @@ namespace Concesionaria
         {
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "ActualizarEmpleado";
+            comando.CommandText = "ActualizarEmplead";
             comando.CommandType = CommandType.StoredProcedure;
 
             comando.Parameters.AddWithValue("@Nombre", Nombre);
@@ -194,6 +250,34 @@ namespace Concesionaria
             comando.Parameters.Clear();
             comando.CommandType = CommandType.Text;
         }
+
+
+        public void EditarAutomovil(string Marca, string Modelo, string Color, string Año, string Serie, string FechaIngreso, string PrecioCompra, string PrecioVenta)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "ActualizarAutomovil";
+            comando.CommandType = CommandType.StoredProcedure;
+
+            comando.Parameters.AddWithValue("@Marca", Marca);
+            comando.Parameters.AddWithValue("@Modelo", Modelo);
+            comando.Parameters.AddWithValue("@Color", Color);
+            comando.Parameters.AddWithValue("@Año", Año);
+            comando.Parameters.AddWithValue("@Serie", Serie);
+            comando.Parameters.AddWithValue("@FechaIngreso", FechaIngreso);
+            comando.Parameters.AddWithValue("@PrecioCompra", PrecioCompra);
+            comando.Parameters.AddWithValue("@PrecioVenta", PrecioVenta);
+            comando.Parameters.AddWithValue("@Sucursal", 1);
+
+
+
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+            comando.CommandType = CommandType.Text;
+        }
+
+
+        
 
     }
 }

@@ -66,6 +66,12 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarAutomovil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarAutomovil.Designer.cs">
+      <DependentUpon>AgregarAutomovil.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarAutomovil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarAutomovil.Designer.cs">
+      <DependentUpon>ModificarAutomovil.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModificarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +206,9 @@
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AgregarAutomovil.resx">
+      <DependentUpon>AgregarAutomovil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarCliente.resx">
       <DependentUpon>AgregarCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarAutomovil.resx">
+      <DependentUpon>ModificarAutomovil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarCliente.resx">
       <DependentUpon>ModificarCliente.cs</DependentUpon>

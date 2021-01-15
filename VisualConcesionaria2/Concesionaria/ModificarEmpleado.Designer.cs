@@ -245,7 +245,7 @@
             this.txtNombre.Size = new System.Drawing.Size(293, 16);
             this.txtNombre.TabIndex = 1;
             this.txtNombre.Text = "Nombre";
-            this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Leave);
+            this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
             this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
             // btnModificar

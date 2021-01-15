@@ -101,10 +101,6 @@ namespace Concesionaria
             txtPassword.ForeColor = Color.Gray;
             txtTel.Text = "Telefono";
             txtTel.ForeColor = Color.Gray;
-            txtFechaNa.Text = "Fecha  de nacimiento  (AAA-MM-DD)";
-            txtFechaNa.ForeColor = Color.Gray;
-            txtFechaIngreso.Text = "Fecha  de ingreso  (AAA-MM-DD)";
-            txtFechaIngreso.ForeColor = Color.Gray;
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
@@ -115,7 +111,7 @@ namespace Concesionaria
                 try
                 {
                     //  Nombre, Apellidos,password, Telefono, Correo, Edad, Sexo, FechaNacimiento, RFC, Referencia1, NumR1, Referencia2, NumR2, Referencia3, NumR3
-                    objetoCliente.InsertarEmpleado(txtNombre.Text, txtApellidos.Text,txtCorreo.Text,txtPassword.Text,txtFechaNa.Text, txtFechaIngreso.Text,txtTel.Text);
+                    objetoCliente.InsertarEmpleado(txtNombre.Text, txtApellidos.Text,txtCorreo.Text,txtPassword.Text, txtFechaNa.Text, txtFechaIngreso.Text,txtTel.Text);
                     MessageBox.Show("Registro Realizado con exito");
 
                     txtNombre.Text = "Nombre";
@@ -126,10 +122,10 @@ namespace Concesionaria
                     txtCorreo.ForeColor = Color.Gray;
                     txtPassword.Text = "Contraseña";
                     txtPassword.ForeColor = Color.Gray;
-                    txtTel.Text = "Telefono";
-                    txtTel.ForeColor = Color.Gray;
-                    txtFechaNa.Text = "Fecha  de nacimiento  (AAA-MM-DD)";
+                    txtFechaNa.Text = "Telefono";
                     txtFechaNa.ForeColor = Color.Gray;
+                    txtTel.Text = "Fecha  de nacimiento  (AAA-MM-DD)";
+                    txtTel.ForeColor = Color.Gray;
                     txtFechaIngreso.Text = "Fecha  de ingreso  (AAA-MM-DD)";
                     txtFechaIngreso.ForeColor = Color.Gray;
 
@@ -165,6 +161,8 @@ namespace Concesionaria
                 isOK = false;
             }
 
+
+            
 
             if (txtTel.Text == "Telefono" || txtTel.Text == "")
             {
@@ -324,12 +322,39 @@ namespace Concesionaria
             }
         }
 
+
+
         private void txtApellidos_TextChanged(object sender, EventArgs e)
         {
 
         }
 
         private void txtFechaIngreso_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrecioVenta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnIngresar_Click_1(object sender, EventArgs e)
         {
 
         }

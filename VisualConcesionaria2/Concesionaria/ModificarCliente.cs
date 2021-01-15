@@ -61,6 +61,10 @@ namespace Concesionaria
                 txtReferencia3.ForeColor = Color.Black;
                 txtNumR3.ForeColor = Color.Black;
 
+
+
+               
+
                 txtNombre.Text = dtgClientes.CurrentRow.Cells["Nombre"].Value.ToString();
                 txtApellidos.Text = dtgClientes.CurrentRow.Cells["Apellidos"].Value.ToString();
                 txtPassword.Text = dtgClientes.CurrentRow.Cells["PasswordCliente"].Value.ToString();
