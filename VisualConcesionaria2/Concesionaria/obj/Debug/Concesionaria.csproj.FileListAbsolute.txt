@@ -99,3 +99,6 @@ C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Con
 C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.ModificarEmpleado.resources
 C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.AgregarAutomovil.resources
 C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.ModificarAutomovil.resources
+C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.EmpleadosInterfaz.resources
+C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.AgregarAccesorio.resources
+C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.ModificarAccesorio.resources

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Concesionaria
 {
@@ -30,113 +31,7 @@ namespace Concesionaria
 
         private void AgregarCliente_Load(object sender, EventArgs e)
         {
-            bool isOK = true;
-            if (txtNombre.Text == "Nombre" || txtNombre.Text == "")
-            {
-                errorProvider1.SetError(txtNombre, "Ingrese su Nombre");
-                isOK = false;
-            }
-
-
-            if (txtApellidos.Text == "Apellidos" || txtApellidos.Text == "")
-            {
-                errorProvider1.SetError(txtApellidos, "Ingrese sus Apellidos");
-                isOK = false;
-            }
-
-
-            if (txtPassword.Text == "Contraseña" || txtPassword.Text == "")
-            {
-                errorProvider1.SetError(txtPassword, "Establesca una contraseña");
-                isOK = false;
-            }
-
-
-            if (txtTel.Text == "Telefono" || txtTel.Text == "")
-            {
-                errorProvider1.SetError(txtTel, "Ingrese su Numero telefonico");
-                isOK = false;
-            }
-
-            if (txtCorreo.Text == "Correo" || txtCorreo.Text == "")
-            {
-                errorProvider1.SetError(txtCorreo, "Ingrese su Correo ");
-                isOK = false;
-            }
-
-
-            if (txtEdad.Text == "Edad" || txtEdad.Text == "")
-            {
-                errorProvider1.SetError(txtEdad, "Ingrese su edad ");
-                isOK = false;
-            }
-
-
-            if (txtDireccion.Text == "Direccion" || txtDireccion.Text == "")
-            {
-                errorProvider1.SetError(txtDireccion, "Ingrese su Direccion");
-                isOK = false;
-            }
-
-            if (cmxGenero.Text == "")
-            {
-                errorProvider1.SetError(cmxGenero, "Seleccione su genero");
-                isOK = false;
-            }
-
-            if (txtFechaNa.Text == "Fecha  de nacimiento  (AAA-MM-DD)" || txtFechaNa.Text == "")
-            {
-                errorProvider1.SetError(txtFechaNa, "Ingrese su Fecha de nacimiento");
-                isOK = false;
-            }
-
-
-            if (txtRFC.Text == "RFC" || txtRFC.Text == "")
-            {
-                errorProvider1.SetError(txtRFC, "Ingrese su RFC");
-                isOK = false;
-            }
-
-
-            if (txtReferencia1.Text == "Nombre" || txtReferencia1.Text == "")
-            {
-                errorProvider1.SetError(txtReferencia1, "Ingrese El nombre se su Referencia");
-                isOK = false;
-            }
-
-
-            if (txtNumR1.Text == "Telefono" || txtNumR1.Text == "")
-            {
-                errorProvider1.SetError(txtNumR1, "Ingrese el numero telefonico se su Referencia");
-                isOK = false;
-            }
-
-
-            if (txtReferencia2.Text == "Nombre" || txtReferencia2.Text == "")
-            {
-                errorProvider1.SetError(txtReferencia2, "Ingrese El nombre se su Referencia");
-                isOK = false;
-            }
-
-
-            if (txtNumR2.Text == "Telefono" || txtNumR2.Text == "")
-            {
-                errorProvider1.SetError(txtNumR2, "Ingrese el numero telefonico se su Referencia");
-                isOK = false;
-            }
-
-            if (txtReferencia3.Text == "Nombre" || txtReferencia3.Text == "")
-            {
-                errorProvider1.SetError(txtReferencia3, "Ingrese El nombre se su Referencia");
-                isOK = false;
-            }
-
-
-            if (txtNumR3.Text == "Telefono" || txtNumR3.Text == "")
-            {
-                errorProvider1.SetError(txtNumR3, "Ingrese el numero telefonico se su Referencia");
-                isOK = false;
-            }
+          
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -632,6 +527,37 @@ namespace Concesionaria
         private void txtNumR2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtCorreo_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider2.Clear();
+            if (txtCorreo.Text != "")
+            {
+                ValidacionExistenciaCorreo(txtCorreo.Text);
+            }
+        }
+
+        private SqlConnection Conexion = new SqlConnection("Server=DESKTOP-NDLJN6T;DataBase= concesionario;Integrated Security=true");
+        private void ValidacionExistenciaCorreo(string Correo)
+        {
+            Conexion.Open();
+
+            SqlCommand cmd = new SqlCommand("SELECT Correo FROM Clientes WHERE Correo=@Correo", Conexion);
+            cmd.Parameters.AddWithValue("Correo", Correo);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+
+
+            if (dt.Rows.Count == 1)
+            {
+                errorProvider2.SetError(txtCorreo, "El correo ya se encuentra registrado, porfavor utilice uno diferente");
+                Conexion.Close();
+
+            }
+            Conexion.Close();
         }
     }
 }

@@ -66,6 +66,12 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarAccesorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarAccesorio.Designer.cs">
+      <DependentUpon>AgregarAccesorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarAutomovil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,12 @@
     <Compile Include="Empelados.Designer.cs">
       <DependentUpon>Empelados.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmpleadosInterfaz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadosInterfaz.Designer.cs">
+      <DependentUpon>EmpleadosInterfaz.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +164,12 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarAccesorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarAccesorio.Designer.cs">
+      <DependentUpon>ModificarAccesorio.cs</DependentUpon>
     </Compile>
     <Compile Include="ModificarAutomovil.cs">
       <SubType>Form</SubType>
@@ -206,6 +224,9 @@
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AgregarAccesorio.resx">
+      <DependentUpon>AgregarAccesorio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarAutomovil.resx">
       <DependentUpon>AgregarAutomovil.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,11 +263,17 @@
     <EmbeddedResource Include="Empelados.resx">
       <DependentUpon>Empelados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadosInterfaz.resx">
+      <DependentUpon>EmpleadosInterfaz.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarAccesorio.resx">
+      <DependentUpon>ModificarAccesorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarAutomovil.resx">
       <DependentUpon>ModificarAutomovil.cs</DependentUpon>
@@ -265,6 +292,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RegistroCliente.resx">
       <DependentUpon>RegistroCliente.cs</DependentUpon>
@@ -291,6 +319,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-123-128.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

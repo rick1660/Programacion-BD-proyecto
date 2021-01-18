@@ -104,6 +104,85 @@ namespace Concesionaria
 
         }
 
+        public void InsertarAccesorio(string Nombre, string Modelo, int Precio, string Cantidad)
+        {
+
+            SqlCommand comandoInsertar = new SqlCommand();
+            comandoInsertar.Connection = conexion.AbrirConexion();
+            comandoInsertar.CommandText = "InsertarAccesorio";
+            comandoInsertar.CommandType = CommandType.StoredProcedure;
+            comandoInsertar.Parameters.AddWithValue("@Nombre", Nombre);
+            comandoInsertar.Parameters.AddWithValue("@Modelo", Modelo);
+            comandoInsertar.Parameters.AddWithValue("@Precio", Precio);
+            comandoInsertar.Parameters.AddWithValue("@Cantidad", Cantidad);
+            comandoInsertar.Parameters.AddWithValue("@Sucursal", 1);
+           
+            comandoInsertar.ExecuteNonQuery();
+            comandoInsertar.Parameters.Clear();
+            comandoInsertar.CommandType = CommandType.Text;
+
+    
+
+
+
+        }
+
+        public void InsertarRuta(string Ruta)
+        {
+
+            SqlCommand comandoInsertar = new SqlCommand();
+            comandoInsertar.Connection = conexion.AbrirConexion();
+            comandoInsertar.CommandText = "InsertarRuta";
+            comandoInsertar.CommandType = CommandType.StoredProcedure;
+
+            comandoInsertar.Parameters.AddWithValue("@IdRuta", 1);
+            comandoInsertar.Parameters.AddWithValue("@Ruta", Ruta);
+     
+            comandoInsertar.ExecuteNonQuery();
+            comandoInsertar.Parameters.Clear();
+            comandoInsertar.CommandType = CommandType.Text;
+
+        }
+
+
+        public void InsertarTraspaso(string Fehca, int SucursalEntrega, int SucursalRecibe, string TipoTraspaso)
+        {
+
+            SqlCommand comandoInsertar = new SqlCommand();
+            comandoInsertar.Connection = conexion.AbrirConexion();
+            comandoInsertar.CommandText = "InsertarTraspaso";
+            comandoInsertar.CommandType = CommandType.StoredProcedure;
+
+            comandoInsertar.Parameters.AddWithValue("@Fehca", Fehca);
+            comandoInsertar.Parameters.AddWithValue("@SucursalEntrega", SucursalEntrega);
+            comandoInsertar.Parameters.AddWithValue("@SucursalRecibe", SucursalRecibe);
+            comandoInsertar.Parameters.AddWithValue("@TipoTraspaso", TipoTraspaso);
+            comandoInsertar.ExecuteNonQuery();
+            comandoInsertar.Parameters.Clear();
+            comandoInsertar.CommandType = CommandType.Text;
+
+        }
+
+
+        public void InsertarDetalleTraspaso(int IdTraspasoSas,int automovil)
+        {
+
+            SqlCommand comandoInsertar = new SqlCommand();
+            comandoInsertar.Connection = conexion.AbrirConexion();
+            comandoInsertar.CommandText = "InsertarDetalleTraspaso";
+            comandoInsertar.CommandType = CommandType.StoredProcedure;
+
+            comandoInsertar.Parameters.AddWithValue("@IdTraspasoSas", IdTraspasoSas);
+            comandoInsertar.Parameters.AddWithValue("@automovil", automovil);
+          
+            comandoInsertar.ExecuteNonQuery();
+            comandoInsertar.Parameters.Clear();
+            comandoInsertar.CommandType = CommandType.Text;
+
+        }
+
+
+
         //Mostrar
 
 
@@ -146,8 +225,48 @@ namespace Concesionaria
 
         }
 
+        public DataTable MostrarAccesorios()
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "MostrarAccesorios";
+            comando.CommandType = CommandType.StoredProcedure;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
 
-      
+        }
+
+        public DataTable MostrarAdmin()
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "MostrarAdmin";
+            comando.CommandType = CommandType.StoredProcedure;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+
+        }
+
+
+        public DataTable MostrarSucursalSecundaria()
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "MostrarSucursalSecundaria";
+            comando.CommandType = CommandType.StoredProcedure;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+
+        }
+
+
+
 
 
         //Eliminar
@@ -193,6 +312,32 @@ namespace Concesionaria
             comando.CommandType = CommandType.Text;
         }
 
+
+        public void EliminarAccesorio(int IdAutopartes)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "EliminarAccesorio";
+            comando.CommandType = CommandType.StoredProcedure;
+
+            comando.Parameters.AddWithValue("@IdAutopartes", IdAutopartes);
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+            comando.CommandType = CommandType.Text;
+        }
+
+        public void EliminarRuta()
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "EliminarRuta";
+            comando.CommandType = CommandType.StoredProcedure;
+
+            comando.Parameters.AddWithValue("@IdRuta", 1);
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+            comando.CommandType = CommandType.Text;
+        }
 
         //Editar
 
@@ -276,8 +421,56 @@ namespace Concesionaria
             comando.CommandType = CommandType.Text;
         }
 
+        public void EditarAccesorio(string Nombre, string Modelo, int Precio,string Cantidad)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "ActualizarAccesorios";
+            comando.CommandType = CommandType.StoredProcedure;
 
-        
+            comando.Parameters.AddWithValue("@Nombre", Nombre);
+            comando.Parameters.AddWithValue("@Modelo", Modelo);
+            comando.Parameters.AddWithValue("@Precio", Precio);
+            comando.Parameters.AddWithValue("@Cantidad", Cantidad);
+            comando.Parameters.AddWithValue("@Sucursal", 1);
+
+
+
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+            comando.CommandType = CommandType.Text;
+
+
+
+
+        }
+
+
+        public void EditarAdmin(int IdAdministrador,string Nombre, string Direccion, string Telefono, string Correo, string Contraseña, string FechaIng)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "ActualizarAdmin";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@IdAdministrador", IdAdministrador);
+            comando.Parameters.AddWithValue("@Nombre", Nombre);
+            comando.Parameters.AddWithValue("@Direccion", Direccion);
+            comando.Parameters.AddWithValue("@Telefono", Telefono);
+            comando.Parameters.AddWithValue("@Correo", Correo);
+            comando.Parameters.AddWithValue("@Contraseña", Contraseña);
+            comando.Parameters.AddWithValue("@FechaIngreso", FechaIng);
+            comando.Parameters.AddWithValue("@TipoUsuario", 3);
+
+
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+            comando.CommandType = CommandType.Text;
+
+
+
+
+        }
+
 
     }
 }

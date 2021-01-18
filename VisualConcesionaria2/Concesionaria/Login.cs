@@ -89,6 +89,13 @@ namespace Concesionaria
                 DataTable Tad = new DataTable();
                 Tba.Fill(Tad);
 
+                SqlCommand TAdEmpleado= new SqlCommand("SELECT Nombre , TipoUsuario FROM Empleados WHERE Correo = @Correo AND PasswordEmpleado = @pas", Conexion);
+                TAdEmpleado.Parameters.AddWithValue("correo", Correo);
+                TAdEmpleado.Parameters.AddWithValue("pas", Contraseña);
+                SqlDataAdapter Tbc = new SqlDataAdapter(TAdEmpleado);
+                DataTable Tac = new DataTable();
+                Tbc.Fill(Tac);
+
 
                 if (dt.Rows.Count == 1 )
                 {
@@ -114,6 +121,19 @@ namespace Concesionaria
                     }
 
                 }
+                else if (Tac.Rows.Count == 1)
+                {
+                    this.Hide();
+
+                    if (Tac.Rows[0][1].ToString() == "1")
+                    {
+                        NombreUsuario = Tac.Rows[0][0].ToString();
+                        new EmpleadosInterfaz(Tac.Rows[0][0].ToString()).Show();
+
+                    }
+
+                }
+
                 else
                 {
                     MessageBox.Show("Correo y/o contraseña incorrecta");
@@ -151,7 +171,7 @@ namespace Concesionaria
 
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "Usuario") 
+            if (txtUsuario.Text == "Correo") 
             {
                 txtUsuario.Text = "";
                 txtUsuario.ForeColor = Color.Black;
@@ -162,7 +182,7 @@ namespace Concesionaria
         {
             if (txtUsuario.Text == "")
             {
-                txtUsuario.Text = "Usuario";
+                txtUsuario.Text = "Correo";
                 txtUsuario.ForeColor = Color.Gray;
             }
         }

@@ -48,7 +48,9 @@
             this.txtSeparador4 = new Concesionaria.txtSeparador();
             this.txtSeparador2 = new Concesionaria.txtSeparador();
             this.txtSeparador1 = new Concesionaria.txtSeparador();
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAutos
@@ -57,7 +59,7 @@
             this.lblAutos.BackColor = System.Drawing.Color.Transparent;
             this.lblAutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAutos.ForeColor = System.Drawing.Color.Teal;
-            this.lblAutos.Location = new System.Drawing.Point(330, 27);
+            this.lblAutos.Location = new System.Drawing.Point(292, 30);
             this.lblAutos.Name = "lblAutos";
             this.lblAutos.Size = new System.Drawing.Size(232, 29);
             this.lblAutos.TabIndex = 15;
@@ -73,7 +75,7 @@
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.Teal;
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(650, 479);
+            this.btnLimpiar.Location = new System.Drawing.Point(612, 482);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(113, 42);
@@ -86,7 +88,7 @@
             // 
             this.btnIngresar.BackColor = System.Drawing.Color.Teal;
             this.btnIngresar.ForeColor = System.Drawing.Color.White;
-            this.btnIngresar.Location = new System.Drawing.Point(307, 461);
+            this.btnIngresar.Location = new System.Drawing.Point(269, 464);
             this.btnIngresar.Margin = new System.Windows.Forms.Padding(4);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(293, 42);
@@ -101,12 +103,13 @@
             this.txtFechaIngreso.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFechaIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFechaIngreso.ForeColor = System.Drawing.Color.Gray;
-            this.txtFechaIngreso.Location = new System.Drawing.Point(304, 330);
+            this.txtFechaIngreso.Location = new System.Drawing.Point(266, 333);
             this.txtFechaIngreso.Margin = new System.Windows.Forms.Padding(4);
             this.txtFechaIngreso.Name = "txtFechaIngreso";
             this.txtFechaIngreso.Size = new System.Drawing.Size(293, 16);
             this.txtFechaIngreso.TabIndex = 163;
             this.txtFechaIngreso.Text = "Fecha  de ingreso  (AAA-MM-DD)";
+            this.txtFechaIngreso.TextChanged += new System.EventHandler(this.txtFechaIngreso_TextChanged_1);
             this.txtFechaIngreso.Enter += new System.EventHandler(this.txtFechaIngreso_Enter);
             this.txtFechaIngreso.Leave += new System.EventHandler(this.txtFechaIngreso_Leave);
             // 
@@ -116,12 +119,13 @@
             this.txtFechaNa.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFechaNa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFechaNa.ForeColor = System.Drawing.Color.Gray;
-            this.txtFechaNa.Location = new System.Drawing.Point(307, 292);
+            this.txtFechaNa.Location = new System.Drawing.Point(269, 295);
             this.txtFechaNa.Margin = new System.Windows.Forms.Padding(4);
             this.txtFechaNa.Name = "txtFechaNa";
             this.txtFechaNa.Size = new System.Drawing.Size(293, 16);
             this.txtFechaNa.TabIndex = 162;
             this.txtFechaNa.Text = "Fecha  de nacimiento  (AAA-MM-DD)";
+            this.txtFechaNa.TextChanged += new System.EventHandler(this.txtFechaNa_TextChanged_1);
             this.txtFechaNa.Enter += new System.EventHandler(this.txtFechaNa_Enter);
             this.txtFechaNa.Leave += new System.EventHandler(this.txtFechaNa_Leave);
             // 
@@ -131,12 +135,13 @@
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.Gray;
-            this.txtPassword.Location = new System.Drawing.Point(307, 254);
+            this.txtPassword.Location = new System.Drawing.Point(269, 257);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(293, 16);
             this.txtPassword.TabIndex = 161;
             this.txtPassword.Text = "Contraseña";
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged_1);
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
@@ -146,12 +151,13 @@
             this.txtCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ForeColor = System.Drawing.Color.Gray;
-            this.txtCorreo.Location = new System.Drawing.Point(307, 214);
+            this.txtCorreo.Location = new System.Drawing.Point(269, 217);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(293, 16);
             this.txtCorreo.TabIndex = 160;
             this.txtCorreo.Text = "Correo";
+            this.txtCorreo.TextChanged += new System.EventHandler(this.txtCorreo_TextChanged_1);
             this.txtCorreo.Enter += new System.EventHandler(this.textCorreo_Enter);
             this.txtCorreo.Leave += new System.EventHandler(this.textCorreo_Leave);
             // 
@@ -161,12 +167,13 @@
             this.txtTel.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTel.ForeColor = System.Drawing.Color.Gray;
-            this.txtTel.Location = new System.Drawing.Point(304, 366);
+            this.txtTel.Location = new System.Drawing.Point(266, 369);
             this.txtTel.Margin = new System.Windows.Forms.Padding(4);
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(293, 16);
             this.txtTel.TabIndex = 164;
             this.txtTel.Text = "Telefono";
+            this.txtTel.TextChanged += new System.EventHandler(this.txtTel_TextChanged_1);
             this.txtTel.Enter += new System.EventHandler(this.textTel_Enter);
             this.txtTel.Leave += new System.EventHandler(this.textTel_Leave);
             // 
@@ -176,12 +183,13 @@
             this.txtApellidos.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidos.ForeColor = System.Drawing.Color.Gray;
-            this.txtApellidos.Location = new System.Drawing.Point(307, 178);
+            this.txtApellidos.Location = new System.Drawing.Point(269, 181);
             this.txtApellidos.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(293, 16);
             this.txtApellidos.TabIndex = 159;
             this.txtApellidos.Text = "Apellidos";
+            this.txtApellidos.TextChanged += new System.EventHandler(this.txtApellidos_TextChanged_1);
             this.txtApellidos.Enter += new System.EventHandler(this.txtApellidos_Enter);
             this.txtApellidos.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
@@ -191,84 +199,96 @@
             this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.Gray;
-            this.txtNombre.Location = new System.Drawing.Point(307, 145);
+            this.txtNombre.Location = new System.Drawing.Point(269, 148);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(293, 16);
             this.txtNombre.TabIndex = 158;
             this.txtNombre.Text = "Nombre";
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
             this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
             // txtSeparador8
             // 
             this.txtSeparador8.ForeColor = System.Drawing.Color.Teal;
-            this.txtSeparador8.Location = new System.Drawing.Point(304, 347);
+            this.txtSeparador8.Location = new System.Drawing.Point(266, 350);
             this.txtSeparador8.Margin = new System.Windows.Forms.Padding(4);
             this.txtSeparador8.Name = "txtSeparador8";
             this.txtSeparador8.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador8.TabIndex = 174;
             this.txtSeparador8.Text = "txtSeparador8";
+            this.txtSeparador8.Click += new System.EventHandler(this.txtSeparador8_Click_1);
             // 
             // txtSeparador7
             // 
             this.txtSeparador7.ForeColor = System.Drawing.Color.Teal;
-            this.txtSeparador7.Location = new System.Drawing.Point(307, 309);
+            this.txtSeparador7.Location = new System.Drawing.Point(269, 312);
             this.txtSeparador7.Margin = new System.Windows.Forms.Padding(4);
             this.txtSeparador7.Name = "txtSeparador7";
             this.txtSeparador7.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador7.TabIndex = 173;
             this.txtSeparador7.Text = "txtSeparador7";
+            this.txtSeparador7.Click += new System.EventHandler(this.txtSeparador7_Click_1);
             // 
             // txtSeparador15
             // 
             this.txtSeparador15.ForeColor = System.Drawing.Color.Teal;
-            this.txtSeparador15.Location = new System.Drawing.Point(307, 270);
+            this.txtSeparador15.Location = new System.Drawing.Point(269, 273);
             this.txtSeparador15.Margin = new System.Windows.Forms.Padding(4);
             this.txtSeparador15.Name = "txtSeparador15";
             this.txtSeparador15.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador15.TabIndex = 172;
             this.txtSeparador15.Text = "txtSeparador15";
+            this.txtSeparador15.Click += new System.EventHandler(this.txtSeparador15_Click_1);
             // 
             // txtSeparador3
             // 
             this.txtSeparador3.ForeColor = System.Drawing.Color.Teal;
-            this.txtSeparador3.Location = new System.Drawing.Point(307, 232);
+            this.txtSeparador3.Location = new System.Drawing.Point(269, 235);
             this.txtSeparador3.Margin = new System.Windows.Forms.Padding(4);
             this.txtSeparador3.Name = "txtSeparador3";
             this.txtSeparador3.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador3.TabIndex = 171;
             this.txtSeparador3.Text = "txtSeparador3";
+            this.txtSeparador3.Click += new System.EventHandler(this.txtSeparador3_Click_1);
             // 
             // txtSeparador4
             // 
             this.txtSeparador4.ForeColor = System.Drawing.Color.Teal;
-            this.txtSeparador4.Location = new System.Drawing.Point(304, 383);
+            this.txtSeparador4.Location = new System.Drawing.Point(266, 386);
             this.txtSeparador4.Margin = new System.Windows.Forms.Padding(4);
             this.txtSeparador4.Name = "txtSeparador4";
             this.txtSeparador4.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador4.TabIndex = 170;
             this.txtSeparador4.Text = "txtSeparador4";
+            this.txtSeparador4.Click += new System.EventHandler(this.txtSeparador4_Click_1);
             // 
             // txtSeparador2
             // 
             this.txtSeparador2.ForeColor = System.Drawing.Color.Teal;
-            this.txtSeparador2.Location = new System.Drawing.Point(307, 194);
+            this.txtSeparador2.Location = new System.Drawing.Point(269, 197);
             this.txtSeparador2.Margin = new System.Windows.Forms.Padding(4);
             this.txtSeparador2.Name = "txtSeparador2";
             this.txtSeparador2.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador2.TabIndex = 169;
             this.txtSeparador2.Text = "txtSeparador2";
+            this.txtSeparador2.Click += new System.EventHandler(this.txtSeparador2_Click);
             // 
             // txtSeparador1
             // 
             this.txtSeparador1.ForeColor = System.Drawing.Color.Teal;
-            this.txtSeparador1.Location = new System.Drawing.Point(307, 162);
+            this.txtSeparador1.Location = new System.Drawing.Point(269, 165);
             this.txtSeparador1.Margin = new System.Windows.Forms.Padding(4);
             this.txtSeparador1.Name = "txtSeparador1";
             this.txtSeparador1.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador1.TabIndex = 168;
             this.txtSeparador1.Text = "txtSeparador1";
+            this.txtSeparador1.Click += new System.EventHandler(this.txtSeparador1_Click);
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
             // 
             // AgregarEmpleado
             // 
@@ -298,6 +318,7 @@
             this.Text = "AgregarEmpleado";
             this.Load += new System.EventHandler(this.AgregarEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,5 +344,6 @@
         private System.Windows.Forms.TextBox txtApellidos;
         private txtSeparador txtSeparador1;
         private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }

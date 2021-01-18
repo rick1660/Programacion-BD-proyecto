@@ -35,12 +35,12 @@
             this.btnAutos = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BarraHorizontal = new System.Windows.Forms.Panel();
+            this.ptxRestaurar = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ptxMinimizar = new System.Windows.Forms.PictureBox();
-            this.ptxRestaurar = new System.Windows.Forms.PictureBox();
             this.ptxExtender = new System.Windows.Forms.PictureBox();
             this.ptxCerrar = new System.Windows.Forms.PictureBox();
             this.btnMenu = new System.Windows.Forms.PictureBox();
@@ -48,8 +48,8 @@
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.BarraHorizontal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptxRestaurar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptxExtender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptxCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
@@ -78,7 +78,7 @@
             this.btnAccesorios.ForeColor = System.Drawing.Color.White;
             this.btnAccesorios.Image = ((System.Drawing.Image)(resources.GetObject("btnAccesorios.Image")));
             this.btnAccesorios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccesorios.Location = new System.Drawing.Point(0, 340);
+            this.btnAccesorios.Location = new System.Drawing.Point(0, 311);
             this.btnAccesorios.Name = "btnAccesorios";
             this.btnAccesorios.Size = new System.Drawing.Size(179, 40);
             this.btnAccesorios.TabIndex = 7;
@@ -95,7 +95,7 @@
             this.btnCompra.ForeColor = System.Drawing.Color.White;
             this.btnCompra.Image = ((System.Drawing.Image)(resources.GetObject("btnCompra.Image")));
             this.btnCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompra.Location = new System.Drawing.Point(0, 294);
+            this.btnCompra.Location = new System.Drawing.Point(0, 265);
             this.btnCompra.Name = "btnCompra";
             this.btnCompra.Size = new System.Drawing.Size(179, 40);
             this.btnCompra.TabIndex = 5;
@@ -112,7 +112,7 @@
             this.btnAutos.ForeColor = System.Drawing.Color.White;
             this.btnAutos.Image = ((System.Drawing.Image)(resources.GetObject("btnAutos.Image")));
             this.btnAutos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAutos.Location = new System.Drawing.Point(0, 248);
+            this.btnAutos.Location = new System.Drawing.Point(3, 231);
             this.btnAutos.Name = "btnAutos";
             this.btnAutos.Size = new System.Drawing.Size(179, 40);
             this.btnAutos.TabIndex = 0;
@@ -148,6 +148,20 @@
             this.BarraHorizontal.Size = new System.Drawing.Size(821, 50);
             this.BarraHorizontal.TabIndex = 2;
             this.BarraHorizontal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraHorizontal_MouseDown);
+            // 
+            // ptxRestaurar
+            // 
+            this.ptxRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ptxRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptxRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("ptxRestaurar.Image")));
+            this.ptxRestaurar.Location = new System.Drawing.Point(767, 12);
+            this.ptxRestaurar.Name = "ptxRestaurar";
+            this.ptxRestaurar.Size = new System.Drawing.Size(20, 20);
+            this.ptxRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptxRestaurar.TabIndex = 3;
+            this.ptxRestaurar.TabStop = false;
+            this.ptxRestaurar.Visible = false;
+            this.ptxRestaurar.Click += new System.EventHandler(this.ptxRestaurar_Click);
             // 
             // label4
             // 
@@ -202,20 +216,6 @@
             this.ptxMinimizar.TabStop = false;
             this.ptxMinimizar.Click += new System.EventHandler(this.ptxMinimizar_Click);
             // 
-            // ptxRestaurar
-            // 
-            this.ptxRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ptxRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ptxRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("ptxRestaurar.Image")));
-            this.ptxRestaurar.Location = new System.Drawing.Point(767, 12);
-            this.ptxRestaurar.Name = "ptxRestaurar";
-            this.ptxRestaurar.Size = new System.Drawing.Size(20, 20);
-            this.ptxRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptxRestaurar.TabIndex = 3;
-            this.ptxRestaurar.TabStop = false;
-            this.ptxRestaurar.Visible = false;
-            this.ptxRestaurar.Click += new System.EventHandler(this.ptxRestaurar_Click);
-            // 
             // ptxExtender
             // 
             this.ptxExtender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -256,7 +256,6 @@
             // PanelContenedor
             // 
             this.PanelContenedor.BackColor = System.Drawing.Color.White;
-            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContenedor.Location = new System.Drawing.Point(179, 50);
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(821, 600);
@@ -275,12 +274,13 @@
             this.Name = "ClienteInterfaz";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminInterfaz";
+            this.Load += new System.EventHandler(this.ClienteInterfaz_Load);
             this.MenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.BarraHorizontal.ResumeLayout(false);
             this.BarraHorizontal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptxMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptxRestaurar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptxMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptxExtender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptxCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();

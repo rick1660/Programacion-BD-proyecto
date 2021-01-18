@@ -102,7 +102,7 @@
             // 
             this.panel.Location = new System.Drawing.Point(0, 0);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(821, 38);
+            this.panel.Size = new System.Drawing.Size(821, 600);
             this.panel.TabIndex = 58;
             this.panel.Visible = false;
             this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Paint);

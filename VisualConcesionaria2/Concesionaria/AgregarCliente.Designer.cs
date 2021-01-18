@@ -71,7 +71,9 @@
             this.txtSeparador2 = new Concesionaria.txtSeparador();
             this.txtSeparador1 = new Concesionaria.txtSeparador();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAutos
@@ -367,6 +369,7 @@
             this.txtCorreo.Size = new System.Drawing.Size(293, 16);
             this.txtCorreo.TabIndex = 119;
             this.txtCorreo.Text = "Correo";
+            this.txtCorreo.TextChanged += new System.EventHandler(this.txtCorreo_TextChanged);
             this.txtCorreo.Enter += new System.EventHandler(this.textCorreo_Enter);
             this.txtCorreo.Leave += new System.EventHandler(this.textCorreo_Leave);
             // 
@@ -570,6 +573,10 @@
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
             // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
             // AgregarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -621,6 +628,7 @@
             this.Text = "AgregarCliente";
             this.Load += new System.EventHandler(this.AgregarCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -669,5 +677,6 @@
         private txtSeparador txtSeparador1;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }

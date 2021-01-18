@@ -34,6 +34,29 @@ namespace Concesionaria
             conexion.InsertarAutomovil(Marca, Modelo, Color, Año, Serie, FechaIngreso, precioCompra, PrecioVenta); ;
         }
 
+        public void InsertarAccesorios(string Nombre, string Modelo, int Precio,string Cantidad)
+        {
+
+            conexion.InsertarAccesorio(Nombre, Modelo, Convert.ToInt32(Precio),Cantidad); ;
+        }
+
+
+        public void InsertarRuta(string Ruta)
+        {
+
+            conexion.InsertarRuta(Ruta); ;
+        }
+
+        public void InsertarTraspaso(string Fecha, int SucursalEntrega, int SucursalRecibe, string TipoTraspaso) 
+        {
+            conexion.InsertarTraspaso(Fecha, SucursalEntrega, SucursalRecibe, TipoTraspaso);
+        }
+
+
+        public void InsertarDetalleTraspaso(int IdTraspasoSas, int automovil) 
+        {
+            conexion.InsertarDetalleTraspaso(IdTraspasoSas, automovil);
+        }
 
         //------------------------Mostrar-------------------------------
         public DataTable MostrarCliente()
@@ -62,7 +85,30 @@ namespace Concesionaria
             return tabla;
         }
 
+        public DataTable MostrarAccesorios()
+        {
 
+            DataTable tabla = new DataTable();
+            tabla = conexion.MostrarAccesorios();
+            return tabla;
+        }
+
+        public DataTable MostrarAdmin()
+        {
+
+            DataTable tabla = new DataTable();
+            tabla = conexion.MostrarAdmin();
+            return tabla;
+        }
+
+
+        public DataTable MostrarSucursalSecundaria() 
+        {
+            DataTable tabla = new DataTable();
+            tabla = conexion.MostrarSucursalSecundaria();
+            return tabla;
+
+        }
         //------------------------Eliminar---------------------------
 
         public void EliminarCliente(string IdCliente)
@@ -83,7 +129,19 @@ namespace Concesionaria
             conexion.EliminarAutomovil(Convert.ToInt32(IdAutomovil));
         }
 
+        public void EliminarAccesorio(string IdAutopartes)
+        {
 
+            conexion.EliminarAccesorio(Convert.ToInt32(IdAutopartes));
+        }
+
+
+
+        public void EliminarRuta()
+        {
+
+            conexion.EliminarRuta();
+        }
 
 
         //-------------------Editar-------------------------------------
@@ -105,5 +163,18 @@ namespace Concesionaria
             conexion.EditarAutomovil(Marca, Modelo, Color, Año, Serie, FechaIngreso, PrecioCompra, PrecioVenta);
         }
 
+        public void EditarAccesorio(string Nombre, string Modelo, int Precio, string Cantidad)
+        {
+
+            conexion.EditarAccesorio(Nombre, Modelo, Convert.ToInt32(Precio), Cantidad);
+        }
+
+
+
+        public void EditarAdmin(int IdAdministrador,string Nombre, string Dirreccion, string Telefono, string Correo, string Contraseña, string FechaIngreso)
+        {
+
+            conexion.EditarAdmin(Convert.ToInt32(IdAdministrador),Nombre, Dirreccion, Telefono, Correo, Contraseña, FechaIngreso);
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Concesionaria
 {
@@ -29,65 +30,28 @@ namespace Concesionaria
 
         }
 
-        private void txtCorreo_TextChanged(object sender, EventArgs e)
+        private SqlConnection Conexion = new SqlConnection("Server=DESKTOP-NDLJN6T;DataBase= concesionario;Integrated Security=true");
+        private void ValidacionExistenciaCorreo(string Correo)
         {
+            Conexion.Open();
 
+            SqlCommand cmd = new SqlCommand("SELECT Correo FROM Clientes WHERE Correo=@Correo", Conexion);
+            cmd.Parameters.AddWithValue("Correo", Correo);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+
+
+            if (dt.Rows.Count == 1)
+            {
+                errorProvider2.SetError(txtCorreo, "El correo ya se encuentra registrado, porfavor utilice uno diferente");
+                Conexion.Close();
+
+            }
+            Conexion.Close();
         }
 
-        private void txtSeparador3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSeparador15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTel_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFechaNa_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSeparador7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEdad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDireccion_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSeparador6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSeparador5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSeparador4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
@@ -355,6 +319,80 @@ namespace Concesionaria
         }
 
         private void btnIngresar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCorreo_TextChanged_1(object sender, EventArgs e)
+        {
+            errorProvider2.Clear();
+            if (txtCorreo.Text != "")
+            {
+                ValidacionExistenciaCorreo(txtCorreo.Text);
+            }
+        }
+
+        private void txtSeparador8_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFechaIngreso_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador7_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFechaNa_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador15_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTel_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtApellidos_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeparador1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
         {
 
         }

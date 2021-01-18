@@ -13,7 +13,7 @@ CREATE TABLE Sucursal_principal
  Correo VARCHAR(45),
 )
 
-ALTER TABLE Sucursal_principal ALTER COLUMN  Telefono Varchar(10);
+ALTER TABLE Administrador ALTER COLUMN  Telefono Varchar(10);
 
 Insert into Sucursal_principal values('1','National cars','Zona rio','664123578','NationalsCarsRio@gmail.com');
 
@@ -22,7 +22,7 @@ Create TABLE Administrador
 	 IdAdministrador INT PRIMARY KEY NOT NULL,
 	 Nombre VARCHAR(45),
 	 Direccion VARCHAR(45),
-	 Telefono INT,
+	 Telefono Varchar(10),
 	 Correo VARCHAR(45),
 	 Contraseña Varchar(45),
 	 FechaIngreso DATE ,
@@ -90,7 +90,7 @@ Delete from Clientes where IdClientes=4
  Drop Table Clientes
  Drop Table CompraVenta
 
-select * from Clientes
+select * from Empleados
 --Automovil
 
 
@@ -112,21 +112,28 @@ CREATE TABLE Automoviles
   ALTER TABLE Automoviles DROP CONSTRAINT FK_SucursalAuto_TBSucursalPrincipal
   Drop Table Automoviles
 
---Autopartes
+--Autopartes-----
+
+drop table Autopartes
 CREATE TABLE Autopartes 
 (
-  IdAutopartes INT PRIMARY KEY NOT NULL,
+  IdAutopartes INT PRIMARY KEY NOT NULL IDENTITY(1,1),
   Nombre VARCHAR(45) NOT NULL,
   Modelo VARCHAR(45) NOT NULL,
+  precio int,
   Cantidad INT NOT NULL,
+  
   Sucursal INT NOT NULL,
   CONSTRAINT FK_SucursalPart_TBSucursalPrincipal FOREIGN KEY (Sucursal) REFERENCES Sucursal_principal (IdSucursal)
   )
 
 --Sucursal secundaria
+
+
+
 CREATE TABLE Sucursal_Secundaria
 (
-  IdSucursal_Secundaria INT PRIMARY KEY NOT NULL,
+  IdSucursal_Secundaria INT PRIMARY KEY NOT NULL ,
   Nombre VARCHAR(45) NOT NULL,
   Direccion VARCHAR(45) NOT NULL,
   Telefono INT NOT NULL,
@@ -134,15 +141,32 @@ CREATE TABLE Sucursal_Secundaria
 )
 
 
+Insert into Sucursal_Secundaria values(1,'NC Otay','Otay','66412147','cOtay@gmail.com');
+Insert into Sucursal_Secundaria values(2,'NC Playas','Playas','664781235','ncplayas@gmail.com');
+
+
 --Traspasos
+
+Drop Table TraspasoSaS
 CREATE TABLE TraspasoSaS
 (
-  IdTraspasoSaS INT PRIMARY KEY NOT NULL,
+  IdTraspasoSaS INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+  Fecha date NOT NULL,
   SucursalEntrega INT NOT NULL,
   SucursalRecibe INT NOT NULL,
   TipoTraspaso VARCHAR(45),
   CONSTRAINT FK_SucursalRecibe_TBSucursal_principal  FOREIGN KEY (SucursalEntrega) REFERENCES Sucursal_principal (IdSucursal),
   CONSTRAINT FK_SucursalEntrega_TBSucursal_Secunadaria  FOREIGN KEY (SucursalRecibe) REFERENCES Sucursal_Secundaria (IdSucursal_Secundaria)
+)
+
+Drop table DetalleTraspaso
+CREATE TABLE DetalleTraspaso 
+(
+  idDetalle_Traspaso INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+  IdTraspasoSAS INT NOT NULL,
+  Automovil INT NOT NULL,
+  CONSTRAINT FK_IdTraspasoSAS_TBDClientes   FOREIGN KEY (IdTraspasoSAS) REFERENCES TraspasoSaS (IdTraspasoSaS),
+  CONSTRAINT FK_Automovil_TBDClientes   FOREIGN KEY (Automovil) REFERENCES Automoviles (IdAutomovil),
 )
 
 --Compra venta
@@ -174,17 +198,7 @@ CREATE TABLE DetalleCompraVenta
 
  
 
-CREATE TABLE DetalleTraspaso 
-(
-  idDetalle_Traspaso INT PRIMARY KEY NOT NULL,
-  IdTraspasoSAS INT NOT NULL,
-  Autoparte INT NOT NULL,
-  Cantidad INT NOT NULL,
-  Automovil INT NOT NULL,
-  CONSTRAINT FK_IdTraspasoSAS_TBDClientes   FOREIGN KEY (IdTraspasoSAS) REFERENCES TraspasoSaS (IdTraspasoSaS),
-  CONSTRAINT FK_Autoparte_TBDClientes   FOREIGN KEY (Autoparte) REFERENCES Autopartes (IdAutopartes),
-  CONSTRAINT FK_Automovil_TBDClientes   FOREIGN KEY (Automovil) REFERENCES Automoviles (IdAutomovil),
-)
+
 
 
 CREATE TABLE Promocion
@@ -232,6 +246,13 @@ CREATE TABLE Rol_Operacion
  IdOperacion INT
  CONSTRAINT FK_Rol_Operacion_Rol   FOREIGN KEY (IdRol) REFERENCES Rol (IdRol), 
  CONSTRAINT FK_Rol_Operacion_Operacion   FOREIGN KEY (IdOperacion) REFERENCES Operaciones (IdOperacion)
+)
+
+drop table RutaImg
+CREATE TABLE RutaImg
+(
+idRuta int,
+ Ruta varchar(200)
 )
 
 
@@ -438,6 +459,63 @@ exec InsertarAutomovil 'Ford','Focus','Rojo','2019','dsf412d1','2020-09-01',1700
 
 
 
+   
+
+----------------Procedimiento para insertar Accesorio--------------
+Go
+create procedure InsertarAccesorio
+@Nombre VARCHAR(45) ,
+@Modelo VARCHAR(45) ,
+@Cantidad INT ,
+@Precio Int,
+@Sucursal INT 
+as
+insert into Autopartes values (@Nombre,@Modelo,@Precio,@Cantidad ,@Sucursal)
+go
+
+if object_id('InsertarTraspaso') is not null
+  drop proc InsertarTraspaso
+----------------Procedimiento para insertar Traspaso--------------
+Go
+create procedure InsertarTraspaso
+@Fecha date ,
+@SucursalEntrega INT,
+@SucursalRecibe INT ,
+@TipoTraspaso Varchar(45)
+as
+insert into TraspasoSaS values (@Fecha,@SucursalEntrega,@SucursalRecibe,@TipoTraspaso)
+go
+
+
+----------------Procedimiento para insertar DetalleTraspaso--------------
+Go
+create procedure InsertarDetalleTraspaso
+@IdTraspasoSAS INT ,
+@Automovil INT 
+as
+insert into DetalleTraspaso values (@IdTraspasoSAS,@Automovil)
+go
+
+
+ idDetalle_Traspaso INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+  IdTraspasoSAS INT NOT NULL,
+  Automovil INT NOT NULL,
+
+
+
+
+
+
+----------------Procedimiento para insertar Ruta de imagen--------------
+Go
+create procedure InsertarRuta
+@idRuta int,
+@Ruta varchar (200)
+
+as
+insert into RutaImg values (@idRuta,@Ruta)
+go
+
 -----procedimiento para consultar clientes----------
 CREATE PROCEDURE MostrarClientes
 AS
@@ -455,12 +533,42 @@ GO
  if object_id('MostrarAutos') is not null
   drop proc MostrarAutos
 
+-----procedimiento para consultar Autos ----------
 CREATE PROCEDURE MostrarAutos
 AS
 SELECT * FROM Automoviles
 GO
 
 
+-----procedimiento para consultar accesorios ----------
+CREATE PROCEDURE MostrarAccesorios
+AS
+SELECT * FROM Autopartes
+GO
+ 
+
+ -----procedimiento para consultar accesorios ----------
+CREATE PROCEDURE MostrarAdmin
+AS
+SELECT * FROM Administrador
+GO
+
+if object_id('MostrarSucursalSecundaria') is not null
+  drop proc MostrarSucursalSecundaria
+
+-----procedimiento para consultar Sucursal Secundari ----------
+CREATE PROCEDURE MostrarSucursalPrincipal
+AS
+SELECT * FROM Sucursal_principal;
+GO
+
+
+-----procedimiento para consultar Sucursal Secundari ----------
+CREATE PROCEDURE MostrarSucursalSecundaria
+AS
+SELECT * FROM Sucursal_Secundaria;
+GO
+ 
 
 
 --------Procedimiento para eliminar cliente
@@ -485,6 +593,21 @@ create proc EliminarAutomovil
 as
 delete from Automoviles where IdAutomovil=@IdAutomovil
 go
+
+-------Procedimiento para eliminar Accesorio
+
+create proc EliminarAccesorio
+@IdAutopartes int
+as
+delete from Autopartes where IdAutopartes=@IdAutopartes
+go
+
+create proc EliminarRuta
+@IdRuta int
+as
+delete from RutaImg where IdRuta=@IdRuta
+go
+
 
 -- Procedimiento para actualizar cliente
 
@@ -541,6 +664,45 @@ create proc ActualizarAutomovil
 as
 Update Automoviles set Marca=@Marca, Modelo=@Modelo, Color=@Color, Año=@Año, Serie=@Serie, FechaIngreso=@FechaIngreso, PrecioCompra=@PrecioCompra, PrecioVenta=@PrecioVenta, Sucursal=@Sucursal where Serie=@Serie
 go
+
+-- Procedimiento para actualizar Accesorios------
+
+
+create proc ActualizarAccesorios
+@Nombre VARCHAR(45) ,
+@Modelo VARCHAR(45) ,
+@Precio int,
+@Cantidad INT ,
+@Sucursal INT 
+
+as
+Update Autopartes set Nombre=@Nombre, Modelo=@Modelo, Precio=@Precio,Cantidad=@Cantidad, Sucursal=@Sucursal
+go
+
+-- Procedimiento para actualizar Admin------
+
+
+create proc ActualizarAdmin
+@IdAdministrador int,
+@Nombre VARCHAR(45) ,
+@Direccion VARCHAR(45) ,
+@Telefono Varchar(10),
+@Correo VARCHAR(45),
+@Contraseña VARCHAR(45),
+@FechaIngreso DATE,
+@TipoUsuario INT
+as
+Update Administrador set IdAdministrador=@IdAdministrador, Nombre=@Nombre, Direccion=@Direccion, Telefono=@Telefono,Correo=@Correo,Contraseña=@Contraseña,FechaIngreso=@FechaIngreso, TipoUsuario=@TipoUsuario
+go
+
+
+ -- Procedimiento para actualizar Accesorios------
+
+
+
+	
+
+
 
 --TRIGGERS	
 /*Selección de un automóvil y que permita llevar un proceso de aplicación de accesorios 
@@ -696,6 +858,10 @@ go
 
 --------------------
 
+if object_id('tr_BitacoraAutosAlta') is not null
+  drop Trigger tr_BitacoraAutosAlta
+
+
 create trigger tr_BitacoraAutosAlta
 on Automoviles for insert
 as
@@ -705,7 +871,8 @@ set @Fecha = (select GETDATE())
 insert into BitacoraAutos( Rol, Fecha, Accion)
 values ('Administrador',@Fecha, 'Alta de Automovil' )
 go
-
+ if object_id('tr_BitacoraAutosBaja') is not null
+  drop Trigger tr_BitacoraAutosBaja
 
 create trigger tr_BitacoraAutosBaja
 on Automoviles for delete
@@ -717,6 +884,8 @@ insert into BitacoraAutos ( Rol, Fecha, Accion)
 values ('Administrador',@Fecha, 'Eliminacion de Automovil' )
 go
 
+if object_id('tr_BitacoraAutosActualizacion') is not null
+  drop Trigger tr_BitacoraAutosActualizacion
 
 create trigger tr_BitacoraAutosActualizacion
 on Automoviles for update
@@ -739,6 +908,10 @@ set @Fecha = (select GETDATE())
 insert into BitacoraAccesorios( Rol, Fecha, Accion)
 values ('Administrador',@Fecha, 'Alta de Accesorio' )
 go
+
+ if object_id('tr_BitacoraAutoPartesBaja') is not null
+  drop Trigger tr_BitacoraAutoPartesBaja
+
 
 
 create trigger tr_BitacoraAutoPartesBaja

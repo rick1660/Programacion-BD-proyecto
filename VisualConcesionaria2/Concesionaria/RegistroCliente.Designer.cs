@@ -59,6 +59,7 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtSeparador5 = new Concesionaria.txtSeparador();
             this.txtSeparador15 = new Concesionaria.txtSeparador();
             this.txtSeparador13 = new Concesionaria.txtSeparador();
@@ -74,10 +75,12 @@
             this.txtSeparador4 = new Concesionaria.txtSeparador();
             this.txtSeparador2 = new Concesionaria.txtSeparador();
             this.txtSeparador1 = new Concesionaria.txtSeparador();
+            this.btnRegresar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptxCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -142,11 +145,11 @@
             this.txtApellidos.ForeColor = System.Drawing.Color.Gray;
             this.txtApellidos.Location = new System.Drawing.Point(105, 222);
             this.txtApellidos.Margin = new System.Windows.Forms.Padding(4);
+            this.txtApellidos.MaxLength = 45;
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(293, 16);
             this.txtApellidos.TabIndex = 2;
             this.txtApellidos.Text = "Apellidos";
-            this.txtApellidos.TextChanged += new System.EventHandler(this.txtApellidos_TextChanged);
             this.txtApellidos.Enter += new System.EventHandler(this.txtApellidos_Enter);
             this.txtApellidos.Leave += new System.EventHandler(this.txtApellidos_Leave);
             // 
@@ -158,11 +161,11 @@
             this.txtNombre.ForeColor = System.Drawing.Color.Gray;
             this.txtNombre.Location = new System.Drawing.Point(105, 189);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.MaxLength = 45;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(293, 16);
             this.txtNombre.TabIndex = 1;
             this.txtNombre.Text = "Nombre";
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
             this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
@@ -174,6 +177,7 @@
             this.txtCorreo.ForeColor = System.Drawing.Color.Gray;
             this.txtCorreo.Location = new System.Drawing.Point(105, 327);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCorreo.MaxLength = 45;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(293, 16);
             this.txtCorreo.TabIndex = 5;
@@ -190,11 +194,11 @@
             this.txtTel.ForeColor = System.Drawing.Color.Gray;
             this.txtTel.Location = new System.Drawing.Point(105, 292);
             this.txtTel.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTel.MaxLength = 10;
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(293, 16);
             this.txtTel.TabIndex = 4;
             this.txtTel.Text = "Telefono";
-            this.txtTel.TextChanged += new System.EventHandler(this.txtTel_TextChanged);
             this.txtTel.Enter += new System.EventHandler(this.textTel_Enter);
             this.txtTel.Leave += new System.EventHandler(this.textTel_Leave);
             // 
@@ -206,27 +210,28 @@
             this.txtEdad.ForeColor = System.Drawing.Color.Gray;
             this.txtEdad.Location = new System.Drawing.Point(105, 364);
             this.txtEdad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEdad.MaxLength = 2;
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(293, 16);
             this.txtEdad.TabIndex = 6;
             this.txtEdad.Text = "Edad";
-            this.txtEdad.TextChanged += new System.EventHandler(this.txtEdad_TextChanged);
             this.txtEdad.Enter += new System.EventHandler(this.textEdad_Enter);
             this.txtEdad.Leave += new System.EventHandler(this.textEdad_Leave);
             // 
             // txtRFC
             // 
             this.txtRFC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRFC.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRFC.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRFC.ForeColor = System.Drawing.Color.Gray;
             this.txtRFC.Location = new System.Drawing.Point(105, 512);
             this.txtRFC.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRFC.MaxLength = 13;
             this.txtRFC.Name = "txtRFC";
             this.txtRFC.Size = new System.Drawing.Size(293, 16);
             this.txtRFC.TabIndex = 10;
             this.txtRFC.Text = "RFC";
-            this.txtRFC.TextChanged += new System.EventHandler(this.txtRFC_TextChanged);
             this.txtRFC.Enter += new System.EventHandler(this.textRFC_Enter);
             this.txtRFC.Leave += new System.EventHandler(this.textRFC_Leave);
             // 
@@ -238,11 +243,11 @@
             this.txtReferencia1.ForeColor = System.Drawing.Color.Gray;
             this.txtReferencia1.Location = new System.Drawing.Point(496, 213);
             this.txtReferencia1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtReferencia1.MaxLength = 45;
             this.txtReferencia1.Name = "txtReferencia1";
             this.txtReferencia1.Size = new System.Drawing.Size(293, 16);
             this.txtReferencia1.TabIndex = 11;
             this.txtReferencia1.Text = "Nombre";
-            this.txtReferencia1.TextChanged += new System.EventHandler(this.txtReferencia1_TextChanged);
             this.txtReferencia1.Enter += new System.EventHandler(this.textReferencia1_Enter);
             this.txtReferencia1.Leave += new System.EventHandler(this.textReferencia1_Leave);
             // 
@@ -254,11 +259,11 @@
             this.txtNumR1.ForeColor = System.Drawing.Color.Gray;
             this.txtNumR1.Location = new System.Drawing.Point(496, 248);
             this.txtNumR1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNumR1.MaxLength = 10;
             this.txtNumR1.Name = "txtNumR1";
             this.txtNumR1.Size = new System.Drawing.Size(293, 16);
             this.txtNumR1.TabIndex = 12;
             this.txtNumR1.Text = "Telefono";
-            this.txtNumR1.TextChanged += new System.EventHandler(this.txtNumR1_TextChanged);
             this.txtNumR1.Enter += new System.EventHandler(this.textNumR1_Enter);
             this.txtNumR1.Leave += new System.EventHandler(this.textNumR1_Leave);
             // 
@@ -270,11 +275,11 @@
             this.txtNumR2.ForeColor = System.Drawing.Color.Gray;
             this.txtNumR2.Location = new System.Drawing.Point(496, 381);
             this.txtNumR2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNumR2.MaxLength = 10;
             this.txtNumR2.Name = "txtNumR2";
             this.txtNumR2.Size = new System.Drawing.Size(293, 16);
-            this.txtNumR2.TabIndex = 114;
+            this.txtNumR2.TabIndex = 14;
             this.txtNumR2.Text = "Telefono";
-            this.txtNumR2.TextChanged += new System.EventHandler(this.txtNumR2_TextChanged);
             this.txtNumR2.Enter += new System.EventHandler(this.textNumR2_Enter);
             this.txtNumR2.Leave += new System.EventHandler(this.textNumR2_Leave);
             // 
@@ -286,11 +291,11 @@
             this.txtReferencia2.ForeColor = System.Drawing.Color.Gray;
             this.txtReferencia2.Location = new System.Drawing.Point(496, 344);
             this.txtReferencia2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtReferencia2.MaxLength = 45;
             this.txtReferencia2.Name = "txtReferencia2";
             this.txtReferencia2.Size = new System.Drawing.Size(293, 16);
             this.txtReferencia2.TabIndex = 13;
             this.txtReferencia2.Text = "Nombre";
-            this.txtReferencia2.TextChanged += new System.EventHandler(this.txtReferencia2_TextChanged);
             this.txtReferencia2.Enter += new System.EventHandler(this.textReferencia2_Enter);
             this.txtReferencia2.Leave += new System.EventHandler(this.textReferencia2_Leave);
             // 
@@ -302,11 +307,11 @@
             this.txtNumR3.ForeColor = System.Drawing.Color.Gray;
             this.txtNumR3.Location = new System.Drawing.Point(487, 517);
             this.txtNumR3.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNumR3.MaxLength = 10;
             this.txtNumR3.Name = "txtNumR3";
             this.txtNumR3.Size = new System.Drawing.Size(293, 16);
             this.txtNumR3.TabIndex = 16;
             this.txtNumR3.Text = "Telefono";
-            this.txtNumR3.TextChanged += new System.EventHandler(this.txtNumR3_TextChanged);
             this.txtNumR3.Enter += new System.EventHandler(this.textNumR3_Enter);
             this.txtNumR3.Leave += new System.EventHandler(this.textNumR3_Leave);
             // 
@@ -318,11 +323,11 @@
             this.txtReferencia3.ForeColor = System.Drawing.Color.Gray;
             this.txtReferencia3.Location = new System.Drawing.Point(487, 482);
             this.txtReferencia3.Margin = new System.Windows.Forms.Padding(4);
+            this.txtReferencia3.MaxLength = 45;
             this.txtReferencia3.Name = "txtReferencia3";
             this.txtReferencia3.Size = new System.Drawing.Size(293, 16);
             this.txtReferencia3.TabIndex = 15;
             this.txtReferencia3.Text = "Nombre";
-            this.txtReferencia3.TextChanged += new System.EventHandler(this.txtReferencia3_TextChanged);
             this.txtReferencia3.Enter += new System.EventHandler(this.txtReferencia3_Enter);
             this.txtReferencia3.Leave += new System.EventHandler(this.txtReferencia3_Leave);
             // 
@@ -347,6 +352,7 @@
             this.txtPassword.ForeColor = System.Drawing.Color.Gray;
             this.txtPassword.Location = new System.Drawing.Point(105, 258);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.MaxLength = 20;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(293, 16);
             this.txtPassword.TabIndex = 3;
@@ -362,10 +368,10 @@
             "Masculino",
             "Femenino"});
             this.cmxGenero.Location = new System.Drawing.Point(229, 443);
+            this.cmxGenero.MaxLength = 9;
             this.cmxGenero.Name = "cmxGenero";
             this.cmxGenero.Size = new System.Drawing.Size(113, 24);
             this.cmxGenero.TabIndex = 8;
-            this.cmxGenero.SelectedIndexChanged += new System.EventHandler(this.cmxGenero_SelectedIndexChanged);
             // 
             // lblGenero
             // 
@@ -386,11 +392,11 @@
             this.txtFechaNa.ForeColor = System.Drawing.Color.Gray;
             this.txtFechaNa.Location = new System.Drawing.Point(105, 482);
             this.txtFechaNa.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFechaNa.MaxLength = 10;
             this.txtFechaNa.Name = "txtFechaNa";
             this.txtFechaNa.Size = new System.Drawing.Size(293, 16);
             this.txtFechaNa.TabIndex = 9;
             this.txtFechaNa.Text = "Fecha  de nacimiento  (AAA-MM-DD)";
-            this.txtFechaNa.TextChanged += new System.EventHandler(this.txtFechaNa_TextChanged);
             this.txtFechaNa.Enter += new System.EventHandler(this.txtFechaNa_Enter);
             this.txtFechaNa.Leave += new System.EventHandler(this.txtFechaNa_Leave);
             // 
@@ -404,7 +410,6 @@
             this.label2.Size = new System.Drawing.Size(155, 24);
             this.label2.TabIndex = 49;
             this.label2.Text = "Datos personales";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -416,7 +421,6 @@
             this.label3.Size = new System.Drawing.Size(173, 24);
             this.label3.TabIndex = 50;
             this.label3.Text = "Datos de referencia";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -428,7 +432,6 @@
             this.label4.Size = new System.Drawing.Size(138, 20);
             this.label4.TabIndex = 51;
             this.label4.Text = "Primera referencia";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -440,7 +443,6 @@
             this.label5.Size = new System.Drawing.Size(149, 20);
             this.label5.TabIndex = 52;
             this.label5.Text = "Segunda referencia";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -452,7 +454,6 @@
             this.label6.Size = new System.Drawing.Size(138, 20);
             this.label6.TabIndex = 53;
             this.label6.Text = "Tercera referencia";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // btnLimpiar
             // 
@@ -462,7 +463,7 @@
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(113, 42);
-            this.btnLimpiar.TabIndex = 54;
+            this.btnLimpiar.TabIndex = 18;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
@@ -475,11 +476,11 @@
             this.txtDireccion.ForeColor = System.Drawing.Color.Gray;
             this.txtDireccion.Location = new System.Drawing.Point(105, 408);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDireccion.MaxLength = 45;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(293, 16);
             this.txtDireccion.TabIndex = 7;
             this.txtDireccion.Text = "Direccion";
-            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             this.txtDireccion.Enter += new System.EventHandler(this.txtDireccion_Enter);
             this.txtDireccion.Leave += new System.EventHandler(this.txtDireccion_Leave);
             // 
@@ -487,6 +488,10 @@
             // 
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
             // 
             // txtSeparador5
             // 
@@ -497,7 +502,6 @@
             this.txtSeparador5.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador5.TabIndex = 56;
             this.txtSeparador5.Text = "txtSeparador5";
-            this.txtSeparador5.Click += new System.EventHandler(this.txtSeparador5_Click);
             // 
             // txtSeparador15
             // 
@@ -508,7 +512,6 @@
             this.txtSeparador15.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador15.TabIndex = 46;
             this.txtSeparador15.Text = "txtSeparador15";
-            this.txtSeparador15.Click += new System.EventHandler(this.txtSeparador15_Click);
             // 
             // txtSeparador13
             // 
@@ -519,7 +522,6 @@
             this.txtSeparador13.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador13.TabIndex = 43;
             this.txtSeparador13.Text = "txtSeparador13";
-            this.txtSeparador13.Click += new System.EventHandler(this.txtSeparador13_Click);
             // 
             // txtSeparador14
             // 
@@ -530,7 +532,6 @@
             this.txtSeparador14.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador14.TabIndex = 41;
             this.txtSeparador14.Text = "txtSeparador14";
-            this.txtSeparador14.Click += new System.EventHandler(this.txtSeparador14_Click);
             // 
             // txtSeparador10
             // 
@@ -541,7 +542,6 @@
             this.txtSeparador10.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador10.TabIndex = 39;
             this.txtSeparador10.Text = "txtSeparador10";
-            this.txtSeparador10.Click += new System.EventHandler(this.txtSeparador10_Click);
             // 
             // txtSeparador12
             // 
@@ -552,7 +552,6 @@
             this.txtSeparador12.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador12.TabIndex = 37;
             this.txtSeparador12.Text = "txtSeparador12";
-            this.txtSeparador12.Click += new System.EventHandler(this.txtSeparador12_Click);
             // 
             // txtSeparador11
             // 
@@ -563,7 +562,6 @@
             this.txtSeparador11.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador11.TabIndex = 35;
             this.txtSeparador11.Text = "txtSeparador11";
-            this.txtSeparador11.Click += new System.EventHandler(this.txtSeparador11_Click);
             // 
             // txtSeparador9
             // 
@@ -574,7 +572,6 @@
             this.txtSeparador9.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador9.TabIndex = 31;
             this.txtSeparador9.Text = "txtSeparador9";
-            this.txtSeparador9.Click += new System.EventHandler(this.txtSeparador9_Click);
             // 
             // txtSeparador8
             // 
@@ -585,7 +582,6 @@
             this.txtSeparador8.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador8.TabIndex = 29;
             this.txtSeparador8.Text = "txtSeparador8";
-            this.txtSeparador8.Click += new System.EventHandler(this.txtSeparador8_Click);
             // 
             // txtSeparador7
             // 
@@ -596,7 +592,6 @@
             this.txtSeparador7.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador7.TabIndex = 27;
             this.txtSeparador7.Text = "txtSeparador7";
-            this.txtSeparador7.Click += new System.EventHandler(this.txtSeparador7_Click);
             // 
             // txtSeparador6
             // 
@@ -607,7 +602,6 @@
             this.txtSeparador6.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador6.TabIndex = 23;
             this.txtSeparador6.Text = "txtSeparador6";
-            this.txtSeparador6.Click += new System.EventHandler(this.txtSeparador6_Click);
             // 
             // txtSeparador3
             // 
@@ -618,7 +612,6 @@
             this.txtSeparador3.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador3.TabIndex = 21;
             this.txtSeparador3.Text = "txtSeparador3";
-            this.txtSeparador3.Click += new System.EventHandler(this.txtSeparador3_Click);
             // 
             // txtSeparador4
             // 
@@ -629,7 +622,6 @@
             this.txtSeparador4.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador4.TabIndex = 19;
             this.txtSeparador4.Text = "txtSeparador4";
-            this.txtSeparador4.Click += new System.EventHandler(this.txtSeparador4_Click);
             // 
             // txtSeparador2
             // 
@@ -640,7 +632,6 @@
             this.txtSeparador2.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador2.TabIndex = 17;
             this.txtSeparador2.Text = "txtSeparador2";
-            this.txtSeparador2.Click += new System.EventHandler(this.txtSeparador2_Click);
             // 
             // txtSeparador1
             // 
@@ -651,7 +642,20 @@
             this.txtSeparador1.Size = new System.Drawing.Size(293, 2);
             this.txtSeparador1.TabIndex = 15;
             this.txtSeparador1.Text = "txtSeparador1";
-            this.txtSeparador1.Click += new System.EventHandler(this.txtSeparador1_Click);
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.BackColor = System.Drawing.Color.White;
+            this.btnRegresar.BackgroundImage = global::Concesionaria.Properties.Resources.arrow_123_128;
+            this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRegresar.ForeColor = System.Drawing.Color.White;
+            this.btnRegresar.Location = new System.Drawing.Point(29, 76);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(84, 42);
+            this.btnRegresar.TabIndex = 57;
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // RegistroCliente
             // 
@@ -659,6 +663,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(858, 650);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.txtSeparador5);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.btnLimpiar);
@@ -713,6 +718,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptxMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptxCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -764,5 +770,7 @@
         private txtSeparador txtSeparador5;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.Button btnRegresar;
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Data.SqlClient;
 namespace Concesionaria
 {
     public partial class RegistroCliente : Form
@@ -17,6 +18,7 @@ namespace Concesionaria
         public RegistroCliente()
         {
             InitializeComponent();
+            
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -96,7 +98,9 @@ namespace Concesionaria
         {
             if (txtCorreo.Text == "Correo")
             {
+                txtCorreo.CharacterCasing = CharacterCasing.Lower;
                 txtCorreo.Text = "";
+                
                 txtCorreo.ForeColor = Color.Black;
             }
         }
@@ -105,6 +109,7 @@ namespace Concesionaria
         {
             if (txtCorreo.Text == "")
             {
+                txtCorreo.CharacterCasing = CharacterCasing.Normal;
                 txtCorreo.Text = "Correo";
                 txtCorreo.ForeColor = Color.Gray;
             }
@@ -427,113 +432,7 @@ namespace Concesionaria
 
         private void RegistroCliente_Load(object sender, EventArgs e)
         {
-            bool isOK = true;
-            if (txtNombre.Text == "Nombre" || txtNombre.Text == "")
-            {
-                errorProvider1.SetError(txtNombre, "Ingrese su Nombre");
-                isOK = false;
-            }
-
-
-            if (txtApellidos.Text == "Apellidos" || txtApellidos.Text == "")
-            {
-                errorProvider1.SetError(txtApellidos, "Ingrese sus Apellidos");
-                isOK = false;
-            }
-
-
-            if (txtPassword.Text == "Contraseña" || txtPassword.Text == "")
-            {
-                errorProvider1.SetError(txtPassword, "Establesca una contraseña");
-                isOK = false;
-            }
-
-
-            if (txtTel.Text == "Telefono" || txtTel.Text == "")
-            {
-                errorProvider1.SetError(txtTel, "Ingrese su Numero telefonico");
-                isOK = false;
-            }
-
-            if (txtCorreo.Text == "Correo" || txtCorreo.Text == "")
-            {
-                errorProvider1.SetError(txtCorreo, "Ingrese su Correo ");
-                isOK = false;
-            }
-
-
-            if (txtEdad.Text == "Edad" || txtEdad.Text == "")
-            {
-                errorProvider1.SetError(txtEdad, "Ingrese su edad ");
-                isOK = false;
-            }
-
-
-            if (txtDireccion.Text == "Direccion" || txtDireccion.Text == "")
-            {
-                errorProvider1.SetError(txtDireccion, "Ingrese su Direccion");
-                isOK = false;
-            }
-
-            if (cmxGenero.Text == "")
-            {
-                errorProvider1.SetError(cmxGenero, "Seleccione su genero");
-                isOK = false;
-            }
-
-            if (txtFechaNa.Text == "Fecha  de nacimiento  (AAA-MM-DD)" || txtFechaNa.Text == "")
-            {
-                errorProvider1.SetError(txtFechaNa, "Ingrese su Fecha de nacimiento");
-                isOK = false;
-            }
-
-
-            if (txtRFC.Text == "RFC" || txtRFC.Text == "")
-            {
-                errorProvider1.SetError(txtRFC, "Ingrese su RFC");
-                isOK = false;
-            }
-
-
-            if (txtReferencia1.Text == "Nombre" || txtReferencia1.Text == "")
-            {
-                errorProvider1.SetError(txtReferencia1, "Ingrese El nombre se su Referencia");
-                isOK = false;
-            }
-
-
-            if (txtNumR1.Text == "Telefono" || txtNumR1.Text == "")
-            {
-                errorProvider1.SetError(txtNumR1, "Ingrese el numero telefonico se su Referencia");
-                isOK = false;
-            }
-
-
-            if (txtReferencia2.Text == "Nombre" || txtReferencia2.Text == "")
-            {
-                errorProvider1.SetError(txtReferencia2, "Ingrese El nombre se su Referencia");
-                isOK = false;
-            }
-
-
-            if (txtNumR2.Text == "Telefono" || txtNumR2.Text == "")
-            {
-                errorProvider1.SetError(txtNumR2, "Ingrese el numero telefonico se su Referencia");
-                isOK = false;
-            }
-
-            if (txtReferencia3.Text == "Nombre" || txtReferencia3.Text == "")
-            {
-                errorProvider1.SetError(txtReferencia3, "Ingrese El nombre se su Referencia");
-                isOK = false;
-            }
-
-
-            if (txtNumR3.Text == "Telefono" || txtNumR3.Text == "")
-            {
-                errorProvider1.SetError(txtNumR3, "Ingrese el numero telefonico se su Referencia");
-                isOK = false;
-            }
+           
 
         }
 
@@ -630,179 +529,54 @@ namespace Concesionaria
 
         }
 
-        private void txtDireccion_TextChanged(object sender, EventArgs e)
-        {
+       
 
-        }
+        private SqlConnection Conexion = new SqlConnection("Server=DESKTOP-NDLJN6T;DataBase= concesionario;Integrated Security=true");
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmxGenero_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSeparador15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSeparador5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSeparador13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNumR3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSeparador14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtReferencia3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSeparador10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNumR2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSeparador12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtReferencia2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSeparador11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNumR1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSeparador9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtReferencia1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSeparador8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtRFC_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSeparador7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFechaNa_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSeparador6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEdad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSeparador3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void txtCorreo_TextChanged(object sender, EventArgs e)
         {
+            errorProvider2.Clear();
+            if (txtCorreo.Text != "") 
+            {
+                ValidacionExistenciaCorreo(txtCorreo.Text);
+            }
+            
 
         }
 
-        private void txtSeparador4_Click(object sender, EventArgs e)
-        {
 
+
+        private void ValidacionExistenciaCorreo(string Correo) 
+        {
+            Conexion.Open();
+
+            SqlCommand cmd = new SqlCommand("SELECT Correo FROM Clientes WHERE Correo=@Correo", Conexion);
+            cmd.Parameters.AddWithValue("Correo", Correo);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+
+
+            if (dt.Rows.Count == 1)
+            {
+                errorProvider2.SetError(txtCorreo, "El correo ya se encuentra registrado, porfavor utilice uno diferente");
+                Conexion.Close();
+
+            }
+            Conexion.Close();
         }
 
-        private void txtTel_TextChanged(object sender, EventArgs e)
+        private void btnRegresar_Click(object sender, EventArgs e)
         {
 
-        }
+            this.Close();
+            Login inicio = new Login();
+            inicio.Show();
 
-        private void txtSeparador2_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void txtApellidos_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSeparador1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-
+            
         }
     }
 }
