@@ -102,3 +102,5 @@ C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Con
 C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.EmpleadosInterfaz.resources
 C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.AgregarAccesorio.resources
 C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.ModificarAccesorio.resources
+C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.AutosClientes2cs.resources
+C:\Users\Rick\Documents\GitHub\Programacion-BD-proyecto\VisualConcesionaria2\Concesionaria\obj\Debug\Concesionaria.AutosTraspaso.resources

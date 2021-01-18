@@ -90,7 +90,7 @@ Delete from Clientes where IdClientes=4
  Drop Table Clientes
  Drop Table CompraVenta
 
-select * from Empleados
+select * from TraspasoSaS
 --Automovil
 
 
@@ -112,6 +112,7 @@ CREATE TABLE Automoviles
   ALTER TABLE Automoviles DROP CONSTRAINT FK_SucursalAuto_TBSucursalPrincipal
   Drop Table Automoviles
 
+  select * from Automoviles
 --Autopartes-----
 
 drop table Autopartes
@@ -146,6 +147,8 @@ Insert into Sucursal_Secundaria values(2,'NC Playas','Playas','664781235','ncpla
 
 
 --Traspasos
+Select * from TraspasoSaS
+Drop Table TraspasoSaS
 
 Drop Table TraspasoSaS
 CREATE TABLE TraspasoSaS
@@ -160,6 +163,7 @@ CREATE TABLE TraspasoSaS
 )
 
 Drop table DetalleTraspaso
+select * from TraspasoSas
 CREATE TABLE DetalleTraspaso 
 (
   idDetalle_Traspaso INT PRIMARY KEY NOT NULL IDENTITY(1,1),
@@ -168,6 +172,7 @@ CREATE TABLE DetalleTraspaso
   CONSTRAINT FK_IdTraspasoSAS_TBDClientes   FOREIGN KEY (IdTraspasoSAS) REFERENCES TraspasoSaS (IdTraspasoSaS),
   CONSTRAINT FK_Automovil_TBDClientes   FOREIGN KEY (Automovil) REFERENCES Automoviles (IdAutomovil),
 )
+
 
 --Compra venta
 CREATE TABLE Compraventa 
@@ -263,109 +268,9 @@ insert into Rol values(1,'Cliente');
 insert into Rol values(2,'Empleado');
 insert into Rol values(3,'Admin');
 
-select * from Modulos
-insert into Modulos values(1,'Sucursal_principal');
-insert into Modulos values(2,'Empleados');
-insert into Modulos values(3,'Clientes');
-insert into Modulos values(4,'Automoviles');
-insert into Modulos values(5,'Autopartes');
-insert into Modulos values(6,'Sucursal_Secundaria');
-insert into Modulos values(7,'Compraventa');
-insert into Modulos values(8,'DetalleCompraVenta');
-insert into Modulos values(9,'DetalleTraspaso');
-insert into Modulos values(10,'Promocion');
-insert into Modulos values(11,'Accesorios');
-insert into Modulos values(12,'Modulos');
-insert into Modulos values(13,'Operaciones');
-insert into Modulos values(14,'Rol_Operacion');
-
-----Operaciones permitidas para Tabla Sucursal_ Principal-----
-insert into Operaciones values(1,'agregar',1);
-insert into Operaciones values(2,'editar',1);
-insert into Operaciones values(3,'eliminar',1);
-insert into Operaciones values(4,'ver',1);
-
-----Operaciones permitidas para Tabla Empleados-----
-
-insert into Operaciones values(5,'agregar',2);
-insert into Operaciones values(6,'editar',2);
-insert into Operaciones values(7,'eliminar',2);
-insert into Operaciones values(8,'ver',2);
-
-----Operaciones permitidas para Tabla Clientes-----
-insert into Operaciones values(9,'agregar',3);
-insert into Operaciones values(10,'editar',3);
-insert into Operaciones values(11,'eliminar',3);
-insert into Operaciones values(12,'ver',3);
-
-----Operaciones permitidas para Tabla automoviles-----
-insert into Operaciones values(13,'agregar',4);
-insert into Operaciones values(14,'editar',4);
-insert into Operaciones values(15,'eliminar',4);
-insert into Operaciones values(16,'ver',4);
-
-----Operaciones permitidas para Tabla autopartes-----
-insert into Operaciones values(17,'agregar',5);
-insert into Operaciones values(18,'editar',5);
-insert into Operaciones values(19,'eliminar',5);
-insert into Operaciones values(20,'ver',5);
-
-----Operaciones permitidas para Tabla Sucursal_Secundaria-----      
-insert into Operaciones values(21,'agregar',6);
-insert into Operaciones values(22,'editar',6);
-insert into Operaciones values(23,'eliminar',6);
-insert into Operaciones values(24,'ver',6);
-
-----Operaciones permitidas para Tabla Compraventa-----
-insert into Operaciones values(25,'agregar',7);
-insert into Operaciones values(26,'editar',7);
-insert into Operaciones values(27,'eliminar',7);
-insert into Operaciones values(28,'ver',7);
-
-----Operaciones permitidas para Tabla DetalleCompraVenta-----
-insert into Operaciones values(29,'agregar',8);
-insert into Operaciones values(30,'editar',8);
-insert into Operaciones values(31,'eliminar',8);
-insert into Operaciones values(32,'ver',8);
-
-----Operaciones permitidas para Tabla DetalleTraspaso-----
-insert into Operaciones values(33,'agregar',9);
-insert into Operaciones values(34,'editar',9);
-insert into Operaciones values(35,'eliminar',9);
-insert into Operaciones values(36,'ver',9);
-
-
-----Operaciones permitidas para Tabla Promocion-----
-insert into Operaciones values(37,'agregar',10);
-insert into Operaciones values(38,'editar',10);
-insert into Operaciones values(39,'eliminar',10);
-insert into Operaciones values(40,'ver',10);
-
-----Operaciones permitidas para Tabla Accesorios-----
-insert into Operaciones values(25,'agregar',11);
-insert into Operaciones values(26,'editar',11);
-insert into Operaciones values(27,'eliminar',11);
-insert into Operaciones values(28,'ver',11);
-
-----Operaciones permitidas para Tabla Modulos-----
-insert into Operaciones values(25,'agregar',12);
-insert into Operaciones values(26,'editar',12);
-insert into Operaciones values(27,'eliminar',12);
-insert into Operaciones values(28,'ver',12);
-
-----Operaciones permitidas para Tabla Operaciones-----
-insert into Operaciones values(25,'agregar',13);
-insert into Operaciones values(26,'editar',13);
-insert into Operaciones values(27,'eliminar',13);
-insert into Operaciones values(28,'ver',13);
-
-----Operaciones permitidas para Tabla Rol_Operacion-----
-insert into Operaciones values(25,'agregar',14);
-insert into Operaciones values(26,'editar',14);
-insert into Operaciones values(27,'eliminar',14);
-insert into Operaciones values(28,'ver',14);
-
-
+Insert Into Automoviles values('Nissan','X-trail','Azul','2020','NX-2020-0104A','2020-05-04',402000,475900,1)
+Insert Into Automoviles values('Nissan','X-trail','Verde','2020','NX-2020-0104A','2020-05-04',402000,475900,1)
+Insert Into Automoviles values('Nissan','X-trail','Gris','2020','NX-2020-0104A','2020-05-04',402000,475900,1)
 select * from Operaciones
 
 
@@ -477,14 +382,23 @@ if object_id('InsertarTraspaso') is not null
   drop proc InsertarTraspaso
 ----------------Procedimiento para insertar Traspaso--------------
 Go
+if object_id('InsertarTraspaso') is not null
+  drop proc InsertarTraspaso
+
 create procedure InsertarTraspaso
 @Fecha date ,
 @SucursalEntrega INT,
 @SucursalRecibe INT ,
 @TipoTraspaso Varchar(45)
+
 as
 insert into TraspasoSaS values (@Fecha,@SucursalEntrega,@SucursalRecibe,@TipoTraspaso)
+
 go
+
+
+
+
 
 
 ----------------Procedimiento para insertar DetalleTraspaso--------------
@@ -497,12 +411,10 @@ insert into DetalleTraspaso values (@IdTraspasoSAS,@Automovil)
 go
 
 
- idDetalle_Traspaso INT PRIMARY KEY NOT NULL IDENTITY(1,1),
-  IdTraspasoSAS INT NOT NULL,
-  Automovil INT NOT NULL,
+exec InsertarDetalleTraspaso '5','7'
 
-
-
+select * from DetalleTraspaso
+ 
 
 
 
@@ -568,9 +480,45 @@ CREATE PROCEDURE MostrarSucursalSecundaria
 AS
 SELECT * FROM Sucursal_Secundaria;
 GO
+
+-----procedimiento para MostrarColor ----------
+CREATE PROCEDURE MostrarColor
+@Modelo varchar(45)
+AS
+SELECT * FROM Automoviles where Modelo=@Modelo;
+GO
+
+if object_id('MostrarDetalleTraspaso') is not null
+  drop proc MostrarDetalleTraspaso
+
+-----procedimiento para DetalleTraspaso ----------
+CREATE PROCEDURE MostrarDetalleTraspaso
+@idTraspasoSas int
+AS
+SELECT  DetalleTraspaso.IdTraspasoSAS, Automoviles.Marca, Automoviles.Modelo, Automoviles.Color, Automoviles.Año, Automoviles.Serie FROM DetalleTraspaso Right JOIN Automoviles on DetalleTraspaso.Automovil = Automoviles.IdAutomovil  where IdTraspasoSAS=@idTraspasoSas ;
+GO
+
+-----------Procedimiento para mostrar factura traspaso----------------------------
+
+CREATE PROCEDURE MostrarFacturaTraspaso
+
+AS
+SELECT TraspasoSaS.IdTraspasoSaS, TraspasoSaS.Fecha, Sucursal_principal.Nombre as Entrega, Sucursal_Secundaria.Nombre as Recibe, TraspasoSaS.TipoTraspaso   From TraspasoSaS Inner JOIN Sucursal_principal  on TraspasoSaS.SucursalEntrega = Sucursal_principal.IdSucursal Inner JOIN Sucursal_Secundaria on  TraspasoSaS.SucursalRecibe = Sucursal_Secundaria.IdSucursal_Secundaria ;
+
+GO
+
+
+create procedure MostrarUltimoID
+
+as
+SELECT @@IDENTITY;
+go
  
+ Select Scope_Identity()
+ 
+ Select *from TraspasoSaS
 
-
+ 
 --------Procedimiento para eliminar cliente
 create proc EliminarCliente
 @IdCliente int
@@ -696,7 +644,7 @@ Update Administrador set IdAdministrador=@IdAdministrador, Nombre=@Nombre, Direc
 go
 
 
- -- Procedimiento para actualizar Accesorios------
+ -- Procedimiento para actualizar DetalleTraspaso------
 
 
 
@@ -990,4 +938,8 @@ select *from BitacoraTraspasos
 go
 
 
-select * from DetalleCompraVenta
+
+
+
+
+select ISNULL(MAX(IdTraspasoSAS), 0) AS LASTID from TraspasoSaS

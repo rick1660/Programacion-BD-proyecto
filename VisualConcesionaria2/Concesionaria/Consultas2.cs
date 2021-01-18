@@ -109,6 +109,26 @@ namespace Concesionaria
             return tabla;
 
         }
+
+
+        public DataTable MostrarDetalleTraspaso(int idTraspaso)
+        {
+            DataTable tabla = new DataTable();
+            tabla = conexion.MostrarDetalleTraspaso(idTraspaso);
+            return tabla;
+
+        }
+
+
+        public DataTable MostrarFacturaTraspaso()
+        {
+            DataTable tabla = new DataTable();
+            tabla = conexion.MostrarFacturaTraspaso();
+            return tabla;
+
+        }
+
+
         //------------------------Eliminar---------------------------
 
         public void EliminarCliente(string IdCliente)

@@ -153,7 +153,7 @@ namespace Concesionaria
             comandoInsertar.CommandText = "InsertarTraspaso";
             comandoInsertar.CommandType = CommandType.StoredProcedure;
 
-            comandoInsertar.Parameters.AddWithValue("@Fehca", Fehca);
+            comandoInsertar.Parameters.AddWithValue("@Fecha", Fehca);
             comandoInsertar.Parameters.AddWithValue("@SucursalEntrega", SucursalEntrega);
             comandoInsertar.Parameters.AddWithValue("@SucursalRecibe", SucursalRecibe);
             comandoInsertar.Parameters.AddWithValue("@TipoTraspaso", TipoTraspaso);
@@ -172,14 +172,17 @@ namespace Concesionaria
             comandoInsertar.CommandText = "InsertarDetalleTraspaso";
             comandoInsertar.CommandType = CommandType.StoredProcedure;
 
-            comandoInsertar.Parameters.AddWithValue("@IdTraspasoSas", IdTraspasoSas);
-            comandoInsertar.Parameters.AddWithValue("@automovil", automovil);
+            comandoInsertar.Parameters.AddWithValue("@IdTraspasoSAS", IdTraspasoSas);
+            comandoInsertar.Parameters.AddWithValue("@Automovil", automovil);
           
             comandoInsertar.ExecuteNonQuery();
             comandoInsertar.Parameters.Clear();
             comandoInsertar.CommandType = CommandType.Text;
 
         }
+
+
+       
 
 
 
@@ -265,8 +268,37 @@ namespace Concesionaria
 
         }
 
+        public DataTable MostrarDetalleTraspaso(int idTraspaso)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "MostrarDetalleTraspaso";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@idTraspasoSas", idTraspaso);
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+
+        }
 
 
+        public DataTable MostrarFacturaTraspaso()
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "MostrarFacturaTraspaso";
+            comando.CommandType = CommandType.StoredProcedure;
+           
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+
+        }
+
+
+     
 
 
         //Eliminar
@@ -307,6 +339,60 @@ namespace Concesionaria
             comando.CommandType = CommandType.StoredProcedure;
 
             comando.Parameters.AddWithValue("@IdAutomovil", IdAutomovil);
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             comando.CommandType = CommandType.Text;

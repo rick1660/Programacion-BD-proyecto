@@ -97,7 +97,7 @@ namespace Concesionaria
                     txtColor.ForeColor = Color.Gray;
                     txtAño.Text = "Año";
                     txtAño.ForeColor = Color.Gray;
-                    txtSerie.Text = "Telefono";
+                    txtSerie.Text = "Serie";
                     txtSerie.ForeColor = Color.Gray;
                     txtFechaIngreso.Text = "Fecha  de ingreso  (AAA-MM-DD)";
                     txtFechaIngreso.ForeColor = Color.Gray;
